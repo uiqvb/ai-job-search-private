@@ -1,0 +1,13 @@
+Hi Tekt team,
+
+I'm Manit, a Software Engineering (Honours) student at Deakin University, entering my penultimate year in 2027. I'd love to join your Concept Development team as a Mechatronics Engineering Intern.
+
+The thing I've built that I'm proudest of is a two-wheel robot for my Embedded Systems unit. I wired it myself around an Arduino Nano, with three infrared line sensors, two light sensors and a rain sensor, driving an L298N motor driver. A Raspberry Pi runs a Python dashboard and talks to the robot over MQTT. It follows a line between a sunny and a sheltered spot, and moves to shelter when rain is coming, cross-checking its rain sensor against a weather forecast before acting.
+
+The hardest lesson came from the hardware, not the code. The robot only behaved on fresh batteries. I eventually traced it to voltage sag at the buck converter, using the robot's own boot and reset logs, and fixed the power supply instead of rewriting software that was never the problem. I then built a .NET backend that controls the same robot over Wi-Fi, which scored 100/100 and was demonstrated at Deakin Open Day.
+
+I've also modelled multi-part assemblies in Fusion 360, including lofted bodies, exploded and sectional views and technical drawings. I haven't 3D printed a part yet, and that is exactly the kind of hands-on prototyping I want to learn from your team.
+
+My degree is software rather than mechatronics, so I'd bring strong firmware and software skills to the studio while learning the mechanical and fabrication side. I'm available two to three days a week. Thank you for considering my application.
+
+Manit Khera

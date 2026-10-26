@@ -1,0 +1,11 @@
+{
+  "company": "RMIT University",
+  "fetched_date": "2026-10-21",
+  "sources": {
+    "website": {"url": "https://www.rmit.edu.au/about/our-strategy/values", "notes": "Values: Imagination, Integrity, Courage, Passion, Impact, Inclusion. Integrity: honest and fair, highest ethical standards, transparency and accountability, 'use expertise and evidence to make decisions'. Impact mentions collaborative design and work-based learning. Street address 124 La Trobe Street, Melbourne VIC 3000 (rmit.edu.au/contact)."},
+    "reviews": {"url": "", "notes": "Not checked."},
+    "linkedin": {"url": "", "notes": "Not checked. JR51349 reports to a Senior Learning Designer, Learning and Teaching (LT&Q), College of Business and Law."},
+    "media": {"url": "https://www.aacsb.edu/insights/articles/2025/02/is-it-legal-gamifying-business-law-courses", "notes": "AACSB, Feb 2025: RMIT Bachelor of Commerce business law course built around a mastery-based simulation; students are trainees at BizRight, a fictional statutory body; GenAI digital humans; rewards unlock. NOT known to be the Excel game in JR51349."}
+  },
+  "network_contacts_note": "None known."
+}

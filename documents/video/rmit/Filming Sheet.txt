@@ -1,0 +1,31 @@
+RMIT - FILMING SHEET  (one long take: read, look up, wait 1 s, say it your way)
+
+1.  "Okay, RMIT. Your game lives in a spreadsheet. Let's get it out."   (say exactly)
+
+2.  - I'm Manit, third year of Software Engineering at Deakin
+
+3.  - a game like that lives or dies on its formulas
+    - investment decisions, scores, progression   >> COUNT 3 ON FINGERS
+
+4.  - get one wrong, the whole class learns the wrong thing   >> WINCE on "wrong"
+
+5.  - before building anything: tests that match your spreadsheet, cell for cell
+    - it's how my robot API checks every move
+    - that one got 100 out of 100
+
+6.  - then it has to feel simple
+    - students playing, not reading formulas
+
+7.  - built and deployed a web app in React, 24 automated tests
+
+8.  - you'd work with learning designers, not just developers
+    - over a year running a stroke support group's website with volunteers
+    - taught them to publish it themselves
+
+9.  >> POINT at the camera
+    - "Oh, and this video? It's a web app too. Every effect is React code, written with Claude Code."
+
+10. >> small wave at the end
+    "So yeah, I'm Manit Khera. Give me your spreadsheet, and I'll give you a game. Thanks for watching."
+
+Mess up? Pause, say the whole point again. Don't move your feet.

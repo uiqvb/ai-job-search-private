@@ -1,0 +1,664 @@
+// Syncrowin intro video, Draft 2: old-PewDiePie, human-made edit (see documents/video/EDITING-STYLE.md).
+// Every time in here is a ROUGH-CUT second (words.json). The only edit to the timeline is a hard cut that
+// skips the frozen beat after the explosion (CUT_A -> CUT_B).
+import React from "react";
+import {
+  AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, random, staticFile, useCurrentFrame, Easing,
+} from "remotion";
+import { loadFont as loadMont } from "@remotion/google-fonts/Montserrat";
+import { loadFont as loadAnton } from "@remotion/google-fonts/Anton";
+import { loadFont as loadMarker } from "@remotion/google-fonts/PermanentMarker";
+import { loadFont as loadMono } from "@remotion/google-fonts/JetBrainsMono";
+import palm from "./palm_track.json";
+import face from "./face_track.json";
+import words from "./words.json";
+
+const { fontFamily: MONT } = loadMont("normal", { weights: ["600", "700", "800", "900"] });
+const { fontFamily: ANTON } = loadAnton();
+const { fontFamily: MARKER } = loadMarker();
+const { fontFamily: MONO } = loadMono("normal", { weights: ["400", "700"] });
+
+export const FPS = 30;
+const TRACK_LEN = 59.333;
+// Draft 3: the black-and-white "that" beat holds on a freeze frame for HOLD seconds, and the bin
+// explosion runs ~0.2 s longer (CUT_A moved later). Track audio pauses at AUD_GAP (after "that").
+const FZ = 455 / FPS; // freeze on this track frame (public/img/freeze_that.png)
+const HOLD = 6 / FPS;
+const AUD_GAP = 463 / FPS; // the word "that" has finished here
+const CUT_A = 500 / FPS; // explosion ends here...
+const CUT_B = 509 / FPS; // ...hard cut to just before "You're a startup"
+const SKIP = CUT_B - CUT_A;
+export const TOTAL_FRAMES = Math.round((TRACK_LEN + HOLD - SKIP) * FPS);
+
+const out = (t: number) => (t < FZ ? t : t < CUT_A ? t + HOLD : t + HOLD - SKIP);
+const F = (t: number) => Math.round(out(t) * FPS);
+const toTrack = (o: number) => (o < FZ ? o : o < FZ + HOLD ? FZ : o < CUT_A + HOLD ? o - HOLD : o - HOLD + SKIP);
+
+const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+const lerp = (t: number, a: number[], b: number[], ease?: (x: number) => number) =>
+  interpolate(t, a, b, { ...clamp, easing: ease });
+
+const W = {
+  minute: 1.26, hundred: 3.42, project: 5.54, fiveK: 10.46, six: 12.40,
+  that: 14.92, toss: 15.2, whip: 15.42, land: 15.75, boom: 15.92,
+  youre: 17.04, curious: 18.66, energy: 19.82, experiments: 20.84, exactlyMe: 22.02,
+  whatIf: 23.92, breaks: 27.40, glitchEnd: 28.0, fun: 28.78, inASmall: 29.32,
+  backend: 35.54, hardware: 36.88, it: 38.04, video: 39.88,
+  because: 40.54, revealEnd: 44.9, ignite: 47.6, fist: 52.35,
+  name: 53.22, watching: 56.72, endCard: 57.15,
+};
+
+// ---------- tracking ----------
+type Row = number[];
+const at = (rows: Row[], t: number) => {
+  if (t <= rows[0][0]) return rows[0].slice(1);
+  for (let i = 1; i < rows.length; i++) {
+    if (t <= rows[i][0]) {
+      const a = rows[i - 1], b = rows[i], k = (t - a[0]) / (b[0] - a[0]);
+      return a.slice(1).map((v, j) => v + (b[j + 1] - v) * k);
+    }
+  }
+  return rows[rows.length - 1].slice(1);
+};
+const faceAt = (t: number) => at(face as Row[], t) as [number, number, number]; // centre x, centre y, width
+const reelPalm = (t: number) => { const [x, y] = at(palm.reel as Row[], t); return [180 + (x - 280), 1600 + (y - 1632)]; };
+const firePalm = (t: number) => { const [x, y] = at(palm.fire as Row[], t); return [165 + (x - 288), 1455 + (y - 1588)]; };
+
+// ---------- meme text ----------
+const meme = (size: number, stroke = Math.round(size / 9)): React.CSSProperties => ({
+  fontFamily: ANTON, fontSize: size, color: "#FFFFFF", lineHeight: 1.05, letterSpacing: 1,
+  WebkitTextStroke: `${stroke}px #000`, paintOrder: "stroke fill", textTransform: "uppercase",
+});
+// one-frame punch when text cuts in (an editor's scale keyframe, not a spring)
+const punch = (t: number, t0: number) => (t - t0 < 1 / FPS ? 1.18 : t - t0 < 2 / FPS ? 1.06 : 1);
+
+// ======================================================================
+// Camera: snap zooms that follow the face, the throw whip, the reveal shrink
+// ======================================================================
+const ZOOMS: [number, number, number, number][] = [
+  // [from, to, scale, tilt deg]
+  [W.minute, 3.10, 1.22, -1.5],
+  [W.that, W.toss, 1.95, -4], // "...hear about THAT": black and white + echo
+  [W.exactlyMe, 22.70, 1.5, 3],
+  [W.fun, 29.30, 1.4, -3],
+  [W.video, W.because, 1.35, 2],
+];
+const BIN = [205, 380]; // where the bin sits on the wall (video coords)
+
+type Cam = { s: number; tx: number; ty: number; rot: number; blur: number };
+const camAt = (t: number): Cam => {
+  let s = 1, tx = 0, ty = 0, rot = 0, blur = 0;
+  for (const [a, b, S, R] of ZOOMS) {
+    if (t >= a && t < b + 2 / FPS) {
+      const k = Math.min(lerp(t, [a, a + 2 / FPS], [0, 1]), lerp(t, [b, b + 2 / FPS], [1, 0]));
+      const [fx, fy] = faceAt(t);
+      s = 1 + (S - 1) * k;
+      const drift = Math.sin(t * 2.3) * 6; // keyed by hand, never perfectly still
+      tx = k * (540 - s * fx + drift);
+      ty = k * (800 - s * fy);
+      rot = R * k;
+    }
+  }
+  // the throw: camera whips up after the props to the bin, holds through the explosion
+  if (t >= W.whip && t < CUT_A) {
+    const k = lerp(t, [W.whip, W.whip + 0.2], [0, 1], Easing.inOut(Easing.cubic));
+    s = 1 + 0.9 * k;
+    const lx = 540 + (BIN[0] - 540) * k, ly = 960 + (BIN[1] - 160 - 960) * k;
+    tx = 540 - s * lx; ty = 960 - s * ly;
+    blur = Math.sin(Math.PI * k) * 14;
+    rot = -3 * k;
+  }
+  tx = Math.min(0, Math.max(1080 - s * 1080, tx));
+  ty = Math.min(0, Math.max(1920 - s * 1920, ty));
+  const d = t - W.boom; // shake on the explosion
+  if (d >= 0 && d < 0.7) {
+    const e = Math.exp(-d * 5) * 26;
+    tx = Math.min(0, Math.max(1080 - s * 1080, tx + Math.sin(d * 120) * e));
+    ty = Math.min(0, Math.max(1920 - s * 1920, ty + Math.cos(d * 97) * e));
+  }
+  return { s, tx, ty, rot, blur };
+};
+
+const revealK = (t: number) => {
+  const a = W.because, b = W.revealEnd;
+  if (t < a || t > b + 0.25) return 0;
+  return Math.min(lerp(t, [a, a + 0.25], [0, 1], Easing.out(Easing.cubic)), lerp(t, [b, b + 0.2], [1, 0], Easing.in(Easing.cubic)));
+};
+const REVEAL_S = 0.56, REVEAL_CY = 1375;
+
+const cameraStyle = (t: number): React.CSSProperties => {
+  const c = camAt(t);
+  const k = revealK(t);
+  const s2 = 1 - (1 - REVEAL_S) * k;
+  const cy2 = 960 + (REVEAL_CY - 960) * k;
+  const s = s2 * c.s;
+  const tx = s2 * (c.tx - 540) + 540;
+  const ty = s2 * (c.ty - 960) + cy2;
+  const bw = t >= W.that && t < W.toss;
+  const extra = c.rot !== 0 ? 1.05 : 1; // hide corners when tilted
+  return {
+    transformOrigin: "0px 0px",
+    transform: `translate(${tx}px, ${ty}px) scale(${s}) translate(540px, 960px) rotate(${c.rot}deg) scale(${extra}) translate(-540px, -960px)`,
+    filter: [bw ? "grayscale(1) contrast(1.15)" : "", c.blur > 0.5 ? `blur(${c.blur}px)` : ""].join(" ").trim() || "none",
+    overflow: "hidden",
+    borderRadius: k > 0 ? 40 : 0,
+    boxShadow: k > 0 ? `0 0 0 ${6 / s2}px #FFFFFF` : "none",
+  };
+};
+
+// ======================================================================
+// Palm props: plain meme text + the real robot photo, then the throw into the bin
+// ======================================================================
+const PROPS = [
+  { at: W.hundred, el: (_t: number) => <div style={meme(110)}>100/100</div>, sub: "BACKEND" },
+  { at: W.project, el: (t: number) => <Img src={staticFile("img/robot_sticker.png")} style={{ width: 250, transform: `rotate(${Math.sin(t * 6) * 6}deg)` }} />, sub: "OPEN DAY" },
+  { at: W.fiveK, el: (t: number) => <div style={meme(t >= W.six ? 120 : 92)}>{t >= W.six ? "6X FASTER" : "5,000 ROBOTS"}</div>, sub: "" },
+];
+const SLOTS = [[40, -110], [40, -330], [150, -560]];
+
+const PalmProps: React.FC<{ t: number }> = ({ t }) => {
+  if (t < W.hundred || t >= W.boom || (t >= W.that && t < W.toss)) return null;
+  const [px, py] = reelPalm(Math.min(t, W.toss));
+  return (
+    <AbsoluteFill>
+      {PROPS.map((p, i) => {
+        if (t < p.at) return null;
+        const t0 = W.toss + i * 0.05, t1 = W.land + i * 0.06;
+        if (t > t1 + 0.02) return null; // in the bin
+        const k = lerp(t, [t0, t1], [0, 1], Easing.in(Easing.quad));
+        const [sx, sy] = SLOTS[i];
+        const x0 = px + sx, y0 = py + sy;
+        const x1 = BIN[0] + (i - 1) * 30, y1 = BIN[1] - 110;
+        const x = x0 + (x1 - x0) * k + Math.sin(k * Math.PI) * (-160 + i * 40);
+        const y = y0 + (y1 - y0) * k - Math.sin(k * Math.PI) * 120;
+        const sc = (1 - 0.55 * k) * punch(t, p.at);
+        const rot = k * (-420 - i * 160) + (i === 0 ? -4 : i === 2 ? 3 : 0);
+        return (
+          <div key={i} style={{ position: "absolute", left: x, top: y, transform: `translate(-50%,-50%) scale(${sc}) rotate(${rot}deg)`, textAlign: "center" }}>
+            {p.el(t)}
+            {p.sub && <div style={{ ...meme(40), marginTop: -4 }}>{p.sub}</div>}
+          </div>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+const Bin: React.FC<{ t: number }> = ({ t }) => {
+  if (t < W.whip || t >= W.boom + 0.04) return null;
+  let wob = 0;
+  for (let i = 0; i < 3; i++) { const d = t - (W.land + i * 0.06); if (d > 0 && d < 0.25) wob += Math.sin(d * 60) * 8 * Math.exp(-d * 10); }
+  return (
+    <Img src={staticFile("img/bin.png")} style={{
+      position: "absolute", left: BIN[0], top: BIN[1], width: 330, transform: `translate(-50%,-45%) rotate(${4 + wob}deg)`,
+    }} />
+  );
+};
+
+const Explosion: React.FC<{ t: number }> = ({ t }) => {
+  const d = t - W.boom;
+  if (d < 0 || t >= CUT_A) return null;
+  const [cx, cy] = [BIN[0], BIN[1] - 40];
+  const grow = lerp(d, [0, 0.38], [0.25, 1], Easing.out(Easing.cubic));
+  const fade = 1 - lerp(d, [0.32, 0.74], [0, 1]);
+  const balls = [];
+  for (let i = 0; i < 34; i++) {
+    const a = random(`ba${i}`) * Math.PI * 2, dist = random(`bd${i}`) * 230 * grow;
+    const r = (50 + random(`br${i}`) * 120) * grow;
+    const hot = random(`bh${i}`) < 0.55;
+    balls.push(<circle key={i} cx={cx + Math.cos(a) * dist} cy={cy + Math.sin(a) * dist * 0.8 - d * 220 * random(`bu${i}`)} r={r}
+      fill={hot ? "url(#hot)" : "url(#smoke)"} opacity={hot ? fade : Math.min(1, fade * 1.6) * 0.8} />);
+  }
+  const debris = [];
+  for (let i = 0; i < 16; i++) {
+    const a = random(`da${i}`) * Math.PI * 2, v = 700 + random(`dv${i}`) * 700;
+    const x = cx + Math.cos(a) * v * d, y = cy + Math.sin(a) * v * d + 700 * d * d;
+    debris.push(<rect key={i} x={x} y={y} width={14 + random(`dw${i}`) * 22} height={10 + random(`dh${i}`) * 14}
+      transform={`rotate(${d * 900 * (random(`dr${i}`) - 0.5)} ${x} ${y})`} fill={i % 2 ? "#55555A" : "#222"} />);
+  }
+  return (
+    <AbsoluteFill>
+      <svg width={1080} height={1920} style={{ position: "absolute", filter: "blur(9px)" }}>
+        <defs>
+          <radialGradient id="hot"><stop offset="0" stopColor="#FFF4C2" /><stop offset="0.35" stopColor="#FFB02E" /><stop offset="0.7" stopColor="#E8480F" stopOpacity="0.85" /><stop offset="1" stopColor="#5A1A08" stopOpacity="0" /></radialGradient>
+          <radialGradient id="smoke"><stop offset="0" stopColor="#4A4440" /><stop offset="0.7" stopColor="#2E2A28" stopOpacity="0.8" /><stop offset="1" stopColor="#222" stopOpacity="0" /></radialGradient>
+        </defs>
+        {balls}
+      </svg>
+      <svg width={1080} height={1920} style={{ position: "absolute" }}>{debris}</svg>
+    </AbsoluteFill>
+  );
+};
+
+// ======================================================================
+// Glitch: only HE glitches (rembg cutouts of track frames 820-843)
+// ======================================================================
+const Glitch: React.FC<{ t: number }> = ({ t }) => {
+  if (t < W.breaks || t >= W.glitchEnd) return null;
+  const fr = Math.max(820, Math.min(843, Math.round(t * FPS)));
+  if (fr % 4 === 3) return null; // stutter: some frames clean
+  const src = staticFile(`glitch/g_${String(fr).padStart(4, "0")}.png`);
+  const r = (k: string) => random(`${k}${fr}`) - 0.5;
+  const dx = 26 + Math.abs(r("dx")) * 50;
+  const bands = [];
+  for (let i = 0; i < 5; i++) {
+    const top = Math.floor(random(`bt${fr}${i}`) * 1700), h = 40 + Math.floor(random(`bh${fr}${i}`) * 160);
+    bands.push(
+      <Img key={i} src={src} style={{
+        position: "absolute", left: 0, top: 0, width: 1080, height: 1920,
+        clipPath: `inset(${top}px 0 ${Math.max(0, 1920 - top - h)}px 0)`, transform: `translateX(${r(`bx${i}`) * 160}px)`,
+      }} />,
+    );
+  }
+  return (
+    <AbsoluteFill>
+      <Img src={src} style={{ position: "absolute", width: 1080, height: 1920, transform: `translateX(${-dx}px)`, mixBlendMode: "screen", opacity: 0.85,
+        filter: "sepia(1) saturate(9) hue-rotate(-50deg) brightness(0.9)" }} />
+      <Img src={src} style={{ position: "absolute", width: 1080, height: 1920, transform: `translateX(${dx}px)`, mixBlendMode: "screen", opacity: 0.85,
+        filter: "sepia(1) saturate(9) hue-rotate(140deg) brightness(0.9)" }} />
+      {bands}
+    </AbsoluteFill>
+  );
+};
+
+// ======================================================================
+// Hats: real photo cutouts stuck on his head, following the face track
+// ======================================================================
+// Drawn in code (Draft 1 shapes, plain colours). Coordinates are in a reference frame where his face
+// centre is REF (x, y, width); the whole layer is moved and scaled to follow the face track.
+const REF = [555, 845, 360];
+const DARK = "#1A1A1A";
+const Beanie = () => (
+  <svg width={600} height={330} viewBox="0 0 600 330">
+    <circle cx={300} cy={42} r={38} fill="#D8392B" />
+    <path d="M40 270 C 40 70, 560 70, 560 270 Z" fill="#2B2F3A" />
+    <rect x={20} y={240} width={560} height={80} rx={30} fill="#232631" />
+    {Array.from({ length: 14 }).map((_, i) => <rect key={i} x={40 + i * 38} y={250} width={14} height={60} rx={6} fill="#30343F" />)}
+    <g transform="rotate(-8 170 170)"><rect x={110} y={140} width={120} height={60} rx={12} fill="#FFFFFF" />
+      <text x={170} y={182} textAnchor="middle" fontFamily={MONO} fontWeight={700} fontSize={34} fill={DARK}>{"{ }"}</text></g>
+    <g transform="rotate(6 330 140)"><rect x={280} y={110} width={110} height={56} rx={12} fill="#F2B233" />
+      <text x={335} y={150} textAnchor="middle" fontFamily={MONT} fontWeight={900} fontSize={32} fill={DARK}>API</text></g>
+    <g transform="rotate(-4 460 200)"><rect x={410} y={170} width={100} height={56} rx={28} fill="#7B5CD6" />
+      <text x={460} y={210} textAnchor="middle" fontFamily={MONT} fontWeight={900} fontSize={32} fill="#FFFFFF">C#</text></g>
+  </svg>
+);
+const HardHat = () => (
+  <svg width={640} height={330} viewBox="0 0 640 330">
+    <path d="M90 260 C 90 40, 550 40, 550 260 Z" fill="#F7C21A" />
+    <path d="M290 62 C 290 40, 350 40, 350 62 L 356 260 L 284 260 Z" fill="#E5A800" />
+    <path d="M150 250 C 160 140, 230 90, 270 80" stroke="#FFE27A" strokeWidth={14} fill="none" strokeLinecap="round" />
+    <rect x={10} y={250} width={620} height={52} rx={26} fill="#E5A800" />
+    <rect x={10} y={250} width={620} height={18} rx={9} fill="#FFD447" />
+    <g transform="translate(420 150) rotate(10)"><rect x={-44} y={-34} width={88} height={68} rx={10} fill={DARK} />
+      <path d="M6 -24 L -14 4 L 2 4 L -6 26 L 16 -6 L 0 -6 Z" fill="#F7C21A" /></g>
+  </svg>
+);
+const Headset = () => (
+  <svg width={1080} height={1100} viewBox="0 0 1080 1100" style={{ position: "absolute", left: 0, top: 0 }}>
+    <path d="M305 830 C 260 420, 850 420, 805 830" stroke={DARK} strokeWidth={34} fill="none" strokeLinecap="round" />
+    <path d="M305 830 C 260 420, 850 420, 805 830" stroke="#3A3A37" strokeWidth={10} fill="none" strokeLinecap="round" />
+    <rect x={245} y={760} width={110} height={160} rx={46} fill={DARK} />
+    <rect x={262} y={782} width={76} height={116} rx={34} fill="#4A4A4A" />
+    <rect x={755} y={760} width={110} height={160} rx={46} fill={DARK} />
+    <rect x={772} y={782} width={76} height={116} rx={34} fill="#4A4A4A" />
+    <path d="M300 900 C 310 990, 400 1000, 470 975" stroke={DARK} strokeWidth={14} fill="none" strokeLinecap="round" />
+    <ellipse cx={478} cy={972} rx={26} ry={20} fill={DARK} />
+  </svg>
+);
+const Beret = () => (
+  <svg width={600} height={300} viewBox="0 0 600 300">
+    <ellipse cx={300} cy={190} rx={270} ry={90} fill="#C8102E" />
+    <ellipse cx={330} cy={150} rx={250} ry={95} fill="#E01F3D" />
+    <rect x={318} y={38} width={16} height={34} rx={6} fill="#8E0B20" />
+    <path d="M70 230 C 200 270, 420 270, 540 225" stroke="#8E0B20" strokeWidth={22} fill="none" strokeLinecap="round" />
+  </svg>
+);
+const Clapper: React.FC<{ open: number }> = ({ open }) => (
+  <svg width={300} height={260} viewBox="0 0 300 260">
+    <rect x={20} y={90} width={260} height={160} rx={12} fill={DARK} />
+    <text x={150} y={170} textAnchor="middle" fontFamily={MONT} fontWeight={900} fontSize={34} fill="#FFFFFF">SYNCROWIN</text>
+    <text x={150} y={215} textAnchor="middle" fontFamily={MONT} fontWeight={800} fontSize={26} fill="#FFFFFF">TAKE 1</text>
+    <g transform={`rotate(${-28 * open} 22 88)`}>
+      <rect x={20} y={56} width={260} height={34} fill="#FFFFFF" />
+      {[0, 1, 2, 3, 4].map((i) => <path key={i} d={`M${30 + i * 54} 56 L ${60 + i * 54} 56 L ${40 + i * 54} 90 L ${10 + i * 54} 90 Z`} fill={DARK} />)}
+    </g>
+  </svg>
+);
+const HATS: { from: number; to: number; el: React.ReactNode; x: number; y: number; rot: number }[] = [
+  { from: W.backend, to: W.hardware, el: <Beanie />, x: 555, y: 700, rot: -6 },
+  { from: W.hardware, to: W.it, el: <HardHat />, x: 555, y: 680, rot: 5 },
+  { from: W.it, to: W.video, el: null, x: 0, y: 0, rot: 0 },
+  { from: W.video, to: W.revealEnd, el: <Beret />, x: 575, y: 650, rot: -10 },
+];
+const Hats: React.FC<{ t: number }> = ({ t }) => {
+  const h = HATS.find((x) => t >= x.from && t < x.to);
+  if (!h) return null;
+  const [fx, fy, fw] = faceAt(t);
+  const s = fw / REF[2];
+  const p = punch(t, h.from);
+  return (
+    <AbsoluteFill style={{ transformOrigin: "0 0", transform: `translate(${fx - s * REF[0]}px, ${fy - s * REF[1]}px) scale(${s})` }}>
+      {h.el === null ? (
+        <div style={{ position: "absolute", width: 1080, height: 1920, transformOrigin: "555px 800px", transform: `scale(${p})` }}><Headset /></div>
+      ) : (
+        <div style={{ position: "absolute", left: h.x, top: h.y, transform: `translate(-50%,-85%) rotate(${h.rot}deg) scale(${p})` }}>{h.el}</div>
+      )}
+      {h.from === W.video && (
+        <div style={{ position: "absolute", left: 770, top: 600, transform: `translate(-50%,-50%) rotate(8deg) scale(${p})` }}>
+          <Clapper open={1 - lerp(t, [W.video + 0.3, W.video + 0.38], [0, 1])} />
+        </div>
+      )}
+    </AbsoluteFill>
+  );
+};
+
+// ======================================================================
+// Fire on the palm (kept from Draft 1)
+// ======================================================================
+const Fire: React.FC<{ t: number }> = ({ t }) => {
+  const a = W.ignite, z = W.fist;
+  if (t < a - 0.05 || t > z + 1.4) return null;
+  const [px, py] = firePalm(Math.min(t, z + 0.15));
+  const grow = lerp(t, [a, a + 0.3], [0, 1], Easing.out(Easing.back(2)));
+  const size = grow * lerp(t, [z, z + 0.12], [1, 0]);
+  const flick = 0.85 + 0.15 * Math.sin(t * 31) * Math.sin(t * 17 + 1);
+  const parts = [];
+  if (size > 0.01) {
+    for (let i = 0; i < 70; i++) {
+      const life = 0.45 + random(`l${i}`) * 0.35;
+      const p = (((t - a) / life) + random(`p${i}`)) % 1;
+      const sway = Math.sin((t + random(`s${i}`) * 5) * 9) * 18 * p;
+      const x = px + (random(`x${i}`) - 0.5) * 110 * (1 - p * 0.9) + sway;
+      const y = py - 10 - p * (390 + random(`h${i}`) * 170) * size;
+      const r = (40 - 32 * p) * (0.7 + random(`r${i}`) * 0.6) * size;
+      const col = p < 0.18 ? "#FFE27A" : p < 0.45 ? "#FFA42B" : p < 0.75 ? "#FF6A14" : "#D92E12";
+      parts.push(<ellipse key={i} cx={x} cy={y} rx={Math.max(0, r * 0.75)} ry={Math.max(0, r * 1.5)} fill={col} opacity={(1 - p) * 0.85} />);
+    }
+  }
+  const smoke = [];
+  if (t >= z) {
+    const k = (t - z) / 1.3;
+    for (let i = 0; i < 9; i++) {
+      const kk = Math.min(1, k + random(`d${i}`) * 0.15);
+      smoke.push(<circle key={i} cx={px + (random(`sx${i}`) - 0.5) * 140 + kk * (random(`sv${i}`) - 0.5) * 160}
+        cy={py - 40 - kk * (220 + random(`sh${i}`) * 200)} r={30 + kk * 90} fill="#B9B9B2" opacity={0.55 * (1 - kk)} />);
+    }
+  }
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{
+        background: `radial-gradient(circle at ${px + 120}px ${py - 260}px, rgba(255,150,40,${0.42 * size * flick}) 0%, rgba(255,120,30,${0.18 * size}) 30%, rgba(0,0,0,0) 62%)`,
+        mixBlendMode: "screen",
+      }} />
+      <svg width={1080} height={1920} style={{ position: "absolute", filter: "blur(4px)" }}>{parts}</svg>
+      <svg width={1080} height={1920} style={{ position: "absolute", filter: "blur(2px)" }}>
+        {size > 0.01 && <ellipse cx={px} cy={py - 50 * size} rx={30 * size} ry={55 * size * flick} fill="#FFF1B8" opacity={0.7} />}
+      </svg>
+      <svg width={1080} height={1920} style={{ position: "absolute", filter: "blur(10px)" }}>{smoke}</svg>
+    </AbsoluteFill>
+  );
+};
+
+// ======================================================================
+// Overlays
+// ======================================================================
+const StartupWords: React.FC<{ t: number }> = ({ t }) => {
+  if (t < W.curious || t >= W.exactlyMe) return null;
+  const items: [number, string, number, number][] = [[W.curious, "CURIOUS", 150, -4], [W.energy, "ENERGY", 300, 3], [W.experiments, "EXPERIMENTS", 450, -2]];
+  return (
+    <AbsoluteFill>
+      {items.map(([a, txt, y, r]) => t >= a && (
+        <div key={txt} style={{ position: "absolute", top: y, width: 1080, textAlign: "center" }}>
+          <div style={{ ...meme(130), display: "inline-block", transform: `rotate(${r}deg) scale(${punch(t, a)})` }}>{txt}</div>
+        </div>
+      ))}
+    </AbsoluteFill>
+  );
+};
+
+const WhatIf: React.FC<{ t: number }> = ({ t }) => {
+  if (t < W.whatIf || t >= W.inASmall || (t >= W.breaks && t < W.glitchEnd)) return null;
+  return (
+    <div style={{ position: "absolute", top: 170, width: 1080, textAlign: "center" }}>
+      <div style={{ display: "inline-block", fontFamily: MARKER, fontSize: 150, color: "#fff", WebkitTextStroke: "10px #000", paintOrder: "stroke fill",
+        transform: `rotate(-6deg) scale(${punch(t, W.whatIf)})` }}>WHAT IF...?</div>
+    </div>
+  );
+};
+
+// Claude Code terminal above the shrunk video: he types the request, Claude starts building the video.
+// Every step shown is one that really happened making this video.
+const CC = "#D77757"; // Claude Code orange
+const PROMPT = "make me a one-minute intro video for Syncrowin";
+const TYPE_A = W.because + 0.28, TYPE_B = W.because + 1.45, ENTER = W.because + 1.55;
+const CC_LINES: [number, "text" | "tool" | "out", string][] = [
+  [ENTER + 0.25, "text", "On it. Cutting your long take first."],
+  [ENTER + 0.6, "tool", "Bash(python cut_talking_track.py)"],
+  [ENTER + 0.8, "out", "Rough cut: 59.2 s from 8 takes"],
+  [ENTER + 1.1, "tool", "Write(src/Video.tsx)"],
+  [ENTER + 1.3, "out", "hats, fire, timer, bin explosion"],
+  [ENTER + 1.6, "tool", "Bash(npx remotion render Syncrowin)"],
+];
+const SPIN = ["·", "✢", "✳", "✶", "✻", "✽", "✻", "✶", "✳", "✢"];
+const RevealBackdrop: React.FC<{ t: number }> = ({ t }) => {
+  const k = revealK(t);
+  if (k <= 0) return null;
+  const mono: React.CSSProperties = { fontFamily: MONO, fontSize: 29, lineHeight: 1.5, whiteSpace: "pre", color: "#E8E8E8" };
+  const typed = PROMPT.slice(0, Math.floor(lerp(t, [TYPE_A, TYPE_B], [0, PROMPT.length])));
+  const sent = t >= ENTER;
+  const cursor = Math.floor(t * 2.5) % 2 === 0;
+  const fr = Math.round(t * FPS);
+  const renderAt = ENTER + 1.85;
+  const done = Math.round(lerp(t, [renderAt, W.revealEnd], [0, 1]) ** 1.6 * 640);
+  return (
+    <AbsoluteFill style={{ background: "#141414" }}>
+      <div style={{
+        position: "absolute", left: 36, top: 96, width: 1008, height: 700, borderRadius: 22, background: "#1E1E1E",
+        border: "2px solid #333", overflow: "hidden", boxShadow: "0 18px 40px rgba(0,0,0,0.6)",
+      }}>
+        <div style={{ height: 50, background: "#2B2B2B", display: "flex", alignItems: "center", padding: "0 20px", gap: 10 }}>
+          {["#FF5F57", "#FEBC2E", "#28C840"].map((c) => <div key={c} style={{ width: 16, height: 16, borderRadius: 8, background: c }} />)}
+          <div style={{ ...mono, fontSize: 22, color: "#9A9A9A", marginLeft: 14 }}>Terminal: claude</div>
+        </div>
+        <div style={{ padding: "18px 24px" }}>
+          <div style={{ border: `2px solid ${CC}`, borderRadius: 12, padding: "8px 18px", marginBottom: 14 }}>
+            <div style={mono}><span style={{ color: CC }}>✻</span> Welcome to <b>Claude Code</b>!</div>
+            <div style={{ ...mono, fontSize: 23, color: "#8A8A8A" }}>  cwd: ~/video/syncrowin/editor</div>
+          </div>
+          {sent && <div style={{ ...mono, color: "#A8A8A8", background: "#2A2A2A", padding: "0 6px" }}>{"> " + PROMPT}</div>}
+          {CC_LINES.map(([at0, kind, txt], i) => t >= at0 && (
+            <div key={i} style={{ ...mono, marginTop: kind === "out" ? 0 : 8 }}>
+              {kind === "text" && <><span>● </span>{txt}</>}
+              {kind === "tool" && <><span style={{ color: "#4EBA65" }}>● </span><b>{txt.split("(")[0]}</b>({txt.split("(").slice(1).join("(")}</>}
+              {kind === "out" && <span style={{ color: "#9A9A9A" }}>{"  ⎿  " + txt}</span>}
+            </div>
+          ))}
+          {t >= renderAt && (
+            <div style={{ ...mono, color: CC, marginTop: 8 }}>
+              {SPIN[Math.floor(fr / 3) % SPIN.length]} Rendering… <span style={{ color: "#9A9A9A" }}>{`${done}/${TOTAL_FRAMES} frames · esc to interrupt`}</span>
+            </div>
+          )}
+          {!sent && (
+            <div style={{ border: "2px solid #5A5A5A", borderRadius: 10, padding: "4px 14px", marginTop: 6 }}>
+              <div style={mono}>{"> " + typed}<span style={{ background: cursor ? "#E8E8E8" : "transparent" }}> </span></div>
+            </div>
+          )}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const Timer: React.FC<{ t: number }> = ({ t }) => {
+  if (t < W.minute || t >= W.endCard) return null;
+  const remain = Math.max(0, 60 * (1 - (t - W.minute) / (W.watching - W.minute)));
+  const secs = Math.ceil(remain - 1e-6);
+  return (
+    <div style={{ position: "absolute", right: 46, top: 40, ...meme(84), opacity: 1 - revealK(t), transform: `scale(${punch(t, W.minute)})` }}>
+      {`${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}`}
+    </div>
+  );
+};
+
+const NameTag: React.FC<{ t: number }> = ({ t }) => {
+  if (t < W.name || t >= W.endCard) return null;
+  return (
+    <div style={{ position: "absolute", left: 56, top: 170, transform: `rotate(-2deg) scale(${punch(t, W.name)})`, transformOrigin: "0 0" }}>
+      <div style={meme(110)}>MANIT KHERA</div>
+      <div style={{ fontFamily: MONT, fontWeight: 800, fontSize: 38, color: "#fff", WebkitTextStroke: "6px #000", paintOrder: "stroke fill" }}>Software Engineering student, Deakin</div>
+    </div>
+  );
+};
+
+const EndCard: React.FC<{ t: number }> = ({ t }) => {
+  if (t < W.endCard) return null;
+  return (
+    <AbsoluteFill style={{ background: "#000", justifyContent: "center", alignItems: "center", textAlign: "center", color: "#fff", fontFamily: MONT }}>
+      <div style={meme(130)}>MANIT KHERA</div>
+      <div style={{ fontSize: 40, fontWeight: 600, marginTop: 20 }}>Software Engineering student · Deakin University</div>
+      <div style={{ fontSize: 46, fontWeight: 800, marginTop: 70 }}>manitkhera26@gmail.com</div>
+      <div style={{ fontSize: 36, fontWeight: 600, marginTop: 20 }}>linkedin.com/in/manit-khera-603957252</div>
+    </AbsoluteFill>
+  );
+};
+
+// ---------- captions ----------
+type Wd = { w: string; s: number; e: number };
+const cleanWords = (() => {
+  const src = (words as Wd[]).map((x) => ({ ...x }));
+  const res: Wd[] = [];
+  for (let i = 0; i < src.length; i++) {
+    const x = src[i];
+    if (x.w === "or" && src[i - 1]?.w === "100" && src[i + 1]?.w === "100") { res.push({ ...x, w: "out of" }); continue; }
+    if (x.w.startsWith("-") && res.length) { const p = res[res.length - 1]; p.w += x.w; p.e = x.e; continue; }
+    res.push({ ...x, w: x.w === "5000" ? "5,000" : x.w });
+  }
+  return res;
+})();
+const CHUNKS = (() => {
+  const res: { words: Wd[]; s: number; e: number }[] = [];
+  let cur: Wd[] = [];
+  const flush = () => { if (cur.length) res.push({ words: cur.map((c) => ({ ...c, w: c.w.replace(/[.,]+$/, "") })), s: cur[0].s, e: cur[cur.length - 1].e }); cur = []; };
+  cleanWords.forEach((x, i) => {
+    const next = cleanWords[i + 1];
+    cur.push(x);
+    const len = cur.map((c) => c.w).join(" ").length;
+    if (cur.length >= 4 || len > 15 || /[.,?]$/.test(x.w) || !next || next.s - x.e > 0.35) flush();
+  });
+  for (let i = 0; i < res.length; i++) res[i].e = Math.min(res[i].e + 0.25, res[i + 1] ? res[i + 1].s : Infinity);
+  return res;
+})();
+const Captions: React.FC<{ t: number }> = ({ t }) => {
+  if (t >= W.endCard) return null;
+  const c = CHUNKS.find((x) => t >= x.s && t < x.e);
+  if (!c) return null;
+  return (
+    <div style={{ position: "absolute", top: 1600, left: 170, width: 820, textAlign: "center" }}>
+      {c.words.map((w, i) => {
+        // the word being said is yellow; it stays yellow through the pause until the next word starts
+        const next = c.words[i + 1];
+        const on = t >= w.s && (!next || t < next.s);
+        return (
+          <span key={i} style={{ fontFamily: MONT, fontWeight: 900, fontSize: 64, color: on ? "#FFE11A" : "#FFFFFF", WebkitTextStroke: "10px #000",
+            paintOrder: "stroke fill", lineHeight: 1.15, display: "inline-block", margin: "0 15px", transform: on ? "scale(1.08)" : "none" }}>{w.w}</span>
+        );
+      })}
+    </div>
+  );
+};
+
+// ======================================================================
+// Sound (no music)
+// ======================================================================
+const SFX: [string, number, number, number?][] = [
+  ["tick", W.minute, 0.6],
+  ["pop", W.hundred, 0.4], ["pop", W.project, 0.4], ["pop", W.fiveK, 0.4], ["pop", W.six, 0.4],
+  ["echo_that", W.that, 0.9],
+  ["whoosh", W.toss, 0.6], ["whip", W.whip, 0.6],
+  ["pop", W.land, 0.35], ["pop", W.land + 0.06, 0.35], ["pop", W.land + 0.12, 0.35],
+  ["slam", W.curious, 0.35], ["slam", W.energy, 0.35], ["slam", W.experiments, 0.35],
+  ["whip", W.exactlyMe, 0.5],
+  ["glitch", W.breaks, 0.8], ["whip", W.fun, 0.3],
+  ["pop", W.backend, 0.45], ["pop", W.hardware, 0.45], ["pop", W.it, 0.28], ["pop", W.video, 0.45], ["whip", W.video, 0.4],
+  ["scratch", W.because, 0.7], ["typing", W.because + 0.28, 0.45], ["whoosh", W.revealEnd, 0.5],
+  ["clap", W.video + 0.3, 0.45],
+  ["ignite", W.ignite, 0.3], ["puff", W.fist, 0.6], ["ding2", W.watching, 0.5],
+];
+
+const MUSIC_VOL = 0.09;
+
+// ======================================================================
+export const Syncrowin: React.FC = () => {
+  const frame = useCurrentFrame();
+  const t = toTrack(frame / FPS); // rough-cut time
+  const fz = Math.round(FZ * FPS), hold = Math.round(HOLD * FPS), gap = Math.round(AUD_GAP * FPS);
+  const cutA = Math.round(CUT_A * FPS), cutB = Math.round(CUT_B * FPS);
+  const seg3 = cutA + hold; // output frame where the post-explosion footage starts
+  return (
+    <AbsoluteFill style={{ background: "#000" }}>
+      <RevealBackdrop t={t} />
+      <AbsoluteFill style={cameraStyle(t)}>
+        <Sequence from={0} durationInFrames={fz}>
+          <OffthreadVideo muted src={staticFile("th/track.mp4")} />
+        </Sequence>
+        <Sequence from={fz} durationInFrames={hold}>
+          <Img src={staticFile("img/freeze_that.png")} style={{ width: 1080, height: 1920 }} />
+        </Sequence>
+        <Sequence from={fz + hold} durationInFrames={cutA - fz}>
+          <OffthreadVideo muted src={staticFile("th/track.mp4")} startFrom={fz} />
+        </Sequence>
+        <Sequence from={seg3}>
+          <OffthreadVideo muted src={staticFile("th/track.mp4")} startFrom={cutB} />
+        </Sequence>
+        <Glitch t={t} />
+        <Bin t={t} />
+        <PalmProps t={t} />
+        <Explosion t={t} />
+        <Hats t={t} />
+        <Fire t={t} />
+        {t >= W.boom && t < W.boom + 0.1 && <AbsoluteFill style={{ background: "#fff", opacity: lerp(t, [W.boom, W.boom + 0.1], [1, 0]) }} />}
+      </AbsoluteFill>
+      <StartupWords t={t} />
+      <WhatIf t={t} />
+      <NameTag t={t} />
+      <Timer t={t} />
+      <Captions t={t} />
+      <EndCard t={t} />
+
+      {/* voice: continuous through "that", then pauses HOLD so the echo rings on its own */}
+      <Sequence from={0} durationInFrames={gap}><Audio src={staticFile("th/track.mp4")} /></Sequence>
+      <Sequence from={gap + hold} durationInFrames={cutA - gap}><Audio src={staticFile("th/track.mp4")} startFrom={gap} /></Sequence>
+      <Sequence from={seg3}><Audio src={staticFile("th/track.mp4")} startFrom={cutB} /></Sequence>
+
+      {/* Draft 4: bigger boom; plays to the hard cut, then the rumble dies away over 0.25 s under "You're" */}
+      <Sequence from={F(W.boom)} durationInFrames={cutA + hold - F(W.boom) + 8}>
+        <Audio src={staticFile("sfx/boom_big.wav")} volume={(f) => 0.75 * interpolate(f, [cutA + hold - F(W.boom), cutA + hold - F(W.boom) + 8], [1, 0], clamp)} />
+      </Sequence>
+
+      {/* Music: Pixel Peeker Polka (faster), Kevin MacLeod, CC BY 4.0. In on "minute", dead stop on "that",
+          slams back on the hard cut to "You're a startup", ducks under the Claude Code typing, fades on the end card. */}
+      <Sequence from={F(W.minute)} durationInFrames={F(W.that) - F(W.minute)}>
+        <Audio src={staticFile("music/pixel_peeker_polka_faster.mp3")} volume={MUSIC_VOL} />
+      </Sequence>
+      <Sequence from={seg3}>
+        <Audio src={staticFile("music/pixel_peeker_polka_faster.mp3")} startFrom={F(W.that) - F(W.minute)}
+          volume={(f) => {
+            const o = (seg3 + f) / FPS, tt = toTrack(o);
+            const duck = revealK(tt) > 0 ? lerp(revealK(tt), [0, 1], [1, 0.45]) : 1;
+            const end = tt >= W.endCard ? 1.6 : 1;
+            const fade = interpolate(seg3 + f, [TOTAL_FRAMES - 24, TOTAL_FRAMES - 1], [1, 0], clamp);
+            return MUSIC_VOL * duck * end * fade;
+          }} />
+      </Sequence>
+
+      <Sequence from={F(W.ignite) + 6} durationInFrames={F(W.fist) - F(W.ignite) - 6}>
+        <Audio src={staticFile("sfx/crackle.wav")} volume={(f) => 0.35 * interpolate(f, [0, 6], [0, 1], clamp)} />
+      </Sequence>
+      {SFX.map(([name, at0, vol, max], i) => (
+        <Sequence key={i} from={F(at0)} durationInFrames={max ? Math.round(max * FPS) : undefined}>
+          <Audio src={staticFile(`sfx/${name}.wav`)} volume={vol} />
+        </Sequence>
+      ))}
+    </AbsoluteFill>
+  );
+};

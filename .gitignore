@@ -81,14 +81,18 @@ documents/projects/**
 # candidate's weak points.
 documents/applications/**
 documents/postings/**
+# Migrated master notes, work log, story bank, contacts (personal)
+documents/notes/**
 # Belt-and-braces, not the primary guard: nothing writes here. Prep packs land
 # in documents/applications/<company>_<role>/, covered above. Kept because
 # tools/security_guards.py pins it in REQUIRED_IGNORE_RULES.
 documents/interview/**
+documents/video/**
 !documents/**/.gitkeep
 
 # Personal job search tracking
 job_search_tracker.csv
+planned_applications.csv
 
 # Gmail sync state (message IDs, subjects - personal data)
 gmail_sync/
@@ -119,3 +123,8 @@ company_research/*.json
 
 # Brainstorm mockups (superpowers visual companion) - never ship
 .superpowers/
+
+# Personal automation config, logs and outputs (topic name is a secret)
+automation/config.json
+automation/logs/
+job_scraper/latest_scrape.md

@@ -1,0 +1,11 @@
+TITLE (paste into Title):
+Manit Khera - Infosys InStep intro
+
+DESCRIPTION (paste into Description):
+Hi Saloni and the InStep team, I'm Manit, a third-year Software Engineering student at Deakin University. Thanks for watching!
+
+Music: "Pixel Peeker Polka - faster" by Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+VISIBILITY: Unlisted

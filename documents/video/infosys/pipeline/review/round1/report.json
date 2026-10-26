@@ -1,0 +1,339 @@
+{
+ "round": 1,
+ "length": 53.75,
+ "fails": 3,
+ "warnings": 20,
+ "general": [
+  {
+   "level": "warn",
+   "text": "line '9 ML gap' is used 2 times"
+  }
+ ],
+ "pieces": [
+  {
+   "piece": 0,
+   "line": "1 Hook",
+   "at": 0.0,
+   "length": 4.05,
+   "said": "Okay Infosys, at the Australian Open you brought a robot to the Fan Zone.",
+   "match": 1.0,
+   "issues": []
+  },
+  {
+   "piece": 1,
+   "line": "2 Open Day",
+   "at": 4.05,
+   "length": 2.43,
+   "said": "I too brought mine to the Deakin Open Day.",
+   "match": 0.88,
+   "issues": [
+    {
+     "level": "warn",
+     "text": "words differ at the end: raw '' vs cut 'open day'"
+    }
+   ]
+  },
+  {
+   "piece": 2,
+   "line": "3 Meet",
+   "at": 6.48,
+   "length": 8.56,
+   "said": "It started as two separate uni projects, an API and a robot. Nobody said that they should meet, but I still made them meet.",
+   "match": 0.96,
+   "issues": [
+    {
+     "level": "warn",
+     "text": "words differ at the start: raw '' vs cut 'it'"
+    },
+    {
+     "level": "warn",
+     "text": "words differ at the end: raw '' vs cut 'meet'"
+    }
+   ]
+  },
+  {
+   "piece": 3,
+   "line": "4 Chair",
+   "at": 15.04,
+   "length": 5.02,
+   "said": "My unit chef warned me that I might finish neither and for a month he was right.",
+   "match": 0.97,
+   "issues": [
+    {
+     "level": "warn",
+     "text": "words differ at the start: raw '' vs cut 'my'"
+    }
+   ]
+  },
+  {
+   "piece": 4,
+   "line": "5 Worked",
+   "at": 20.06,
+   "length": 4.6,
+   "said": "Then it worked. 100 out of 100 and it got picked for Deakin's Open Day.",
+   "match": 1.0,
+   "issues": []
+  },
+  {
+   "piece": 5,
+   "line": "6 MatchFeel",
+   "at": 24.66,
+   "length": 5.66,
+   "said": "That's why MatchFeel got me. No one expects to follow tennis by touch. You built it anyways.",
+   "match": 0.88,
+   "issues": [
+    {
+     "level": "warn",
+     "text": "words differ at the start: raw '' vs cut 'that's'"
+    },
+    {
+     "level": "warn",
+     "text": "words differ at the end: raw '' vs cut 'anyways'"
+    }
+   ]
+  },
+  {
+   "piece": 6,
+   "line": "7 Robot",
+   "at": 30.32,
+   "length": 4.43,
+   "said": "Same with my robot, nobody asked me to build it. But I still built it anyway.",
+   "match": 0.88,
+   "issues": [
+    {
+     "level": "warn",
+     "text": "words differ at the end: raw '' vs cut 'anyway'"
+    }
+   ]
+  },
+  {
+   "piece": 7,
+   "line": "8 InStep",
+   "at": 34.75,
+   "length": 3.75,
+   "said": "That's the work I want at InStep. AI and robots that leave the screen.",
+   "match": 0.56,
+   "issues": [
+    {
+     "level": "warn",
+     "text": "words differ at the start: raw 'wanted in step' vs cut 'that's the work i want at instep'"
+    },
+    {
+     "level": "warn",
+     "text": "re-transcription only matches 56% of the raw words (check for garbled audio)"
+    }
+   ]
+  },
+  {
+   "piece": 8,
+   "line": "9 ML gap",
+   "at": 38.5,
+   "length": 2.41,
+   "said": "I haven't trained a machine model yet.",
+   "match": 0.77,
+   "issues": [
+    {
+     "level": "warn",
+     "text": "words differ at the start: raw '' vs cut 'i'"
+    },
+    {
+     "level": "warn",
+     "text": "words differ at the end: raw '' vs cut 'yet'"
+    },
+    {
+     "level": "warn",
+     "text": "re-transcription only matches 77% of the raw words (check for garbled audio)"
+    }
+   ]
+  },
+  {
+   "piece": 9,
+   "line": "9 ML gap",
+   "at": 40.91,
+   "length": 4.88,
+   "said": "I haven't trained an ML model yet, but that's what I want to learn from InStep and its mentors.",
+   "match": 0.6,
+   "issues": [
+    {
+     "level": "warn",
+     "text": "words differ at the start: raw '' vs cut 'i haven't trained an ml model yet but'"
+    },
+    {
+     "level": "warn",
+     "text": "words differ at the end: raw '' vs cut 'mentors'"
+    },
+    {
+     "level": "warn",
+     "text": "re-transcription only matches 60% of the raw words (check for garbled audio)"
+    }
+   ]
+  },
+  {
+   "piece": 10,
+   "line": "10 Close",
+   "at": 45.79,
+   "length": 7.96,
+   "said": "So yeah, I'm Manit Khera and I usually end up doing more than what is asked of me. Thank you so much for watching.",
+   "match": 0.98,
+   "issues": [
+    {
+     "level": "warn",
+     "text": "words differ at the start: raw '' vs cut 'so'"
+    }
+   ]
+  }
+ ],
+ "joins": [
+  {
+   "join": 1,
+   "at": 4.05,
+   "between": [
+    "1 Hook",
+    "2 Open Day"
+   ],
+   "gap": 0.91,
+   "loudness_jump_db": 1.2,
+   "image": "pipeline/review/round1/join_01.png",
+   "issues": [
+    {
+     "level": "fail",
+     "text": "dead air 0.91s"
+    }
+   ]
+  },
+  {
+   "join": 2,
+   "at": 6.48,
+   "between": [
+    "2 Open Day",
+    "3 Meet"
+   ],
+   "gap": 0.24,
+   "loudness_jump_db": 0.3,
+   "image": "pipeline/review/round1/join_02.png",
+   "issues": []
+  },
+  {
+   "join": 3,
+   "at": 15.04,
+   "between": [
+    "3 Meet",
+    "4 Chair"
+   ],
+   "gap": 0.21,
+   "loudness_jump_db": null,
+   "image": "pipeline/review/round1/join_03.png",
+   "issues": []
+  },
+  {
+   "join": 4,
+   "at": 20.06,
+   "between": [
+    "4 Chair",
+    "5 Worked"
+   ],
+   "gap": 1.2,
+   "loudness_jump_db": 1.6,
+   "image": "pipeline/review/round1/join_04.png",
+   "issues": [
+    {
+     "level": "fail",
+     "text": "dead air 1.20s"
+    }
+   ]
+  },
+  {
+   "join": 5,
+   "at": 24.66,
+   "between": [
+    "5 Worked",
+    "6 MatchFeel"
+   ],
+   "gap": 0.26,
+   "loudness_jump_db": 5.1,
+   "image": "pipeline/review/round1/join_05.png",
+   "issues": [
+    {
+     "level": "warn",
+     "text": "loudness changes 5.1 dB"
+    }
+   ]
+  },
+  {
+   "join": 6,
+   "at": 30.32,
+   "between": [
+    "6 MatchFeel",
+    "7 Robot"
+   ],
+   "gap": 0.25,
+   "loudness_jump_db": 5.0,
+   "image": "pipeline/review/round1/join_06.png",
+   "issues": [
+    {
+     "level": "warn",
+     "text": "loudness changes 5.0 dB"
+    }
+   ]
+  },
+  {
+   "join": 7,
+   "at": 34.75,
+   "between": [
+    "7 Robot",
+    "8 InStep"
+   ],
+   "gap": 0.29,
+   "loudness_jump_db": 3.8,
+   "image": "pipeline/review/round1/join_07.png",
+   "issues": []
+  },
+  {
+   "join": 8,
+   "at": 38.5,
+   "between": [
+    "8 InStep",
+    "9 ML gap"
+   ],
+   "gap": 0.25,
+   "loudness_jump_db": 1.0,
+   "image": "pipeline/review/round1/join_08.png",
+   "issues": []
+  },
+  {
+   "join": 9,
+   "at": 40.91,
+   "between": [
+    "9 ML gap",
+    "9 ML gap"
+   ],
+   "gap": 0.26,
+   "loudness_jump_db": 0.7,
+   "image": "pipeline/review/round1/join_09.png",
+   "issues": [
+    {
+     "level": "fail",
+     "text": "words repeated across the cut: 'i haven't trained'"
+    }
+   ]
+  },
+  {
+   "join": 10,
+   "at": 45.79,
+   "between": [
+    "9 ML gap",
+    "10 Close"
+   ],
+   "gap": 0.25,
+   "loudness_jump_db": 6.5,
+   "image": "pipeline/review/round1/join_10.png",
+   "issues": [
+    {
+     "level": "warn",
+     "text": "loudness changes 6.5 dB"
+    }
+   ]
+  }
+ ],
+ "start_end_image": "pipeline/review/round1/start_end.png"
+}

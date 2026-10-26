@@ -1,0 +1,23 @@
+{
+  "company": "Tesla",
+  "fetched_date": "2026-10-23",
+  "sources": {
+    "website": {
+      "url": "https://www.tesla.com/findus/location/service/melbourne",
+      "notes": "Search lead only: Melbourne service centre 650 Church St, Cremorne. No confirmed Tesla Energy office address in Melbourne; tesla.com/careers disallowed by robots.txt. Nothing found on the Industrial Energy Product Engineering team."
+    },
+    "reviews": {
+      "url": "",
+      "notes": "Not checked."
+    },
+    "linkedin": {
+      "url": "",
+      "notes": "Not checked."
+    },
+    "media": {
+      "url": "https://www.enerdata.net/publications/daily-energy-news/australia-switches-600-mw16-gwh-melbourne-renewable-energy-hub.html",
+      "notes": "Verified: Melbourne Renewable Energy Hub, Plumpton VIC, 444 Tesla Megapacks, 600 MW / 1.6 GWh, SEC + Equis, commercial operation Dec 2025 (Enerdata 10 Dec 2025; SEC factsheet). Victorian Big Battery near Geelong, Neoen partner, 300 MW / 450 MWh, 210 Megapacks per AusNet project page (212 in some sources), operating since Dec 2021; 2021 fire during testing (avoid). Shanghai Megafactory supplies Megapacks to Australian customers (pv magazine Australia, 18 Feb 2025)."
+    }
+  },
+  "network_contacts_note": "None identified."
+}

@@ -1,0 +1,19 @@
+- [Only finished projects](only-finished-projects.md) — excluded projects list; ask before adding new ones
+- [Job records locations](job-records-locations.md) — tracker, planned_applications.csv, application folders, scraped jobs, outreach lists
+- [Intro video outreach](intro-video-outreach.md) — video + EOI strategy for funded Melbourne startups
+- [Cover letter template](cover-letter-template-deakintalent.md) — DeakinTALENT Word template is the CL default, not cover.cls
+- [Third-year student](year-level-third-year.md) — third/penultimate year as of Oct 2026, never second-year
+- [CV template](cv-template-master-v7.md) — one-page master v7 Word layout is the CV default, not LaTeX
+- [Events calendar](events-calendar.md) — upcoming Meetup RSVPs with dates and venues; full list in documents/notes/events.md
+- [Application history from Gmail](application-history-from-gmail.md) — Bosch, KPMG (untracked), Suncorp assessment, Mill/Asta/GHD closures
+- [Pending decisions 2026-10-20](pending-decisions-2026-10-20.md) — open questions to raise next session (Capgemini, Arcitecta, Bosch/KPMG, cleanup)
+- [Phone access plan](phone-access-plan.md) — deferred: private repo + cloud sessions + pull/push hooks, so he can work from his phone
+- [Automation setup](automation-setup-in-progress.md) — scheduled gmail-sync/scrape/event reminders + ntfy push: built and scheduled; phone setup + wake check left
+- [No availability caveats](no-availability-caveats.md) — never volunteer visa/part-time limits in CVs or letters; state start date only
+- [Video script style](video-script-style.md) — read documents/video/SCRIPT-RULES.md before any video script; one story, sentences hand off
+- [Video pipeline plan](video-pipeline-plan.md) — deferred: two-phase video pipeline (auto cut+music+transition review, then planned visuals), approval gates
+- [Video style references](video-style-references.md) — videos Manit likes (Mark Leruste video CV, PremiumBeat + other roundups); list in documents/video/REFERENCES.md
+- [No AI-sounding copy](no-ai-sounding-copy.md) — plain human voice; never riff on company slogans or quote their values back
+- [Video edit style](video-edit-style-human.md) — old-PewDiePie human edit: snap zooms, B&W + echo beats, meme text, real photo cutouts; no brand colours or AI-looking effects
+- [Catch-up command](catchup-command.md) — /catchup = scrape + gmail sync + buried-reply sweep + dashboard in one run
+- [Skill to make later](skill-to-make-later.md) — Manit wants a new skill, topic not remembered yet; ask him, don't guess

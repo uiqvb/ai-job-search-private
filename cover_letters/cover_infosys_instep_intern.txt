@@ -1,0 +1,37 @@
+## Sender
+Manit Khera
+12 Jenner Street
+Blackburn South, VIC 3130
+0412 761 206
+manitkhera26@gmail.com
+
+## Date
+Wednesday 21 October 2026
+
+## Recipient
+Saloni Agarwal
+InStep Internship Program
+Infosys
+Two Melbourne Quarter
+Docklands, VIC 3008
+
+## Greeting
+Dear Saloni Agarwal,
+
+## RE
+RE: InStep International Internship in GenAI, Robotics and Machine Learning, Melbourne (starting 18 January 2027)
+
+## Body
+I am writing to apply for the Infosys InStep International Internship in GenAI, Robotics and Machine Learning in Melbourne, which I found on LinkedIn. What draws me to Infosys is a robot and a tennis court. At the Australian Open 2026, Infosys brought Rally, a humanoid robot powered by generative AI, to the Fan Zone, and piloted MatchFeel, where a magnetic ring traces the ball across engraved court lines so blind and visually impaired fans can follow a match by touch. That is the work I want to do: software that leaves the screen and changes what a person can do in the real world.
+
+I am a third-year (penultimate-year) student in a Bachelor of Software Engineering (Honours) at Deakin University, finishing in 2028, with a WAM of 81.33 and marks of 100 in Data Structures and Algorithms and in Backend Development. I connected two unrelated final projects so that my C# backend, which scored 100/100 and was shown at Deakin Open Day, drove my Arduino and Raspberry Pi robot, which I programmed in C++ and Python. When the robot reset at random, I did not guess: I added reset telemetry and traced the fault to a failing buck converter. I also measure what I build. By removing race conditions and scaling a dispatch API across two Azure replicas, I lifted throughput 6.05 times, and automated scanning in my pipeline cut container vulnerability findings by 93%. I use Claude Code, a generative AI coding tool, every day. I have not yet trained a machine learning model, and that is the gap I most want InStep's mentors to help me close.
+
+MatchFeel stays with me because it is built the way I like to build. Live data drives a physical device, and the design starts from the person using it, not the feature. Volunteering with the Boroondara Stroke Support Group, I have learnt that technology only helps when it fits the people it is for. I also like that this work happens in Melbourne. Infosys's Living Lab at Two Melbourne Quarter was built for clients, start-ups and academia to prototype alongside Infosys, and InStep works with Victorian universities, including Deakin. I want to learn how Infosys takes an idea from a prototype to something thousands of people use on the same day.
+
+I am available to start on 18 January 2027. My resume is attached, along with a short video introducing myself, and I would welcome an interview. Thank you for your consideration.
+
+## Sign-off
+Kind regards,
+
+## Name
+Manit Khera

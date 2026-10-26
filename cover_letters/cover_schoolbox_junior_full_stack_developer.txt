@@ -1,0 +1,35 @@
+## Sender
+Manit Khera
+12 Jenner Street
+Blackburn South, VIC 3130
+0412 761 206
+manitkhera26@gmail.com
+
+## Date
+Friday 23 October 2026
+
+## Recipient
+Hiring Manager
+Schoolbox
+Melbourne, VIC
+
+## Greeting
+Dear Hiring Manager,
+
+## RE
+RE: Junior Full Stack Developer position
+
+## Body
+I am writing to apply for the Junior Full Stack Developer position at Schoolbox, which I found on LinkedIn. I want my first developer role to be on a product people use every day, and a school platform used by teachers, students and families is that kind of product.
+
+I am a third-year (penultimate-year) student in a Bachelor of Software Engineering (Honours) at Deakin University, finishing in 2028, with a WAM of 81.33, 100 in Backend Development and 92 in Object-Oriented Programming. My Backend Development project was selected for the Deakin Open Day showcase. I built DEV@Deakin, a full-stack web app in React and Node.js/Express, with JWT sign-in, TOTP two-factor login, server-enforced premium access and XSS-sanitised Markdown, covered by 24 automated tests. On a robot dispatch API, I cut redundant SQL queries and made PostgreSQL job claims atomic, which together with async I/O raised throughput 6.05 times, and I checked the result across 80 benchmark runs. When a change broke a live page on the WordPress site I maintain for a stroke support group, I traced the cause and rolled it back myself. That site runs on PHP, but I have not written PHP code myself yet. My object-oriented work is in C#, where I built one API with three interchangeable data layers, and I expect PHP's classes and patterns to carry over quickly. I have also not worked in a formal Agile team, so the code reviews and ceremonies are a part of the role I would value. I use Claude Code daily for coding, testing and troubleshooting.
+
+Schoolbox began in 2002 from a conversation between developers and a school, and it now runs in hundreds of schools across more than a dozen countries. I also noticed that your customer-relationship staff are former educators, which tells me the product is built close to the people who use it. Some of my favourite work has been helping people learn, from designing the seeded bugs for a 30-attendee debugging workshop to training volunteers to publish their own monthly calendar. On the technical side, Schoolbox connects to school information systems such as Compass, Sentral and Synergetic, and that kind of integration work is close to the REST APIs I have built.
+
+My resume is attached. I would welcome an interview to talk about how I could contribute to the Schoolbox engineering team. Thank you for your time and consideration.
+
+## Sign-off
+Kind regards,
+
+## Name
+Manit Khera

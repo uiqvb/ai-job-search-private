@@ -4,6 +4,20 @@ framework_version: 1.0.2
 
 # Cover Letter Templates and Tailoring Guide
 
+<!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
+> **Active template override: `deakintalent`**
+>
+> A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
+>
+> - **Template skeleton:** `templates/cover_letters/deakintalent/template.txt` — use this as the structural reference instead of the stock template (it fills `template.docx`, the DeakinTALENT Word template)
+> - **Manifest:** `templates/cover_letters/deakintalent/TEMPLATE.md` — read this for style rules and known pitfalls before drafting
+> - **Source extension:** `.txt` (not `.tex`; plain text with `## Section` headings, no LaTeX escaping)
+> - **Compile command:** `python ../templates/cover_letters/deakintalent/build_cover.py <file>.txt` (not the xelatex command in the stock guidance below — `/apply`'s compile step must use this instead). Run it from `cover_letters/`. It writes `<file>.docx` and `<file>.pdf` via Microsoft Word; no `build/` folder, nothing to clean up, keep both outputs
+> - **Fonts:** Calibri 10pt (system font, from the template)
+> - **Page limit:** exactly 1 page(s)
+> - **Output file:** `cover_letters/cover_<company>_<role>.txt` (plus the generated `.docx` and `.pdf`); the template files are referenced by relative path, nothing to copy
+<!-- END ACTIVE-TEMPLATE -->
+
 ## Template: Custom cover.cls (XeLaTeX)
 
 Cover letters use a custom LaTeX document class (`cover.cls`) with Lato/Raleway fonts.
@@ -76,7 +90,7 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TITLE NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{}{\Huge{[YOUR_NAME]}}{  \href{mailto:[YOUR_EMAIL]}{[YOUR_EMAIL]} | [YOUR_PHONE] |  \urlstyle{same}\href{[YOUR_LINKEDIN_URL]}{LinkedIn}
+\namesection{}{\Huge{Manit Khera}}{  \href{mailto:manitkhera26@gmail.com}{manitkhera26@gmail.com} | 0412 761 206 |  \urlstyle{same}\href{https://www.linkedin.com/in/manit-khera-603957252}{LinkedIn}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,10 +122,18 @@ The font wrapper is mandatory — if you just move `\begin{itemize}` outside `\l
 % doubled break triggers "! LaTeX Error: There's no line here to end."
 \closing{Kind regards,}
 
-\signature{[YOUR_NAME]}
+\signature{Manit Khera}
 \end{flushright}
 \end{document}
 ```
+
+## Candidate-specific overrides (Manit)
+
+Manit follows the DeakinTALENT cover letter guide (`03-writing-style.md`, "DeakinTALENT Rules"):
+- **No bullet list.** Write the body as prose paragraphs and drop the itemize block from the structure above.
+- Greeting "Dear Firstname Lastname," or "Dear Hiring Manager,". Add a reference line (`RE: <position>, REF: <number>`) when the ad gives one.
+- Introduction says where the ad was found. Body one: degree, expected completion (2028), WAM, two or three evidenced skills. Body two: organisation research. Closing: attachments, interview request, thanks.
+- Sign-off "Kind regards,". UK spelling. Numbers one to ten as words.
 
 ## Key Commands Reference
 

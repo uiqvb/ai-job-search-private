@@ -1,0 +1,24 @@
+started 2026-10-21 01:01  exit 0
+usage: claude-sonnet-5-5 | in 12 + cache write 55,833 + cache read 277,890 | out 3,093 | 14 turns | 0.6 min | API-equivalent cost $0.28
+
+## Gmail Sync (unattended) - 2026-10-21
+
+I scanned 16 threads since 2026-10-19 and found no new application signals. I didn't touch the tracker or any `outcome.md`.
+
+- **Still pending approval:** the two entries already in `gmail_sync/pending.md` are unchanged.
+  - **Capgemini:** the application acknowledgement would move `drafted` to `applied`, with the date set to 2026-10-20.
+  - **Arcitecta:** the Hack2Hire sign-up isn't an application acknowledgement, so someone needs to ask Manit whether the internship application was actually submitted.
+- **Noise:** nine new messages were LinkedIn alerts and digests. I marked them processed in `state.json` and set `last_sync` to 2026-10-21.
+- **Events:** nothing changed in `documents/notes/events.md`. The one new Meetup announcement was TechWalking in Geelong, which I skipped as out of Melbourne. I refreshed the date on the events memory snapshot.
+- **Stale applications:** none. Nothing is 30+ days old, and `drafted` rows are skipped for this check.
+- **Next three events:**
+  - GDG Coding Night, today (21 Oct), 5:45 pm. It's still waitlisted.
+  - SEEK CTO fireside chat, 5 Nov, 12:15 pm.
+  - Melbourne Python Meetup, 12 Nov, 5:30 pm.
+- **Tekt reply due:** Tekt Industries promised a reply by about 23 Oct.
+- **Andromeda nudge due:** the follow-up nudge to Natalie at Andromeda Robotics is due 28 Oct.
+
+NOTIFY: No new application updates, 2 pending approvals
+NOTIFY: 2 pending updates waiting for approval (Capgemini ack, Arcitecta check)
+NOTIFY: GDG Coding Night today 5:45pm (waitlisted)
+NOTIFY: Tekt reply due about 23 Oct

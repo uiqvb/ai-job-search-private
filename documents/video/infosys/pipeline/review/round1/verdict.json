@@ -1,0 +1,11 @@
+{
+ "verdict": "fix",
+ "summary": "join 1 dead air (Hook out 53.15->52.60, Open Day in 80.73->80.95); drop piece 8 (duplicate ML line); piece 9 out 418.30->418.40; joins 3/4 holds overruled as planned",
+ "for_manit": [
+  "Line 10 exact words differ (only take)",
+  "Listen joins 5,6,10 loudness",
+  "'chair' vs 'chef' line 4",
+  "check 'Okay' onset and 'mentors' tail",
+  "mic in hand lines 1-2, clipped on later"
+ ]
+}

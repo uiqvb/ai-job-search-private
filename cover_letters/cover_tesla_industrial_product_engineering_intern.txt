@@ -1,0 +1,36 @@
+## Sender
+Manit Khera
+12 Jenner Street
+Blackburn South, VIC 3130
+0412 761 206
+manitkhera26@gmail.com
+
+## Date
+Friday 23 October 2026
+
+## Recipient
+Hiring Manager
+Industrial Energy Product Engineering
+Tesla
+Melbourne, VIC
+
+## Greeting
+Dear Hiring Manager,
+
+## RE
+RE: Industrial Product Engineering Intern, Megapack, Energy position
+
+## Body
+I am writing to apply for the Industrial Product Engineering Intern (Megapack, Energy) position, which I found on LinkedIn. What drew me to it is the mix of field troubleshooting and building the tools that make the next fault quicker to find. It is the work I have enjoyed most at university, on robots I built myself.
+
+I am a third-year (penultimate-year) student in a Bachelor of Software Engineering (Honours) at Deakin University, finishing in 2028, with a WAM of 81.33, 93 in Embedded Systems and 100 in Backend Development, where my robot project was selected for the Deakin Open Day showcase. My clothesline robot kept resetting at random. Rather than swapping parts until it stopped, I read the boot ID and reset-cause fields in its telemetry, which pointed to voltage sag, and traced it to a failing buck converter. The same robot ran a Linux-based application that I built and maintained. Its Python service ran under systemd on a Raspberry Pi and received JSON telemetry over MQTT every five seconds from Arduino firmware I wrote in C++. My Robot Controller API stores an inverse with every command it hands the robot, and I tested the offline rollback on the physical robot until it came back to its exact predicted grid position. I work in Python and SQL, analysed 80 benchmark runs to measure a 6.05 times throughput gain on a robot dispatch API, and use Claude Code daily to build and test tools quickly. My degree is software rather than electrical, and I have not yet worked with power systems, battery systems or CAN bus. My electronics knowledge comes from embedded work with I2C sensors, a motor driver and that buck converter fault. I would start by learning how a Megapack reports its own faults and what data the team already collects.
+
+Megapacks are already part of Victoria's grid. The Victorian Big Battery near Geelong, delivered with Neoen, is built from 210 of them, and the Melbourne Renewable Energy Hub at Plumpton, which began operating in late 2025, uses 444. Once sites like these are commissioned, the useful work is spotting a fault early across hundreds of units, before a customer sees downtime, and that is the kind of analytics this role describes. With Tesla's Shanghai Megafactory now building Megapacks for Australian customers, the local fleet and its data will keep growing. I would like to help turn that data into tools the field team actually uses.
+
+My resume is attached. I would welcome an interview to talk through the brownout and the rollback testing in more detail. Thank you for your time and consideration.
+
+## Sign-off
+Kind regards,
+
+## Name
+Manit Khera

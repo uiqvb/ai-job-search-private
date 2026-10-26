@@ -28,6 +28,13 @@ Read the posting's eligibility / work rights / "who can apply" section **verbati
 
 If the candidate's permit also constrains *hours* or *start date* (a student visa with a term-time cap, a permit that begins on graduation), record that as a second gate under this section during `/setup`, with the specific dates. Do not merge it with the eligibility question above — they fail for different reasons and need different answers.
 
+### Candidate-specific gates (Manit, set by /setup 2026-10-20)
+
+- **Eligibility:** holds an Australian student visa (subclass 500). Not a citizen or PR. Citizenship/PR or security clearance requirements FAIL. Many Australian graduate and defence/government programs gate on this; check before drafting.
+- **Hours / timing (separate gate):** assumed standard subclass 500 conditions: capped hours per fortnight while a trimester is in session, unrestricted during scheduled breaks (roughly Nov to Feb). A role needing full-time work during a trimester (Mar to Jun, Jul to Oct) FAILS timing unless it is part-time within the cap. A summer placement running into March: FLAG and confirm dates. Verify the exact conditions against the visa grant before answering any work-rights form question.
+- **Year level:** third-year (penultimate) of four years, finishing 2028. Roles reserved for final-year or graduating students: FLAG (he has applied to some anyway; tell him, don't skip silently).
+- **Driver's licence:** none. "Licence and car required" FAILs logistics; "desirable" is a FLAG.
+
 A role that fails this gate is not scored and not drafted. Everything below applies only to roles that pass it.
 
 ## Language Gate — run before scoring
@@ -60,9 +67,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** C# / .NET 8 / ASP.NET Core / EF Core REST APIs; PostgreSQL; backend performance, concurrency and reliability (rollback, atomic job claims, load testing); Arduino C/C++ firmware and sensor/motor integration; Raspberry Pi + Python/Flask; MQTT; Docker, Jenkins CI/CD, Azure; automated testing (xUnit); AI-assisted development with Claude Code
+**Moderate match areas:** TypeScript/React/Next.js/Node.js; Python beyond Flask; Fusion 360 CAD; teaching and facilitation (workshops, training new starters); social media/community engagement
+**Weak match areas:** ROS/ROS2, PID/control theory, computer vision/OpenCV/OCR, ML model training, statistics/experimental design, PCB design, 3D printing/fabrication, Java, mobile, cloud certifications
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +81,9 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** student-level backend and robotics software (three robotics-adjacent projects across three units, one showcased at Open Day); website support for a not-for-profit (volunteer, 15+ months)
+**Moderate:** customer-facing service (7-Eleven, Open Day ambassador); student clubs (LinkedIn manager, committee); teaching support (debugging workshop, training new staff)
+**Entry-level:** everything professional. **No paid software job yet.** Score internships, vacation programs and junior/casual roles; treat any role asking for 1+ years of industry software experience as an Experience gap, and graduate roles as only eligible if they accept a 2028 completion
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -91,10 +98,11 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
-- Frequent international travel: FLAG (discuss with user)
+- Melbourne onsite or hybrid, reachable by public transport from Blackburn South: PASS (eastern suburbs and CBD are easiest; outer west/north and industrial estates far from a station: FLAG with travel time)
+- Fully remote, anywhere in Australia or overseas: PASS (check time zone and that the employer can hire an Australian student visa holder)
+- Onsite outside Melbourne (Sydney, Brisbane, interstate), or requires relocation: FAIL (deal-breaker; e.g. OZGRADS Sydney, declined)
+- Requires a car or driver's licence: FAIL
+- Frequent travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
 Does this role advance career goals and contain tasks that energize?
@@ -107,19 +115,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Land a first software/engineering internship, ideally robotics, embedded or firmware (summer Nov to Feb, or part-time during term)
+- Build toward backend / systems engineering where software drives real hardware
+- Explore AI and agent research (applied AI, agent workflows); bridging roles in tutoring and kids' STEM facilitation are acceptable stepping stones
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: building systems that touch real hardware, debugging hard faults, performance work with measurable results, open-ended "what if" problems, demoing what he built
+- Tasks that drain: pure maintenance or ticket triage, repetitive retail-style duties, roles where interns only observe
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: international student; paid work preferred. **Minimum acceptable pay: Australian national minimum wage** (or the applicable award/intern rate). Unpaid roles are a FLAG, not auto-skip: only worth it if short and clearly career-relevant (e.g. the Deakin A2I2 research internship)
+- **Flexibility**: full-time only in course breaks (Nov to Feb); 2 to 3 days/week max during trimesters; weekday availability set each term around the timetable
+- **Professional development**: real engineering mentorship, hands-on hardware/software work, a reference from industry
 
 ### 6. Salary Benchmark (Optional)
 
@@ -267,3 +275,10 @@ Before writing the application, consider whether the candidate should call the c
 - The call's purpose is **gathering information**, not delivering a pitch
 - Take notes - use what you learn to tailor the application
 - Reference the conversation naturally in the cover letter ("After speaking with [name], I was especially drawn to...")
+
+## Calibration from Past Applications
+*[From the Resume folder tracker and CLAUDE.md, Jul to Oct 2026. Review before relying on this.]*
+
+- **Rejected:** CSIRO Vacation Studentship, Microsoft/Clipchamp SWE intern, Suncorp vacation program, Deloitte, AEMO talent pool, Deakin Student Experience Ambassador and Assistant, DeakinTALENT Career Ambassador. Pattern: large structured intern/graduate programs and Deakin student-services roles have all said no so far. Big programs screen hard on year level and work rights; treat them as long shots.
+- **Awaiting (as of 20 Oct 2026):** Andromeda Robotics (engineering summer intern), Deakin A2I2 research internships x3, Rosterfy EOI, ReSource imaging station intern, NxtGen intern challenge, Tekt mechatronics intern, Asta Solutions, Mill Software, plus 8 cold emails to Melbourne robotics/AI startups.
+- No interview yet, so there is no confirmed strong-fit signal. Smaller Melbourne robotics/hardware startups, where the build portfolio carries more weight than year level, are the current best bet.

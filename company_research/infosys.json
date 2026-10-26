@@ -1,0 +1,33 @@
+{
+  "company": "Infosys",
+  "fetched_date": "2026-10-21",
+  "sources": {
+    "website": {
+      "url": "https://www.infosys.com/newsroom/press-releases/2022/launches-living-lab-ecosystem-melbourne.html",
+      "notes": "403 to fetchers; snippet only. Contact page snippet: Level 4, 697 Collins Street, Docklands VIC 3008 (unverified)."
+    },
+    "reviews": {
+      "url": "",
+      "notes": "not researched"
+    },
+    "linkedin": {
+      "url": "",
+      "notes": "not researched"
+    },
+    "media": {
+      "url": "https://invest.vic.gov.au/understand-the-market/explore-investment-success-stories/infosys-reinvests-in-melbourne-through-living-labs",
+      "notes": "Verified via fetch_page 2026-10-21 (Invest Victoria, 25 Oct 2022): Melbourne office since 1999; Melbourne Living Lab in five-floor, 9,200 sqm office at Two Melbourne Quarter, Docklands; for clients, partners, start-ups, local academia and government; Infosys explores IoT, AI, AR, VR, ML, robotics; InStep collaborates with UniMelb, Deakin, Monash, RMIT; Australian Open digital partner (4th year in 2022). Vault '#1 five years' unverified, do not use."
+    },
+    "media_ao2026": {
+      "url": "https://www.aap.com.au/aapreleases/cision20260128ae73104",
+      "notes": "Verified 2026-10-21 (AAP/Cision, 28 Jan 2026): Infosys + Tennis Australia AO 2026, powered by Infosys Topaz. Rally = GenAI humanoid robot at the Infosys Fan Zone. MatchFeel = pilot tactile court for blind/visually impaired fans: magnetic ring traces the ball across engraved court lines, vibration shows speed/direction, synced commentary. Also Keys to the Match, Gen AI Stadium (VR), AI Commentary, AI Shot of the Day. Digital innovation partner (eight-year partnership per 2026 release)."
+    }
+  },
+  "network_contacts_note": "Posting gives a recruiter email for resume submission (InStep, Infosys).",
+  "values": {
+    "purpose": "To amplify human potential and create the next opportunity for people, businesses and communities (infosys.com/about; Nandan Nilekani)",
+    "c_life": "Client Value (exceed client expectations consistently); Leadership by Example (ordinary people can be inspired and mentored to achieve extraordinary results); Integrity and Transparency; Fairness (objectivity, empathy, care); Excellence (relentless effort, continuous self-improvement)",
+    "sources": "infosys.com/about; Infosys Code of Conduct in SEC filing infy-ex11_2.htm; Talent Pulse Report 2023",
+    "verified": "2026-10-21"
+  }
+}

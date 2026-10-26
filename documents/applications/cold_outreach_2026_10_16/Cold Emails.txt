@@ -1,0 +1,173 @@
+# Cold outreach emails, 16 October 2026
+
+Attach to every email: Manit Khera Resume.pdf and Manit Khera Portfolio.pdf (this folder).
+Same subject line for all: Summer internship enquiry, Deakin software engineering student (Manit Khera)
+Field Sense Robotics: no website or contact found. Skipped until Manit says where he found it.
+
+======================================================================
+Apollo Medical Imaging Technology
+To: info@apollomit.com
+Subject: Summer internship enquiry, Deakin software engineering student (Manit Khera)
+
+Hi Apollo team,
+
+I'm Manit, a third-year Software Engineering (Honours) student at Deakin University, and I'm writing to ask whether you might have room for an intern this summer.
+
+MIStar caught my attention because stroke is the first application you list. I volunteer as IT support for the Boroondara Stroke Support Group, so I know a little about the people on the other side of that diagnosis, and I would love to learn how software like yours supports the doctors treating them.
+
+I build software that works with real hardware. My main project is a sensor-driven robot I wired and programmed myself on an Arduino and a Raspberry Pi, controlled by a .NET backend that scored 100/100 and ran live at Deakin Open Day. I later load-tested that backend against 5,000 simulated robots and took it from zero completed jobs to about 1,000 a second. My resume and a short portfolio with demo videos are attached.
+
+I'm available full-time over the summer break, from November to February, or part-time around my classes. I'd be grateful for any opportunity, even a short conversation about how your team works.
+
+Thank you for your time,
+
+Manit Khera
+0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252
+
+======================================================================
+Exergenics
+To: careers@exergenics.com
+Subject: Summer internship enquiry, Deakin software engineering student (Manit Khera)
+
+Hi Exergenics team,
+
+I'm Manit, a third-year Software Engineering (Honours) student at Deakin University, and I'm writing to ask whether you might have room for an intern this summer.
+
+Optimising real HVAC plants from live building data appeals to me because so much of my own work has been about deciding when sensor data is trustworthy enough to act on, and cutting a building's energy use and emissions is a very good reason to get that right.
+
+I build software that works with real hardware. My main project is a sensor-driven robot I wired and programmed myself on an Arduino and a Raspberry Pi, controlled by a .NET backend that scored 100/100 and ran live at Deakin Open Day. I later load-tested that backend against 5,000 simulated robots and took it from zero completed jobs to about 1,000 a second. My resume and a short portfolio with demo videos are attached.
+
+I'm available full-time over the summer break, from November to February, or part-time around my classes. I'd be grateful for any opportunity, even a short conversation about how your team works.
+
+Thank you for your time,
+
+Manit Khera
+0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252
+
+======================================================================
+AOS Group
+To: info@aosgrp.com.au  (or the form at aosgrp.com.au/careers, which welcomes undergraduates)
+Subject: Summer internship enquiry, Deakin software engineering student (Manit Khera)
+
+Hi AOS team,
+
+I'm Manit, a third-year Software Engineering (Honours) student at Deakin University, and I'm writing to ask whether you might have room for an intern this summer.
+
+Your work on intelligent agents and autonomous systems, from the JACK platform to robotics systems like KELPIE and HERCULES, sits right where my interests are: software that makes the decisions, on hardware that carries them out.
+
+I build software that works with real hardware. My main project is a sensor-driven robot I wired and programmed myself on an Arduino and a Raspberry Pi, controlled by a .NET backend that scored 100/100 and ran live at Deakin Open Day. I later load-tested that backend against 5,000 simulated robots and took it from zero completed jobs to about 1,000 a second. My resume and a short portfolio with demo videos are attached.
+
+I'm available full-time over the summer break, from November to February, or part-time around my classes. I'd be grateful for any opportunity, even a short conversation about how your team works.
+
+Thank you for your time,
+
+Manit Khera
+0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252
+
+======================================================================
+Aurova
+To: info@aurova.com.au
+Subject: Summer internship enquiry, Deakin software engineering student (Manit Khera)
+
+Hi Aurova team,
+
+I'm Manit, a third-year Software Engineering (Honours) student at Deakin University, and I'm writing to ask whether you might have room for an intern this summer.
+
+Automating land maintenance without relying on GPS is a problem I find fascinating. My own robot gets around without any positioning system at all, just infrared sensors following a line, so I have a small taste of how much depends on sensing the ground in front of you.
+
+I build software that works with real hardware. My main project is a sensor-driven robot I wired and programmed myself on an Arduino and a Raspberry Pi, controlled by a .NET backend that scored 100/100 and ran live at Deakin Open Day. I later load-tested that backend against 5,000 simulated robots and took it from zero completed jobs to about 1,000 a second. My resume and a short portfolio with demo videos are attached.
+
+I'm available full-time over the summer break, from November to February, or part-time around my classes. I'd be grateful for any opportunity, even a short conversation about how your team works.
+
+Thank you for your time,
+
+Manit Khera
+0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252
+
+======================================================================
+Vivenex AI
+To: admin@vivenexai.com
+Subject: Summer internship enquiry, Deakin software engineering student (Manit Khera)
+
+Hi Vivenex team,
+
+I'm Manit, a third-year Software Engineering (Honours) student at Deakin University, and I'm writing to ask whether you might have room for an intern this summer.
+
+Companion robots that support safer ageing feel close to home for me. I volunteer as IT support for a stroke support group, and I would love to help build robots that people actually live alongside.
+
+I build software that works with real hardware. My main project is a sensor-driven robot I wired and programmed myself on an Arduino and a Raspberry Pi, controlled by a .NET backend that scored 100/100 and ran live at Deakin Open Day. I later load-tested that backend against 5,000 simulated robots and took it from zero completed jobs to about 1,000 a second. My resume and a short portfolio with demo videos are attached.
+
+I'm available full-time over the summer break, from November to February, or part-time around my classes. I'd be grateful for any opportunity, even a short conversation about how your team works.
+
+Thank you for your time,
+
+Manit Khera
+0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252
+
+======================================================================
+Element Robotics
+To: founders@elementrobotics.space
+Subject: Summer internship enquiry, Deakin software engineering student (Manit Khera)
+
+Hi Element Robotics team,
+
+I'm Manit, a third-year Software Engineering (Honours) student at Deakin University, and I'm writing to ask whether you might have room for an intern this summer.
+
+Testing lunar robots in simulation before they ever fly is a problem I have met in miniature: my own backend replays what my robot reports through a simulation before it records it as true. LunarSim takes that idea a very long way further, and I would love to see how.
+
+I build software that works with real hardware. My main project is a sensor-driven robot I wired and programmed myself on an Arduino and a Raspberry Pi, controlled by a .NET backend that scored 100/100 and ran live at Deakin Open Day. I later load-tested that backend against 5,000 simulated robots and took it from zero completed jobs to about 1,000 a second. My resume and a short portfolio with demo videos are attached.
+
+I'm available full-time over the summer break, from November to February, or part-time around my classes. I'd be grateful for any opportunity, even a short conversation about how your team works.
+
+Thank you for your time,
+
+Manit Khera
+0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252
+
+======================================================================
+August Robotics
+To: info@augustrobotics.com  (Melbourne presence not confirmed; ask)
+Subject: Summer internship enquiry, Deakin software engineering student (Manit Khera)
+
+Hi August Robotics team,
+
+I'm Manit, a third-year Software Engineering (Honours) student at Deakin University, and I'm writing to ask whether you might have room for an intern this summer.
+
+Your robot fleets for floor marking, drilling and layout on real construction and exhibition sites are the kind of work I want to learn: robots that have to be precise in places nobody tidied up for them. I'm based in Melbourne, so I'd also love to know whether you have a team here.
+
+I build software that works with real hardware. My main project is a sensor-driven robot I wired and programmed myself on an Arduino and a Raspberry Pi, controlled by a .NET backend that scored 100/100 and ran live at Deakin Open Day. I later load-tested that backend against 5,000 simulated robots and took it from zero completed jobs to about 1,000 a second. My resume and a short portfolio with demo videos are attached.
+
+I'm available full-time over the summer break, from November to February, or part-time around my classes. I'd be grateful for any opportunity, even a short conversation about how your team works.
+
+Thank you for your time,
+
+Manit Khera
+0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252
+
+======================================================================
+black.ai
+To: No email found. Use the contact form at black.ai/contact, or a LinkedIn message.
+Subject: Summer internship enquiry, Deakin software engineering student (Manit Khera)
+
+Hi black.ai team,
+
+I'm Manit, a third-year Software Engineering (Honours) student at Deakin University, and I'm writing to ask whether you might have room for an intern this summer.
+
+Turning existing in-store cameras into something a retailer can actually search and act on interests me because my own work keeps coming back to the same question: when is a reading from the real world reliable enough to trust?
+
+I build software that works with real hardware. My main project is a sensor-driven robot I wired and programmed myself on an Arduino and a Raspberry Pi, controlled by a .NET backend that scored 100/100 and ran live at Deakin Open Day. I later load-tested that backend against 5,000 simulated robots and took it from zero completed jobs to about 1,000 a second. My resume and a short portfolio with demo videos are attached.
+
+I'm available full-time over the summer break, from November to February, or part-time around my classes. I'd be grateful for any opportunity, even a short conversation about how your team works.
+
+Thank you for your time,
+
+Manit Khera
+0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252

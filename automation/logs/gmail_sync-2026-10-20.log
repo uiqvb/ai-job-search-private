@@ -1,0 +1,31 @@
+started 2026-10-20 21:19  exit 0
+
+## Gmail Sync (unattended run): 2026-10-20
+
+I scanned 19 application threads and 50 Meetup threads from the last 30 days. Only one application email was new: a weekly Capgemini job alert, which doesn't change any status. **Nothing was written to the tracker or any `outcome.md`.**
+
+### Still waiting for your approval
+These were queued earlier today in `gmail_sync/pending.md`. The next interactive `/gmail-sync` will show them for approval:
+1. **Capgemini, IT Analyst Intern**: their "New Job Application Received" email (2026-10-20) would move the row from `drafted` to `applied`, with the date set to 2026-10-20.
+2. **Arcitecta, Student Internship**: the only email is a Hack2Hire challenge sign-up, which doesn't prove you applied. Did you actually submit the internship application?
+
+### Stale applications (30+ days, no activity)
+- **Deakin A2I2, Benchmarking Agent Workflows**: last activity 2026-09-18, still `applied`. A follow-up email to Dr Takerngsaksiri may be worth sending.
+
+### Events (`documents/notes/events.md`)
+- **3 new suggestions:**
+  - "How to Make Conferences Work for Your Tech Career": 28 Oct, 5:30 pm, online.
+  - GDG End of Year Celebration: 10 Dec, 6:30 pm, Elephant & Wheelbarrow, Bourke St. Tickets are on TryBooking.
+  - Startup Valley pitch and networking night: 29 Jan 2027, The National Hotel, Richmond. Registration is on Luma.
+- **No RSVP changes.** You're still on the waitlist for GDG Coding Night.
+- **Next up:**
+  - GDG Coding Night: tomorrow, 21 Oct, 5:45 pm (waitlisted).
+  - FOST Conference: 28 Oct, morning (suggested).
+  - The online conferences talk: 28 Oct, evening (suggested).
+- **Clashes:** both 28 Oct events are on the same day but don't overlap. Physical AI Melbourne may hold an event on 21 Oct, the same evening as GDG Coding Night.
+- I skipped three events that had already happened and the interstate or non-career events. I also refreshed the events memory.
+
+I set `last_sync` to 2026-10-20 and marked the scanned messages as processed. I didn't page through Meetup emails older than about 29 Sep, because today's earlier full-history scan already covered them.
+
+NOTIFY: Capgemini application received - approve drafted->applied in /gmail-sync
+NOTIFY: 3 new tech events suggested (28 Oct online talk, 10 Dec GDG party, 29 Jan startup night)

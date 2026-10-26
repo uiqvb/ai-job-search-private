@@ -1,0 +1,10 @@
+Photo cutouts (all CC0 / public domain, found via Openverse 22 Oct 2026; backgrounds removed with rembg):
+hardhat.png  - "Pyramex Ridgeline Full Brim Hard Hat", Flickr, CC0
+beanie.png   - "Cream knit hat with pom pom", Flickr, CC0
+beret.png    - "Beret" MET 53.4.1, Wikimedia Commons, CC0 (mannequin removed)
+headset.png  - "Plantronics headset", Wikimedia Commons, CC0
+bin.png      - "Old Rubbermaid 45 gal. Wheeled Trash Can", Flickr, public domain mark
+claude_code.png - Manit's own screenshot (job table blurred)
+
+Music (Draft 4): "Pixel Peeker Polka - faster" by Kevin MacLeod (incompetech.com), CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/  (credit line goes in the YouTube description)

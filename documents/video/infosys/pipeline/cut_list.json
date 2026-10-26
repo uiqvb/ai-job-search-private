@@ -1,0 +1,95 @@
+{
+ "length": 50.75,
+ "pieces": [
+  {
+   "line": "1 Hook",
+   "file": "20261022_210409.mp4",
+   "in": 49.02,
+   "out": 52.6,
+   "at": 0.0,
+   "moved_in": 0.0,
+   "moved_out": 0.0
+  },
+  {
+   "line": "2 Open Day",
+   "file": "20261022_210409.mp4",
+   "in": 80.95,
+   "out": 83.16,
+   "at": 3.58,
+   "moved_in": 0.0,
+   "moved_out": 0.11
+  },
+  {
+   "line": "3 Meet",
+   "file": "20261022_210409.mp4",
+   "in": 192.64,
+   "out": 201.2,
+   "at": 5.79,
+   "moved_in": 0.11,
+   "moved_out": 0.0
+  },
+  {
+   "line": "4 Chair",
+   "file": "20261022_210409.mp4",
+   "in": 224.08,
+   "out": 229.1,
+   "at": 14.35,
+   "moved_in": 0.11,
+   "moved_out": 0.0
+  },
+  {
+   "line": "5 Worked",
+   "file": "20261022_210409.mp4",
+   "in": 244.42,
+   "out": 249.02,
+   "at": 19.37,
+   "moved_in": -0.13,
+   "moved_out": 0.09
+  },
+  {
+   "line": "6 MatchFeel",
+   "file": "20261022_210409.mp4",
+   "in": 275.87,
+   "out": 281.53,
+   "at": 23.97,
+   "moved_in": 0.16,
+   "moved_out": -0.06
+  },
+  {
+   "line": "7 Robot",
+   "file": "20261022_210409.mp4",
+   "in": 327.39,
+   "out": 331.82,
+   "at": 29.63,
+   "moved_in": -0.24,
+   "moved_out": -0.15
+  },
+  {
+   "line": "8 InStep",
+   "file": "20261022_210409.mp4",
+   "in": 381.88,
+   "out": 385.63,
+   "at": 34.06,
+   "moved_in": -0.07,
+   "moved_out": 0.08
+  },
+  {
+   "line": "9 ML gap",
+   "file": "20261022_210409.mp4",
+   "in": 413.42,
+   "out": 418.4,
+   "at": 37.81,
+   "moved_in": 0.0,
+   "moved_out": 0.0
+  },
+  {
+   "line": "10 Close",
+   "file": "20261022_210409.mp4",
+   "in": 426.0,
+   "out": 433.96,
+   "at": 42.79,
+   "moved_in": 0.07,
+   "moved_out": 1.97
+  }
+ ]
+}

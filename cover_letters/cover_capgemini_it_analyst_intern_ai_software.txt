@@ -1,0 +1,38 @@
+## Sender
+Manit Khera
+12 Jenner Street
+Blackburn South, VIC 3130
+0412 761 206
+manitkhera26@gmail.com
+
+## Date
+Tuesday 20 October 2026
+
+## Recipient
+Hiring Manager
+Capgemini Australia
+Level 13, 699 Collins Street
+Docklands, VIC 3000
+
+## Greeting
+Dear Hiring Manager,
+
+## RE
+RE: IT Analyst Intern - AI and Software position, 2026/2027 Summer Internship (Melbourne), REF: 575576
+
+## Body
+I am writing to apply for the IT Analyst Intern - AI and Software position in Capgemini's 2026/2027 Summer Internship in Melbourne, which I found on the Capgemini careers site. The role brings together the two things I most want to grow: building software with AI, and understanding a client's problem well enough to know what that software should do.
+
+I am a third-year (penultimate-year) student in a Bachelor of Software Engineering (Honours) at Deakin University, finishing in 2028, with a WAM of 81.33 and marks of 100 in Data Structures and Algorithms and in Backend Development. My Python runs on real hardware: for my smart clothesline robot I wrote the Raspberry Pi tier as a Flask service that commands an Arduino over MQTT and falls back to a weather forecast when the rain sensor cannot be trusted. I learnt client service at the counter. At 7-Eleven I resolved escalated complaints without a manager, and at Deakin Open Day I explained my robot platform to prospective students and parents. As a volunteer for the Boroondara Stroke Support Group I audited the group's website and wrote a redevelopment plan naming the hosting limit holding it back. That is the nearest I have come to business analysis, the skill I most want this internship to grow.
+
+Capgemini's report “Rise of agentic AI” found that executives' trust in fully autonomous AI agents fell from 43% to 27% in a year, and calls for balancing autonomy with human oversight. My robot platform is built on that idea: the robot holds no plan of its own, and the server never records what it says it did until it has replayed the report through a simulation. I use Claude Code every day, and I want to learn how Capgemini earns that trust with clients at scale.
+
+Your values also describe how I have worked so far. Boldness, in your words, means taking considered risks with commitment. I connected two unrelated final projects so my backend drove a physical robot, after my unit chair made sure I understood I might finish neither properly. A month of building, breaking and rebuilding later, it scored 100/100 and was shown at Open Day. Trust means empowering people, and I have measured every role by it: I trained new starters at 7-Eleven and new volunteers at the stroke support group until the work no longer depended on me. In the spirit of Modesty, I will say plainly that I have not yet trained a machine learning model or held a formal analyst role; I would bring the habit of checking a system against evidence, and the appetite to learn the rest.
+
+The internship runs from 1 December to 26 February, within my university break, so I can work full-time for all of it, and I am happy to complete the police checks. I would bring working Python, daily Claude Code practice and a habit of explaining technical work clearly. My resume is attached, and I would welcome an interview. Thank you for your consideration.
+
+## Sign-off
+Kind regards,
+
+## Name
+Manit Khera

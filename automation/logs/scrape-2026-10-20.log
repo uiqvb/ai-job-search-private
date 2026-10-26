@@ -1,0 +1,29 @@
+started 2026-10-20 21:21  exit 0
+
+## New job matches, 2026-10-20 (scheduled run)
+
+Found 23 new postings: 1 high, 4 medium and 18 low match. LinkedIn and freehire both ran through their search tools (bun 1.4.3), and none of their results looked broken. Most other hits had already been saved by today's earlier run.
+
+skipped (disabled): jobbank-search, jobdanmark-search, jobindex-search, jobnet-search
+
+| # | Fit | Title | Company | Location | Deadline |
+|---|-----|-------|---------|----------|----------|
+| 1 | High | IT Developer (Part time) | Australian Physiotherapy Council | Melbourne | not stated |
+| 2 | Medium | Binance Accelerator Program: Full Stack Engineer (Backend Oriented), Fully Remote | Binance | Australia (remote) | not stated |
+| 3 | Medium | Binance Accelerator Program: Applied AI Agent Engineer | Binance | Australia | not stated |
+| 4 | Medium | IoT Engineer (eShepherd) | Gallagher Animal Management | Melbourne | not stated |
+| 5 | Medium | Software Developer, C# and C++ Programming & CAD Modelling | BlueScope | Mount Waverley | not stated |
+| 6–23 | Low | Sydney/Brisbane/Canberra roles (TikTok, PsiQuantum, Dolby, TCS, Starling, ANU NCI for postgrads only), mid-level .NET jobs (VicRoads, ROLLER ×2, Hanwha Defence, DBiz.ai, MECCA, Arinco), Kogan Graduate Product Tester (needs a finished degree and full-time Australian work rights), and other non-tech roles | — | — | ANU closes 28 Oct |
+
+**Highlights**
+- **#1 Australian Physiotherapy Council:** an entry-level, part-time role in Melbourne building an ASP.NET front end and APIs, plus testing, deployment and training staff. That's a close match to his .NET API work and the volunteer training he did. Part-time hours should fit around semester on his student visa. The gaps are MS Dynamics and SharePoint, and it asks for a "tertiary qualification" (he's still studying). The cover letter has to include an expected salary range.
+- **#2 and #3 Binance:** the agentic-AI and backend work suits him well, but both ask for 6 months at 5 days a week. That conflicts with his visa, which only allows full-time work from Nov to Feb.
+- **#4 Gallagher:** MQTT, sensors, microcontrollers and Azure all match, but it's a permanent full-time role asking for "proven IoT experience".
+- **#5 BlueScope:** close to home and uses C#/C++, but it's full-time, needs a finished degree and wants OpenGL/CAD skills.
+- One freehire result, "SEEK Grad AI & Full-Stack Intern", is the DXC graduate role reposted under another name. DXC was already seen in the earlier run, so I marked it low.
+
+LinkedIn search links for recruiters and team members at #1–5 are in `job_scraper/latest_scrape.md`, along with the full table. All 23 entries are saved in `job_scraper/seen_jobs.json`, and I added a line to the work log.
+
+NOTIFY: 23 new matches (1 high, 4 medium)
+NOTIFY: Australian Physiotherapy Council - IT Developer (Part time) (High)
+NOTIFY: Binance - Accelerator Full Stack Engineer, Fully Remote (Medium)

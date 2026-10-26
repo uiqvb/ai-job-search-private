@@ -1,0 +1,104 @@
+{
+ "anchors": {
+  "okay": {"word": "Okay"},
+  "infosys": {"word": "Infosys"},
+  "rally": {"word": "robot", "n": 1},
+  "openday_in": {"word": "I too brought", "offset": -0.18},
+  "score15": {"word": "Open Day", "n": 1},
+  "openday_out": {"word": "Open Day", "n": 1, "edge": "e", "offset": 0.2},
+  "api": {"word": "API"},
+  "robot": {"word": "robot", "n": 2},
+  "slide": {"word": "still made"},
+  "smack": {"word": "made them meet"},
+  "handsup": {"word": "made them meet", "edge": "e", "offset": 0.42},
+  "chair_cut": {"word": "My unit", "offset": -0.29},
+  "right": {"word": "right"},
+  "then": {"word": "Then"},
+  "hundred": {"word": "100", "n": 1},
+  "game": {"word": "100", "n": 2},
+  "court": {"word": "MatchFeel"},
+  "court_end": {"word": "anyways", "edge": "e", "offset": 0.05},
+  "drive_in": {"word": "Same", "offset": -0.3},
+  "drive_out": {"word": "Nobody", "n": 2},
+  "built": {"word": "built it anyway"},
+  "built_end": {"word": "anyway", "edge": "e", "offset": 0.04},
+  "leave": {"word": "leave"},
+  "screen_end": {"word": "screen", "edge": "e"},
+  "ml_in": {"word": "I haven't"},
+  "yet": {"word": "yet"},
+  "ml_end": {"word": "mentors", "edge": "e"},
+  "endcard": {"word": "watching", "edge": "e", "offset": 0.15}
+ },
+ "captions": {
+  "on": true,
+  "top": 1600,
+  "lift": [
+   {"from": "@openday_in", "to": "@openday_out+0.05", "top": 1760},
+   {"from": "@slide-0.1", "to": "@handsup", "top": 1780}
+  ],
+  "fix": {"chef": "chair"}
+ },
+ "zooms": [
+  {"from": "@okay", "to": "@infosys", "scale": 1.3, "tilt": 0},
+  {"from": "@handsup", "to": "@chair_cut", "scale": 1.2, "tilt": -3},
+  {"from": "@right", "to": "@then-0.21", "scale": 1.35, "tilt": 0},
+  {"from": "@hundred", "to": "@game+0.6", "scale": 1.3, "tilt": 2},
+  {"from": "@built", "to": "@built_end", "scale": 1.25, "tilt": -2},
+  {"from": "@leave", "to": "@screen_end+0.3", "scale": 1.25, "tilt": -4}
+ ],
+ "follow": [
+  {"from": "@api-0.2", "to": "@handsup-0.4", "scale": 1.1, "amount": 0.9}
+ ],
+ "bw": [
+  {"from": "@right", "to": "@then-0.21"}
+ ],
+ "echo": [
+  {"id": "right", "word": {"word": "right", "n": 1}, "vol": 0.75}
+ ],
+ "shakes": [
+  {"at": "@smack", "strength": 10}
+ ],
+ "bursts": [
+  {"at": "@smack", "x": 540, "y": 1430}
+ ],
+ "broll": [
+  {"from": "@openday_in", "to": "@openday_out", "src": "broll/cuts/openday.mp4", "start": 159.0, "layout": "split", "zoom": 1.7, "focus": [496, 290]},
+  {"from": "@drive_in", "to": "@drive_out", "src": "broll/cuts/drive_vertical.mp4", "start": 2.0, "layout": "full", "zoom": 1.0}
+ ],
+ "texts": [
+  {"from": "@hundred", "to": "@game+0.9", "txt": "100/100", "size": 160, "top": 200, "x": 540, "rot": -5},
+  {"from": "@court", "to": "@court_end", "txt": "MATCHFEEL", "size": 110, "top": 60, "x": 540, "rot": -2},
+  {"from": "@built", "to": "@built_end", "txt": "BUILT IT ANYWAY", "size": 120, "top": 230, "x": 540, "rot": -3},
+  {"from": "@yet", "to": "@yet+0.9", "txt": "NOT YET", "size": 90, "top": 330, "x": 540, "rot": 3}
+ ],
+ "stickers": [
+  {"from": "@rally", "to": "@openday_in-0.02", "src": "project:editor/public/img/rally_sticker.png", "x": 185, "y": 560, "width": 300, "anim": "pop", "label": "RALLY"},
+  {"from": "@handsup", "to": "@chair_cut", "src": "project:editor/public/img/robot_sticker.png", "x": 520, "y": 1250, "width": 400, "anim": "rise", "rise_to": [540, 380]}
+ ],
+ "endcard": {"from": "@endcard", "title": "GAME, SET, MATCH"},
+ "sfx": [
+  {"name": "thock", "at": "@okay", "vol": 0.5},
+  {"name": "pop", "at": "@rally", "vol": 0.35},
+  {"name": "whoosh", "at": "@openday_in", "vol": 0.3},
+  {"name": "clap", "at": "@smack", "vol": 0.5},
+  {"name": "tada", "at": "@handsup", "vol": 0.45},
+  {"name": "ding", "at": "@game", "vol": 0.45},
+  {"name": "thock", "at": "@court+0.85", "vol": 0.2},
+  {"name": "thock", "at": "@court+1.7", "vol": 0.2},
+  {"name": "thock", "at": "@court+2.55", "vol": 0.2},
+  {"name": "thock", "at": "@court+3.4", "vol": 0.2},
+  {"name": "pop", "at": "@built", "vol": 0.35},
+  {"name": "whoosh", "at": "@leave", "vol": 0.45},
+  {"name": "ding2", "at": "@endcard", "vol": 0.4}
+ ],
+ "music": {
+  "file": "project:editor/public/music/pixel_peeker_polka_faster.mp3",
+  "volume": 0.085,
+  "music_at": 0,
+  "anchor": 0,
+  "credit": "\"Pixel Peeker Polka - faster\" Kevin MacLeod (incompetech.com), CC BY 4.0: credit line in the YouTube description",
+  "stops": [{"from": "@right", "to": "@then"}],
+  "dips": [{"from": "@ml_in", "to": "@ml_end", "factor": 0.35}]
+ },
+ "custom": true
+}

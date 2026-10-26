@@ -1,0 +1,23 @@
+{
+  "company": "Schoolbox",
+  "fetched_date": "2026-10-23",
+  "sources": {
+    "website": {
+      "url": "https://schoolbox.education/about-us",
+      "notes": "Founded 2002 by Sean Richards, Matt Sambell, James Leckie; began from a conversation between developers and a school; hundreds of schools across more than a dozen countries; customer-relationship staff are trained former educators. Integrations: Edumate, FACTS, KAMAR, Wonde, Civica Education, iSams, Veracross, Compass, Sentral, Synergetic; Microsoft Education & Google Classroom, Intellischool, Geosnapshot, Paperly, Turnitin. Add-ons incl. Schoolbox AI. Careers page: profitable, independent, product-led; hybrid/remote flexibility, mentoring. Contact page: 1300 932 338, no address."
+    },
+    "reviews": {
+      "url": "",
+      "notes": "Not checked."
+    },
+    "linkedin": {
+      "url": "",
+      "notes": "Not checked. Aggregators disagree on HQ (South Melbourne / Camberwell); posting says Burnley. Unverified."
+    },
+    "media": {
+      "url": "",
+      "notes": "None found. Aggregator stack claim (PHP, JS, React, MySQL, AWS, Docker) unverified."
+    }
+  },
+  "network_contacts_note": "None identified."
+}

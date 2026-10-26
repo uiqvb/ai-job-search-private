@@ -1,0 +1,35 @@
+## Sender
+Manit Khera
+12 Jenner Street
+Blackburn South, VIC 3130
+0412 761 206
+manitkhera26@gmail.com
+
+## Date
+Thursday 22 October 2026
+
+## Recipient
+Hiring Manager
+Syncrowin
+Melbourne, VIC
+
+## Greeting
+Dear Hiring Manager,
+
+## RE
+RE: Early Career Data Scientist (Hybrid) position
+
+## Body
+I am writing to apply for the Early Career Data Scientist (Hybrid) position in Syncrowin's engineering team, which I found on your careers page. Your homepage says that warning signs usually show up in a site's data well before output drops. I have seen a small version of that on a robot far smaller than a wind farm, where my own logged telemetry explained a fault the hardware would not show me, and I want to learn to find those signs where the stakes are real.
+
+I am a third-year (penultimate-year) student in a Bachelor of Software Engineering (Honours) at Deakin University, finishing in 2028, with a WAM of 81.33 and marks of 100 in Data Structures and Algorithms and in Backend Development, where my project was selected for the Deakin Open Day showcase. I would bring three things to your data work. First, Python with sensor data: I wrote the Python service that received my robot's telemetry, and I learned to treat a sensor as conditionally reliable rather than taking any single reading on trust. Second, SQL with care: in PostgreSQL I made job claims atomic so two robots could never claim the same job. Third, a method: I do not trust one good run, so I judged my dispatch backend on 72 grid runs and eight stress runs, repeating each grid point three times and reporting the median rather than the best result. I have not yet studied statistics, probability, linear algebra or machine learning, and I will not pretend otherwise. I learn fast when a real problem is waiting, and I would rather learn those foundations beside your AI engineers on industrial data than from a textbook alone.
+
+Of Syncrowin's three principles, Trust through transparency, where every recommendation comes with the reasoning behind it, is the one I hold myself to hardest. I check what I claim about my work against my own code and data, which is why this letter names what I have not studied as plainly as what I have built. Your oversubscribed A$3 million round is going partly into growing your AI and engineering teams in Australia, and your careers page promises that what people build goes into real operations, not demo environments. Building past the brief on real hardware is where I do my best work.
+
+My resume and portfolio are attached; the portfolio answers your question about a project I am proud of: a sensor-data story rather than a trained model. I am available immediately and would welcome an interview. Thank you for your time and consideration.
+
+## Sign-off
+Kind regards,
+
+## Name
+Manit Khera

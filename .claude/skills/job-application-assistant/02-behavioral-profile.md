@@ -4,51 +4,58 @@ framework_version: 1.0.0
 
 # Behavioral Profile
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- You can use results from PI, DISC, Myers-Briggs, StrengthsFinder, or a self-assessment -->
+*[Inferred from the Resume folder's story bank (Stories/01-15), cover letters and work log. No formal assessment (PI, DISC, MBTI) has been taken. Review before relying on this.]*
 
 ## Overview
-[YOUR_NAME]'s behavioral assessment identifies them as a **[PROFILE_TYPE]** pattern. [1-2 SENTENCE_SUMMARY].
+Manit is a **self-challenging builder**: he does his best work when he sets himself a harder problem than the brief asks for, and someone he respects tells him it might not work. He is careful about honesty in his own claims (names gaps rather than hiding them) and likes to finish work in a state where others can carry it without him.
 
 ## Core Behavioral Drives
 
 | Drive | Level | Meaning |
 |-------|-------|---------|
-| [DRIVE_1] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_2] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_3] | [LEVEL] | [DESCRIPTION] |
-| [DRIVE_4] | [LEVEL] | [DESCRIPTION] |
+| Self-set challenge | High | Expands briefs on purpose (joined two unrelated unit projects so a backend drove a real robot). Motivated by "what if..." |
+| Ownership | High | Took the LinkedIn channel end to end; ran shifts and store closes unsupervised; owns decisions and their risk |
+| Precision about claims | High | Audits his own resume against the code; corrects overclaims; names gaps (ROS, CV/OCR) up front |
+| Social energy | Moderate | Comfortable fronting Market Day stalls and anchoring networking sessions, but his centre of gravity is building |
 
 ## Strongest Behaviors
-- **[BEHAVIOR_1]:** [DESCRIPTION]
-- **[BEHAVIOR_2]:** [DESCRIPTION]
-- **[BEHAVIOR_3]:** [DESCRIPTION]
+- **Goes beyond the brief:** creates the hard version of the task himself (Story 01, the Frankenstein integration).
+- **Debugs from evidence:** instruments systems so faults can be diagnosed from the record (brownout found from `bootId`/`resetCause`; replay-before-commit).
+- **Leadership by handover:** trains people until the work stops depending on him (7-Eleven new starters, BSSG volunteers, workshop attendees).
+- **Can't leave a finished project alone:** one robot reused across three units, each time asked to do more.
 
 ## How You Work Best
-- [ENVIRONMENT_PREFERENCE_1]
-- [ENVIRONMENT_PREFERENCE_2]
-- [ENVIRONMENT_PREFERENCE_3]
+- With a mentor who challenges rather than approves ("nah, you can't do this" provokes his best work; Story 12 and the Slavnenko "rage bait" story).
+- With room to experiment, break things, and own the decision.
+- On tangible systems where software meets real hardware or real users.
+- Working fast with AI tooling (Claude Code) and iterating.
 
 ## Growth Areas (frame positively in applications)
-- **[AREA_1]:** [HOW_TO_FRAME_IT_POSITIVELY]
-- **[AREA_2]:** [HOW_TO_FRAME_IT_POSITIVELY]
+- **Formal theory gaps (ROS, control theory, statistics, CV):** frame with the "Naming the Gap" move (Story 10): name it, show the substrate underneath, state a dated plan.
+- **No titled leadership:** frame as capability transfer (Story 11), never inflate titles.
+- **Scope ambition:** takes on more than the brief; frame as calculated risk with the stakeholder informed, delivered (100/100).
 
 ## Mapping to Job Posting Language
 
 When a job posting mentions these keywords, it's a **strong behavioral fit**:
-- [KEYWORD_OR_PHRASE_THAT_MATCHES_YOUR_STYLE]
-- [ANOTHER_KEYWORD]
+- "hands-on", "build and test on real hardware", "prototype", "tinkerer", "maker"
+- "ownership", "self-starter", "initiative", "curious", "experiment"
+- "reliability", "debugging", "root cause", "testing", "observability"
+- "fast-paced startup", "small team", "wear many hats"
+- "mentoring", "teaching", "facilitating" (for tutoring/STEM roles)
 
 When a job posting mentions these, flag as **potential friction** (not deal-breaker):
-- [KEYWORD_OR_PHRASE_THAT_MIGHT_CLASH]
-- [ANOTHER_KEYWORD]
+- heavily process-driven or maintenance-only roles with little building
+- pure sales/quota roles
+- roles that are mostly documentation or ticket triage
 
 ## Management Style Preferences
-- [WHAT_MANAGEMENT_STYLE_WORKS_FOR_YOU]
-- [WHAT_DOESN'T_WORK]
+- Works best with a manager who challenges ideas, explains risk, then trusts him to choose.
+- Responds to being challenged more than to praise.
+- Struggles with being micromanaged or kept as an observer "on the sidelines".
 
 ## Using This in Applications
-- **Cover letters:** [HOW_TO_WEAVE_IN_BEHAVIORAL_STRENGTHS]
-- **CV:** [WHAT_TO_EMPHASIZE]
-- **Interviews:** [WHAT_STAR_EXAMPLES_TO_USE]
-- **Don't overstate:** [WHAT_NOT_TO_CLAIM]
+- **Cover letters:** carry one story (01 for initiative, 11 for leadership, 07/09 for embedded reliability), plus Story 10 for any missing requirement.
+- **CV:** lead with build evidence and measured results (100/100, 3.44x, 93% fewer vulnerabilities).
+- **Interviews:** see `07-interview-prep.md`. Lead with the offline LIFO rollback design and the workflow-id-to-LIFO redesign.
+- **Don't overstate:** no "led the workshop", no "autonomous robots", no "Saga", no PID, no ROS, no ParkSense at all (excluded at his request), no Wi-Fi drops as something that happened to him.

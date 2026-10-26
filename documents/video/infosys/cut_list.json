@@ -1,0 +1,72 @@
+[
+ {
+  "section": "1 Hook",
+  "in": 49.454,
+  "out": 52.525,
+  "at": 0.0,
+  "text": "Okay, Infosys, at the Australian Open, you brought a robot to the Fan Zone."
+ },
+ {
+  "section": "2 Open Day",
+  "in": 80.988,
+  "out": 83.193,
+  "at": 3.071,
+  "text": "I too brought mine to the Deakin Open Day."
+ },
+ {
+  "section": "3 Meet",
+  "in": 192.686,
+  "out": 201.3,
+  "at": 5.276,
+  "text": "Two separate uni projects, an API and a robot. Nobody said they should meet, but I still made them meet. [hands up, look up]"
+ },
+ {
+  "section": "4 Chair",
+  "in": 230.821,
+  "out": 236.0,
+  "at": 13.891,
+  "text": "My unit chair warned me that I might not finish neither, and for a month he was right. [straight face]"
+ },
+ {
+  "section": "5 Worked",
+  "in": 244.478,
+  "out": 249.062,
+  "at": 19.069,
+  "text": "Then it worked. 100 out of 100, and it got picked for Deakin's Open Day."
+ },
+ {
+  "section": "6 MatchFeel",
+  "in": 275.924,
+  "out": 281.573,
+  "at": 23.653,
+  "text": "That's why MatchFeel got to me. No one expects to follow tennis by touch. You built it anyways."
+ },
+ {
+  "section": "7 Robot",
+  "in": 327.439,
+  "out": 331.864,
+  "at": 29.301,
+  "text": "Same with my robot. Nobody asked me to build it, but I still built it anyway."
+ },
+ {
+  "section": "8 InStep",
+  "in": 381.692,
+  "out": 385.665,
+  "at": 33.726,
+  "text": "That's the work I want at InStep. AI and robots that leave the screen. (restart only; first attempt at 378.3 dropped)"
+ },
+ {
+  "section": "9 ML gap",
+  "in": 413.399,
+  "out": 418.345,
+  "at": 37.7,
+  "text": "I haven't trained a machine learning model yet, but that's what I want to learn from InStep and its mentors."
+ },
+ {
+  "section": "10 Close",
+  "in": 426.052,
+  "out": 433.992,
+  "at": 42.646,
+  "text": "So yeah, I'm Manit Khera and I usually end up doing more than what is asked of me. Thank you so much for watching."
+ }
+]

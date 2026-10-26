@@ -1,0 +1,17 @@
+started 2026-10-21 08:41  exit 0
+usage: claude-sonnet-5-5 | in 18 + cache write 81,249 + cache read 556,601 | out 6,977 | 23 turns | 1.0 min | API-equivalent cost $0.45
+
+## New Job Matches - 2026-10-21
+
+The run found 9 new postings, all Low fit, so none is worth chasing. I wrote the table to `job_scraper/latest_scrape.md` and added all nine to `job_scraper/seen_jobs.json`.
+
+- **Portals run:** `linkedin-search` (Melbourne, last 14 days) and `freehire-search`.
+- **Skipped (disabled):** the four Danish portals.
+- **Not run:** the WebSearch fallback for seek.com.au and gradconnection, because this was an unattended run.
+- **Hand-made keys:** `tools/job_key.py` needed approval I couldn't get, so I wrote the `seen_jobs.json` keys by hand in the same company_title pattern. `python3 tools/job_key.py --audit` will flag any that differ.
+- **Still-open earlier items:** Australian Physiotherapy Council's part-time IT Developer, Gallagher's IoT Engineer and BlueScope's C#/C++ developer role. They were seen yesterday, so they aren't counted as new.
+
+The nine Low matches are Axon, Ideagen, Study and Work (three roles, an agency placement), MDA National, Halcyon Knights, Amazon and Guap. I did not generate referral contact links, since there are no High or Medium matches.
+
+NOTIFY: 9 new jobs: 0 high, 0 medium
+NOTIFY: + 9 low (see latest_scrape.md)

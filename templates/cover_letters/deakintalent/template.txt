@@ -1,0 +1,37 @@
+## Sender
+[YOUR_NAME]
+[YOUR_STREET_ADDRESS]
+[YOUR_SUBURB], [STATE] [POSTCODE]
+[YOUR_PHONE]
+[YOUR_EMAIL]
+
+## Date
+[WEEKDAY DAY MONTH YEAR, e.g. Wednesday 1 April 2026]
+
+## Recipient
+[CONTACT_NAME or Hiring Manager]
+[CONTACT_POSITION_TITLE, drop the line if unknown]
+[ORGANISATION_NAME]
+[ORGANISATION_STREET_ADDRESS]
+[ORGANISATION_SUBURB], [STATE] [POSTCODE]
+
+## Greeting
+Dear [Firstname Lastname or Hiring Manager],
+
+## RE
+RE: [Full position title] position, REF: [reference number, or drop ", REF: ..." if none]
+
+## Body
+[INTRODUCTION: why you are writing, full position title, full organisation name, where you found the ad, referrer or event contact if any, one or two lines on why this opportunity]
+
+[BODY ONE: current degree, expected completion, academic average, significant awards, then two or three skills/experiences aligned to the position description, each with concrete evidence]
+
+[BODY TWO: organisation research, what specifically attracts you, understanding of their work]
+
+[CLOSING: what you bring, attached documents, interest in an interview, thanks]
+
+## Sign-off
+Kind regards,
+
+## Name
+[YOUR_NAME]

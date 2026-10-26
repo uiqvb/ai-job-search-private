@@ -1,0 +1,12 @@
+{"round": 2, "pieces": [
+  {"line": "1 Hook", "file": "20261022_210409.mp4", "in": 49.02, "out": 52.60, "snap": "none", "why": "last of 3, clean and exact; R2 out 53.15->52.60 (dead air), in 49.02 to protect 'Okay'"},
+  {"line": "2 Open Day", "file": "20261022_210409.mp4", "in": 80.95, "out": 83.05, "snap": "out", "why": "last of 4; R2 in 80.95 drops a blip"},
+  {"line": "3 Meet", "file": "20261022_210409.mp4", "in": 192.53, "out": 201.20, "snap": "in", "why": "last of 4, clean; out keeps planned hands-up hold"},
+  {"line": "4 Chair", "file": "20261022_210409.mp4", "in": 223.97, "out": 229.10, "snap": "in", "why": "attempt 1 of 2: last says 'might NOT finish neither'; straight-face hold kept"},
+  {"line": "5 Worked", "file": "20261022_210409.mp4", "in": 244.55, "out": 248.93, "snap": "both", "why": "only attempt, clean"},
+  {"line": "6 MatchFeel", "file": "20261022_210409.mp4", "in": 275.71, "out": 281.59, "snap": "both", "why": "last of 2, only one with the full line"},
+  {"line": "7 Robot", "file": "20261022_210409.mp4", "in": 327.63, "out": 331.97, "snap": "both", "why": "last of 5, with the point at himself"},
+  {"line": "8 InStep", "file": "20261022_210409.mp4", "in": 381.95, "out": 385.55, "snap": "both", "why": "restart only, hand push to lens"},
+  {"line": "9 ML gap", "file": "20261022_210409.mp4", "in": 413.42, "out": 418.40, "snap": "none", "why": "R2: duplicate first half deleted; restart has the full line; out extended for 'mentors'"},
+  {"line": "10 Close", "file": "20261022_210409.mp4", "in": 425.93, "out": 431.99, "snap": "both", "why": "only attempt; not the exact script wording"}
+]}

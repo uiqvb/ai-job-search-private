@@ -1,0 +1,291 @@
+<title>Manit Khera Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<style>
+  /* Layout: plain two-page portfolio. Mono labels, hairline rules, one green accent. Two A4 pages in print. */
+  :root {
+    --bone: #f4f4ef; --ink: #0c0c0c; --panel: #edede7; --line: #cdcdc5; --grid: #e4e4dd;
+    --grey: #6b6b64; --accent: #347009; --glow: #9bf03c;
+    --sans: "Geist", "Helvetica Neue", Arial, sans-serif;
+    --mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bone: #0c0c0c; --ink: #f4f4ef; --panel: #161615; --line: #2a2a2a; --grid: #1c1c1c;
+    --grey: #9a9a92; --accent: #9bf03c; color-scheme: dark } }
+  :root[data-theme="dark"] {
+    --bone: #0c0c0c; --ink: #f4f4ef; --panel: #161615; --line: #2a2a2a; --grid: #1c1c1c;
+    --grey: #9a9a92; --accent: #9bf03c; color-scheme: dark }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bone); color: var(--ink); font-family: var(--sans); font-size: 9.6pt; line-height: 1.4; }
+  .page { max-width: 820px; margin: 0 auto; padding-block: 28px 40px;
+          padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  p { margin: 0 0 5pt; }
+
+  header { display: grid; grid-template-columns: 1fr auto; gap: 6pt 16pt; align-items: end;
+           border-bottom: 1px solid var(--ink); padding-bottom: 7pt; }
+  h1 { font-size: 25pt; line-height: 1; letter-spacing: -.02em; font-weight: 700; margin: 0 0 4pt; }
+  .tagline { font-size: 10.5pt; margin: 0; color: var(--grey); text-wrap: balance; }
+  .contact { font-family: var(--mono); font-size: 7.6pt; color: var(--grey); text-align: right; line-height: 1.6; }
+  .contact a { color: var(--ink); }
+
+  .flow { margin-top: 8pt; border: 1px solid var(--line); background: var(--panel); padding: 6pt 9pt;
+          display: flex; flex-wrap: wrap; gap: 4pt 6pt; align-items: center; font-family: var(--mono); font-size: 7.4pt; }
+  .flow .lbl { color: var(--grey); text-transform: uppercase; letter-spacing: .06em; margin-right: 4pt; }
+  .flow .node { border: 1px solid var(--accent); padding: 2pt 5pt; }
+  .flow .arr { color: var(--accent); }
+
+  .intro { display: grid; grid-template-columns: 1fr 56mm; gap: 12pt; margin-top: 9pt; }
+  .intro > * { min-width: 0; }
+  h2 { font-size: 12.5pt; letter-spacing: -.01em; margin: 0 0 4pt; text-wrap: balance; }
+  .card { border: 1px solid var(--ink); padding: 7pt 9pt; font-size: 8.8pt; align-self: start; }
+  .card h3 { font-size: 10pt; margin: 0 0 4pt; }
+  .card dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2.5pt 7pt; }
+  .card dt { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: .06em; color: var(--grey); padding-top: 1pt; }
+  .card dd { margin: 0; }
+
+  .why { margin-top: 9pt; border-top: 1px solid var(--ink); padding-top: 6pt; display: grid; grid-template-columns: 34mm 1fr; gap: 10pt; }
+  .why > * { min-width: 0; }
+  .why h2 { font-size: 11pt; }
+
+  .sec { margin-top: 11pt; break-inside: avoid; }
+  .sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2pt 10pt;
+              border-bottom: 1px solid var(--ink); padding-bottom: 2pt; margin-bottom: 5pt; }
+  .sec-head h2 { margin: 0; }
+  .meta { font-family: var(--mono); font-size: 7.3pt; color: var(--grey); }
+  .cols { display: grid; grid-template-columns: 1fr 64mm; gap: 12pt; }
+  .cols > * { min-width: 0; }
+  .label { font-family: var(--mono); font-size: 7.3pt; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-right: 3pt; }
+  .links { font-family: var(--mono); font-size: 7.4pt; display: flex; flex-wrap: wrap; gap: 2pt 10pt; margin: 0 0 5pt; }
+  .links .tech { color: var(--grey); }
+  .shot { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; border: 1px solid var(--line); }
+  .cap { font-family: var(--mono); font-size: 6.9pt; color: var(--grey); margin: 2pt 0 5pt; }
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 4pt; }
+  .tile { border-top: 1px solid var(--ink); padding-top: 2pt; }
+  .tile b { display: block; font-size: 14pt; font-weight: 600; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  .tile span { font-size: 7.6pt; color: var(--grey); }
+
+  .chart { border: 1px solid var(--line); background: var(--panel); padding: 6pt 7pt 4pt; }
+  .chart .t { font-family: var(--mono); font-size: 7pt; text-transform: uppercase; letter-spacing: .06em; color: var(--grey); margin-bottom: 3pt; }
+  .chart svg { width: 100%; height: auto; display: block; }
+  .chart svg text { font-family: var(--mono); font-size: 7px; fill: var(--grey); }
+  .bars { display: grid; grid-template-columns: auto 1fr auto; gap: 3pt 6pt; align-items: center; font-size: 8pt; margin-bottom: 5pt; }
+  .bars .track { height: 8pt; background: repeating-linear-gradient(90deg, var(--grid) 0 1px, transparent 1px 10%); min-width: 0; }
+  .bars .bar { height: 100%; background: var(--accent); }
+  .bars .bar.old { background: var(--grey); opacity: .55; }
+  .bars .v { font-family: var(--mono); font-size: 7.4pt; text-align: right; font-variant-numeric: tabular-nums; }
+
+  .gap { margin-top: 11pt; border: 1px solid var(--ink); display: grid; grid-template-columns: 1fr 1fr; break-inside: avoid; }
+  .gap > div { padding: 7pt 9pt; font-size: 8.8pt; min-width: 0; }
+  .gap > div + div { border-left: 1px solid var(--ink); background: var(--panel); }
+  .gap h3 { font-size: 10pt; margin: 0 0 3pt; }
+  .sign { margin-top: 8pt; font-family: var(--mono); font-size: 7.3pt; color: var(--grey); }
+
+  @media (max-width: 640px) {
+    header, .intro, .cols, .gap, .why { grid-template-columns: 1fr; }
+    .contact { text-align: left; }
+    .gap > div + div { border-left: 0; border-top: 1px solid var(--ink); }
+  }
+
+  @media print {
+    @page { size: A4; margin: 0; }
+    :root { --bone: #f4f4ef; --ink: #0c0c0c; --panel: #edede7; --line: #cdcdc5; --grid: #e4e4dd;
+            --grey: #6b6b64; --accent: #347009; color-scheme: light; }
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: var(--bone); font-size: 9.2pt; line-height: 1.36; }
+    .page { max-width: none; padding: 9mm 12mm; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .screen-only { display: none; }
+    .intro, .why { margin-top: 7pt; }
+    .sec { margin-top: 9pt; }
+  }
+</style>
+
+<div class="page">
+
+<header>
+  <div>
+    <h1>Manit Khera</h1>
+    <p class="tagline">Third-year Software Engineering (Honours) student at Deakin University, applying for the Early Career Data Scientist role at Syncrowin</p>
+  </div>
+  <div class="contact">
+    0412 761 206<br>
+    manitkhera26@gmail.com<br>
+    <a href="https://github.com/uiqvb">github.com/uiqvb</a><br>
+    <a href="https://www.linkedin.com/in/manit-khera-603957252">linkedin.com/in/manit-khera-603957252</a>
+  </div>
+</header>
+
+<div class="flow" aria-label="How the three projects connect">
+  <span class="lbl">How the projects connect</span>
+  <span class="node">Arduino + six sensors</span><span class="arr">→</span>
+  <span class="node">Python on a Raspberry Pi</span><span class="arr">→</span>
+  <span class="node">my .NET backend</span><span class="arr">→</span>
+  <span class="node">5,000 simulated robots on Azure</span>
+</div>
+
+<section class="intro">
+  <div>
+    <h2>About me</h2>
+    <p>Hi, I'm Manit. Most of what I've built in the last year has been around one small robot. I made it for my
+    embedded systems unit, connected it to a backend I wrote for a different unit, and then used that backend in a
+    third unit to see how it coped with thousands of simulated robots.</p>
+    <p>Your application asks about a data science project I'm proud of. I should be upfront: I haven't trained a
+    model, and I haven't studied statistics, probability, linear algebra or machine learning yet. The closest thing
+    I have is the work I did with this robot's sensor data, so that's what most of this portfolio is about.</p>
+    <p>The part I enjoyed most across all three projects was figuring out why something wasn't behaving the way I
+    expected, usually by going back through the data. I'd like to do a lot more of that, on real industrial data,
+    with people who know the maths better than I do.</p>
+  </div>
+  <aside class="card">
+    <h3>About the robot</h3>
+    <dl>
+      <dt>Body</dt><dd>Two wheels, six sensors, and a cardboard shell</dd>
+      <dt>Used for</dt><dd>Moving washing, my Open Day demo, and as the model for 5,000 simulated copies</dd>
+      <dt>Good at</dt><dd>Getting the washing out of the rain</dd>
+      <dt>Bad at</dt><dd>Wonky tape, and low batteries</dd>
+      <dt>Marks</dt><dd>93 and 100/100</dd>
+    </dl>
+  </aside>
+</section>
+
+<section class="why">
+  <h2>Why Syncrowin</h2>
+  <p>I read through your site before applying, and what stuck with me was that your recommendations come with the
+  reasoning behind them instead of just an answer. I ended up building my robot's backend in a similar way, for a
+  less noble reason: I couldn't trust what the robot told me, so the server checks every report before saving it.
+  I'd like to work on that kind of problem with data from real sites, in a small team where I can learn from the
+  engineers directly.</p>
+</section>
+
+<section class="sec">
+  <div class="sec-head"><h2>Smart Clothesline Robot</h2>
+    <span class="meta">Embedded Systems unit · 93</span></div>
+  <div class="links"><span class="tech">Arduino C++ · Raspberry Pi · Python/Flask · MQTT</span>
+    <a href="https://youtu.be/7QVj2lUGF2s">Demo video</a>
+    <a href="https://www.hackster.io/manitkhera26/smart-clothesline-robot-using-arduino-nano-and-mqtt-7f6c5b">Write-up</a>
+    <a href="https://github.com/uiqvb/SIT210/tree/main/Task11.1HD">Code</a></div>
+  <div class="cols">
+    <div>
+      <p><span class="label">The problem</span> The robot moves washing between a sunny spot and a sheltered spot by
+      following a tape line. An Arduino reads six sensors and sends the readings every five seconds over MQTT to a
+      Python program I wrote on a Raspberry Pi, which decides what to do.</p>
+      <p><span class="label">What I did</span> The rain sensor was cheap and not very reliable, so the robot also checks
+      the weather forecast before it moves. I tested this by wetting the sensor, and by feeding it fake rain readings
+      to make sure it would go with the forecast.</p>
+      <p>The harder problem was power. On fresh batteries everything worked, but once they dropped to around 90
+      percent the robot started resetting at random. I assumed the batteries were the problem and kept buying new
+      ones, probably about $100 worth, before I went back through the logs. The boot ID and reset cause in each
+      message showed the board was browning out, which led me to a faulty voltage converter.</p>
+      <p><span class="label">What I learned</span> I should have looked at the logs much earlier. I now add fields like
+      those to everything I build, because they are what made the fault findable. I also still have a pile of
+      batteries sitting at about 90 percent.</p>
+    </div>
+    <div>
+      <div class="chart" role="img" aria-label="Rough sketch: the robot behaved normally until battery charge fell to about 90 percent, then kept resetting">
+        <div class="t">Robot behaviour vs battery charge</div>
+        <svg viewBox="0 0 220 104" aria-hidden="true">
+          <g stroke="var(--grid)" stroke-width="1">
+            <line x1="22" y1="14" x2="214" y2="14"/><line x1="22" y1="44" x2="214" y2="44"/><line x1="22" y1="74" x2="214" y2="74"/>
+          </g>
+          <line x1="22" y1="84" x2="214" y2="84" stroke="var(--line)" stroke-width="1"/>
+          <line x1="118" y1="8" x2="118" y2="84" stroke="var(--ink)" stroke-width=".8" stroke-dasharray="2 2"/>
+          <polyline fill="none" stroke="var(--accent)" stroke-width="1.6"
+            points="22,22 60,22 100,23 118,24 124,60 128,26 136,70 140,28 150,74 154,30 166,72 170,30 184,76 188,32 200,74 214,34"/>
+          <text x="22" y="95">100%</text><text x="110" y="95">≈90%</text><text x="198" y="95">80%</text>
+          <text x="24" y="11">working</text><text x="150" y="11">resetting</text>
+        </svg>
+        <div class="cap">A rough sketch from memory, not recorded data.</div>
+      </div>
+      <div class="screen-only"><img class="shot" src="portfolio-assets/clothesline-robot.jpg" alt="The clothesline robot on its tape track" style="margin-top:6pt">
+      <div class="cap">The robot on its tape track, from the first demo.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head"><h2>Robot Controller API</h2>
+    <span class="meta">Backend Development unit · 100/100 · shown at Deakin Open Day</span></div>
+  <div class="links"><span class="tech">.NET 8 · C# · PostgreSQL · Docker · Jenkins</span>
+    <a href="https://youtu.be/unDSeDkGBI0">Open Day demo</a>
+    <a href="https://github.com/uiqvb/RobotControllerApi/tree/deploying">Code</a></div>
+  <div class="cols">
+    <div>
+      <p><span class="label">The problem</span> For my backend unit I wrote an API that does the robot's thinking. The
+      robot just asks the server what to do next. When I connected it to the clothesline robot, the server and the
+      robot often disagreed about where the robot actually was.</p>
+      <p><span class="label">What I did</span> I started logging every command and result to a history table in
+      PostgreSQL, so I could see what had really happened. I also planned for the Wi-Fi dropping out, even though it
+      never did. Each command comes with instructions for undoing it, so if the robot hears nothing for seven seconds
+      it backs up along its last moves and then reports what it did. The server runs that report through a simulation
+      before saving it.</p>
+      <p><span class="label">How it went</span> When I tested it on the real robot, it stopped exactly where the server
+      predicted. The project got 100/100 and was picked for Deakin Open Day, where I demoed it to prospective students
+      and their parents.</p>
+    </div>
+    <div>
+      <img class="shot" src="portfolio-assets/robot-controller-demo.jpg" alt="Dashboard on a laptop driving the robot across the floor">
+      <div class="cap">My dashboard driving the robot (bottom right).</div>
+      <div class="tiles">
+        <div class="tile"><b>~120</b><span>API endpoints</span></div>
+        <div class="tile"><b>7 s</b><span>without a reply before it backs up</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head"><h2>Scaling a Robot Dispatch API</h2>
+    <span class="meta">Distributed Programming unit</span></div>
+  <div class="links"><span class="tech">C# · ASP.NET Core · PostgreSQL · Azure · NBomber · xUnit</span>
+    <a href="https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=dcbbdbc3-a0bf-4ee4-87fa-b4db001c2a9d">Demo video</a>
+    <a href="https://github.com/uiqvb/SIT315-RobotDispatch">Code</a>
+    <a href="https://github.com/uiqvb/SIT315-RobotDispatch/blob/main/report/M4T1D_report.pdf">Report</a></div>
+  <div class="cols">
+    <div>
+      <p><span class="label">The problem</span> For a third unit I wanted to see what would happen with far more robots.
+      I simulated a fleet on Azure and ran it against my backend. At 5,000 robots it didn't finish a single job.</p>
+      <p><span class="label">What I did</span> I went through the code and found 12 problems, including a race where two
+      robots could claim the same job. I made job claims atomic in PostgreSQL, added a limit so the server tells robots
+      to retry instead of falling over, and added a second server. Then I ran 80 benchmark runs on Azure, repeating
+      each grid setup three times and taking the median so one lucky run couldn't skew the result.</p>
+      <p><span class="label">What I learned</span> At 400 robots the median time to claim a job went from 766.5 ms to
+      59.5 ms, with 54 automated tests behind the changes. I never found the new limit, because my load generator
+      ran out of capacity before the backend did. I wrote the method and results up in a report.</p>
+    </div>
+    <div class="chart">
+      <div class="t">Jobs finished per second, 400 robots</div>
+      <div class="bars">
+        <span>Before</span><div class="track"><div class="bar old" style="width:16.5%"></div></div><span class="v">177</span>
+        <span>1 server</span><div class="track"><div class="bar" style="width:56.8%"></div></div><span class="v">608</span>
+        <span>2 servers</span><div class="track"><div class="bar" style="width:100%"></div></div><span class="v">1,069</span>
+      </div>
+      <div class="t">Jobs finished per second, 5,000 robots</div>
+      <div class="bars">
+        <span>Before</span><div class="track"><div class="bar old" style="width:0"></div></div><span class="v">0</span>
+        <span>2 servers</span><div class="track"><div class="bar" style="width:94.3%"></div></div><span class="v">~1,008</span>
+      </div>
+      <div class="cap">From my benchmark results on Azure. Both charts use the same scale.</div>
+    </div>
+  </div>
+</section>
+
+<section class="gap">
+  <div>
+    <h3>What I haven't done yet</h3>
+    <p>Statistics, probability, linear algebra and machine learning. I haven't built a forecasting model or used
+    PyTorch. So far my work has been collecting sensor data and checking whether it can be trusted, not modelling it.</p>
+  </div>
+  <div>
+    <h3>What I'd like to learn at Syncrowin</h3>
+    <p>The modelling side, properly, from people who do it every day. I learn fastest when there's a real problem in
+    front of me, and each project here started as a uni assignment that I kept adding to.</p>
+  </div>
+</section>
+
+<p class="sign">Manit Khera · manitkhera26@gmail.com · 0412 761 206 · available immediately</p>
+
+</div>

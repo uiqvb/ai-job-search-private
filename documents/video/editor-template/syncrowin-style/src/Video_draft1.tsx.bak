@@ -1,0 +1,867 @@
+// Syncrowin intro video (phase 2). All times below are ROUGH-CUT seconds (words.json);
+// out() shifts anything after the toss by the length of the inserted chase cutaway.
+import React from "react";
+import {
+  AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, random, spring,
+  staticFile, useCurrentFrame, Easing,
+} from "remotion";
+import { loadFont as loadMont } from "@remotion/google-fonts/Montserrat";
+import { loadFont as loadMarker } from "@remotion/google-fonts/PermanentMarker";
+import { loadFont as loadMono } from "@remotion/google-fonts/JetBrainsMono";
+import palm from "./palm_track.json";
+
+const { fontFamily: MONT } = loadMont("normal", { weights: ["600", "700", "800", "900"] });
+const { fontFamily: MARKER } = loadMarker();
+const { fontFamily: MONO } = loadMono("normal", { weights: ["400", "700"] });
+
+// Syncrowin palette (syncrowin.com.au CSS)
+const LIME = "#9BF03C";
+const BLACK = "#0C0C0C";
+const INK = "#111110";
+const OFF = "#F4F4EF";
+const GREY1 = "#CDCDC5";
+const GREY2 = "#75756E";
+
+export const FPS = 30;
+const TRACK_LEN = 59.333;
+const INS = 15.75; // rough-cut second where the chase cutaway is inserted (hand frozen at shoulder)
+const GAP = 2.4; // cutaway length
+export const TOTAL_FRAMES = Math.ceil((TRACK_LEN + GAP) * FPS);
+const CAPTIONS = false; // built later, once graphics are signed off
+
+const out = (t: number) => (t < INS ? t : t + GAP);
+const F = (t: number) => Math.round(out(t) * FPS);
+const INS_F = Math.round(INS * FPS);
+const GAP_F = Math.round(GAP * FPS);
+
+const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+const lerp = (t: number, a: number[], b: number[], ease?: (x: number) => number) =>
+  interpolate(t, a, b, { ...clamp, easing: ease });
+const popIn = (frame: number, atOut: number, damping = 9) =>
+  spring({ frame: frame - atOut * FPS, fps: FPS, config: { damping, stiffness: 190, mass: 0.6 } });
+
+// ---------- key moments (rough-cut seconds) ----------
+const W = {
+  minute: 1.26, hundred: 3.42, project: 5.54, fiveK: 10.46, six: 12.40, tossStart: 15.2,
+  youre: 17.04, curious: 18.66, energy: 19.82, experiments: 20.84, exactlyMe: 22.02, iCant: 23.12,
+  whatIf: 23.92, breaks: 27.40, fun: 28.78, inASmall: 29.32,
+  backend: 35.54, hardware: 36.88, it: 38.04, video: 39.88,
+  because: 40.54, revealEnd: 44.9, ignite: 47.6, imagine: 50.64, syncrowin: 51.74, fist: 52.35,
+  name: 53.22, watching: 56.72, endCard: 57.15,
+};
+
+// ---------- palm tracking (rough-cut seconds -> pixel offset) ----------
+type Row = number[];
+const trackAt = (rows: Row[], t: number) => {
+  if (t <= rows[0][0]) return [rows[0][1], rows[0][2]];
+  for (let i = 1; i < rows.length; i++) {
+    if (t <= rows[i][0]) {
+      const a = rows[i - 1], b = rows[i];
+      const k = (t - a[0]) / (b[0] - a[0]);
+      return [a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k];
+    }
+  }
+  const l = rows[rows.length - 1];
+  return [l[1], l[2]];
+};
+// reference points measured on full-res frames: reel palm surface (180,1600) at 4.0 s,
+// fire palm (165,1455) at 49.0 s
+const reelPalm = (t: number) => {
+  const [x, y] = trackAt(palm.reel as Row[], t);
+  return [180 + (x - 280), 1600 + (y - 1632)];
+};
+const firePalm = (t: number) => {
+  const [x, y] = trackAt(palm.fire as Row[], t);
+  return [165 + (x - 288), 1455 + (y - 1588)];
+};
+
+// ======================================================================
+// Props that sit on the palm
+// ======================================================================
+const Badge100: React.FC<{ glow?: number }> = ({ glow = 1 }) => (
+  <div style={{
+    width: 250, padding: "18px 0 14px", borderRadius: 26, background: BLACK, border: `6px solid ${LIME}`,
+    boxShadow: `0 0 ${40 * glow}px ${LIME}AA, 0 10px 30px rgba(0,0,0,0.45)`, textAlign: "center",
+    fontFamily: MONT, color: LIME,
+  }}>
+    <div style={{ fontSize: 76, fontWeight: 900, lineHeight: 1 }}>100<span style={{ fontSize: 40 }}>/100</span></div>
+    <div style={{ fontSize: 24, fontWeight: 800, color: OFF, letterSpacing: 3, marginTop: 6 }}>BACKEND</div>
+  </div>
+);
+
+const RobotProp: React.FC<{ t: number }> = ({ t }) => (
+  <div style={{ width: 250, textAlign: "center", transform: `translateY(${Math.sin(t * 7) * 8}px) rotate(${Math.sin(t * 5) * 7}deg)` }}>
+    <Img src={staticFile("img/robot_sticker.png")} style={{ width: 250, filter: "drop-shadow(0 10px 18px rgba(0,0,0,0.45))" }} />
+    <div style={{
+      display: "inline-block", marginTop: -6, padding: "6px 16px", borderRadius: 12, background: LIME, color: BLACK,
+      fontFamily: MONT, fontWeight: 900, fontSize: 24, letterSpacing: 2,
+    }}>OPEN DAY</div>
+  </div>
+);
+
+const Badge6x: React.FC<{ stamp: number }> = ({ stamp }) => (
+  <div style={{
+    width: 250, padding: "14px 0 12px", borderRadius: 26, background: LIME, color: BLACK, textAlign: "center",
+    fontFamily: MONT, boxShadow: "0 10px 30px rgba(0,0,0,0.45)",
+  }}>
+    <div style={{ fontSize: 30, fontWeight: 900, letterSpacing: 1 }}>{stamp > 0.05 ? "5,000 ROBOTS" : "SIMULATED"}</div>
+    <div style={{ position: "relative", height: 92 }}>
+      <div style={{ position: "absolute", width: "100%", fontSize: 80, fontWeight: 900, lineHeight: 1.1, opacity: 1 - Math.min(1, stamp * 3) }}>5,000</div>
+      <div style={{
+        position: "absolute", width: "100%", fontSize: 92, fontWeight: 900, lineHeight: 1, opacity: Math.min(1, stamp * 2),
+        transform: `scale(${2 - stamp}) rotate(${(1 - stamp) * -20}deg)`,
+      }}>6x<span style={{ fontSize: 34 }}> FASTER</span></div>
+    </div>
+  </div>
+);
+
+// Stack slots above the palm: bottom, middle, top (centre offsets from the palm surface)
+const SLOTS = [[30, -130], [30, -370], [30, -600]];
+
+const PalmProps: React.FC<{ frame: number }> = ({ frame }) => {
+  const t = frame / FPS; // output seconds (only used before the cutaway, so = rough-cut time)
+  if (t < W.hundred - 0.1 || t >= INS) return null;
+  const [px, py] = reelPalm(t);
+  // toss: hand swings back to the shoulder 15.2 -> 15.5; props fly over the shoulder, staggered
+  const items = [
+    { at: W.hundred, el: <Badge100 glow={0.7 + 0.3 * Math.sin(t * 6)} /> },
+    { at: W.project, el: <RobotProp t={t} /> },
+    { at: W.fiveK, el: <Badge6x stamp={popIn(frame, W.six, 8)} /> },
+  ];
+  return (
+    <AbsoluteFill>
+      {items.map((it, i) => {
+        if (t < it.at - 0.05) return null;
+        const s = popIn(frame, it.at);
+        const tossK = lerp(t, [W.tossStart + i * 0.04, W.tossStart + 0.38 + i * 0.04], [0, 1], Easing.in(Easing.quad));
+        const [sx, sy] = SLOTS[i];
+        const bx = px + sx, by = py + sy;
+        // arc up and back past his right shoulder (frame left), shrinking as it goes behind him
+        const x = bx + tossK * (-60 - i * 40) + Math.sin(tossK * Math.PI) * -80;
+        const y = by + tossK * (-900 - i * 120);
+        const sc = s * (1 - 0.65 * tossK);
+        const rot = tossK * (-200 - i * 90);
+        return (
+          <div key={i} style={{
+            position: "absolute", left: x, top: y, transform: `translate(-50%,-50%) scale(${sc}) rotate(${rot}deg)`,
+            opacity: 1 - lerp(tossK, [0.75, 1], [0, 1]),
+          }}>{it.el}</div>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+// ======================================================================
+// Hats (head top ~ (555,540), forehead ~660, ears hidden by hair ~ x 300 / 810, mouth ~ (560,940))
+// ======================================================================
+const Beanie = () => (
+  <svg width={600} height={330} viewBox="0 0 600 330">
+    <circle cx={300} cy={42} r={38} fill={LIME} />
+    <path d="M40 270 C 40 70, 560 70, 560 270 Z" fill={INK} />
+    <rect x={20} y={240} width={560} height={80} rx={30} fill="#222220" />
+    {Array.from({ length: 14 }).map((_, i) => <rect key={i} x={40 + i * 38} y={250} width={14} height={60} rx={6} fill="#2E2E2B" />)}
+    <g transform="rotate(-8 170 170)"><rect x={110} y={140} width={120} height={60} rx={12} fill={LIME} />
+      <text x={170} y={182} textAnchor="middle" fontFamily={MONO} fontWeight={700} fontSize={34} fill={BLACK}>{"{ }"}</text></g>
+    <g transform="rotate(6 330 140)"><rect x={280} y={110} width={110} height={56} rx={12} fill={OFF} />
+      <text x={335} y={150} textAnchor="middle" fontFamily={MONT} fontWeight={900} fontSize={32} fill={BLACK}>API</text></g>
+    <g transform="rotate(-4 460 200)"><rect x={410} y={170} width={100} height={56} rx={28} fill="#5EC8F2" />
+      <text x={460} y={210} textAnchor="middle" fontFamily={MONT} fontWeight={900} fontSize={32} fill={BLACK}>C#</text></g>
+  </svg>
+);
+
+const HardHat = () => (
+  <svg width={640} height={330} viewBox="0 0 640 330">
+    <path d="M90 260 C 90 40, 550 40, 550 260 Z" fill="#F7C21A" />
+    <path d="M290 62 C 290 40, 350 40, 350 62 L 356 260 L 284 260 Z" fill="#E5A800" />
+    <path d="M150 250 C 160 140, 230 90, 270 80" stroke="#FFE27A" strokeWidth={14} fill="none" strokeLinecap="round" />
+    <rect x={10} y={250} width={620} height={52} rx={26} fill="#E5A800" />
+    <rect x={10} y={250} width={620} height={18} rx={9} fill="#FFD447" />
+    <g transform="translate(420 150) rotate(10)"><rect x={-44} y={-34} width={88} height={68} rx={10} fill={BLACK} />
+      <path d="M6 -24 L -14 4 L 2 4 L -6 26 L 16 -6 L 0 -6 Z" fill={LIME} /></g>
+  </svg>
+);
+
+const Headset = () => (
+  <svg width={1080} height={1100} viewBox="0 0 1080 1100" style={{ position: "absolute", left: 0, top: 0 }}>
+    <path d="M305 830 C 260 420, 850 420, 805 830" stroke={INK} strokeWidth={34} fill="none" strokeLinecap="round" />
+    <path d="M305 830 C 260 420, 850 420, 805 830" stroke="#3A3A37" strokeWidth={10} fill="none" strokeLinecap="round" />
+    <rect x={245} y={760} width={110} height={160} rx={46} fill={INK} />
+    <rect x={262} y={782} width={76} height={116} rx={34} fill={LIME} />
+    <rect x={755} y={760} width={110} height={160} rx={46} fill={INK} />
+    <rect x={772} y={782} width={76} height={116} rx={34} fill={LIME} />
+    <path d="M300 900 C 310 990, 400 1000, 470 975" stroke={INK} strokeWidth={14} fill="none" strokeLinecap="round" />
+    <ellipse cx={478} cy={972} rx={26} ry={20} fill={INK} />
+  </svg>
+);
+
+const Beret = () => (
+  <svg width={600} height={300} viewBox="0 0 600 300">
+    <ellipse cx={300} cy={190} rx={270} ry={90} fill="#C8102E" />
+    <ellipse cx={330} cy={150} rx={250} ry={95} fill="#E01F3D" />
+    <rect x={318} y={38} width={16} height={34} rx={6} fill="#8E0B20" />
+    <path d="M70 230 C 200 270, 420 270, 540 225" stroke="#8E0B20" strokeWidth={22} fill="none" strokeLinecap="round" />
+  </svg>
+);
+
+const Clapper: React.FC<{ open: number }> = ({ open }) => (
+  <svg width={300} height={260} viewBox="0 0 300 260">
+    <rect x={20} y={90} width={260} height={160} rx={12} fill={INK} />
+    <text x={150} y={170} textAnchor="middle" fontFamily={MONT} fontWeight={900} fontSize={34} fill={OFF}>SYNCROWIN</text>
+    <text x={150} y={215} textAnchor="middle" fontFamily={MONT} fontWeight={800} fontSize={26} fill={LIME}>TAKE 1</text>
+    <g transform={`rotate(${-28 * open} 22 88)`}>
+      <rect x={20} y={56} width={260} height={34} fill={OFF} />
+      {[0, 1, 2, 3, 4].map((i) => <path key={i} d={`M${30 + i * 54} 56 L ${60 + i * 54} 56 L ${40 + i * 54} 90 L ${10 + i * 54} 90 Z`} fill={INK} />)}
+    </g>
+  </svg>
+);
+
+const HATS = [
+  { from: W.backend, to: W.hardware, label: "BACKEND GUY", el: <Beanie />, x: 555, y: 700, w: 600 },
+  { from: W.hardware, to: W.it, label: "HARDWARE GUY", el: <HardHat />, x: 555, y: 680, w: 640 },
+  { from: W.it, to: W.video, label: "IT SUPPORT GUY", el: null, x: 0, y: 0, w: 0 },
+  { from: W.video, to: W.revealEnd, label: "VIDEO GUY", el: <Beret />, x: 575, y: 650, w: 600 },
+];
+
+const Hats: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  return (
+    <AbsoluteFill>
+      {HATS.map((h, i) => {
+        const a = out(h.from), b = out(h.to);
+        if (tOut < a - 0.05 || tOut > b + 0.35) return null;
+        const s = popIn(frame, a, 8);
+        const leaving = lerp(tOut, [b, b + 0.3], [0, 1], Easing.in(Easing.quad));
+        const dropY = (1 - s) * -260 - leaving * 700;
+        const rot = leaving * 40;
+        if (h.el === null) {
+          return (
+            <div key={i} style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1920, transform: `translateY(${dropY}px)`, opacity: Math.min(1, s * 1.5) * (1 - leaving) }}>
+              <Headset />
+            </div>
+          );
+        }
+        return (
+          <div key={i} style={{
+            position: "absolute", left: h.x, top: h.y,
+            transform: `translate(-50%,-85%) translateY(${dropY}px) rotate(${rot + (i === 3 ? -8 : 0)}deg)`,
+            opacity: 1 - leaving,
+          }}>{h.el}</div>
+        );
+      })}
+      {/* clapperboard for "video guy" */}
+      {tOut >= out(W.video) - 0.05 && tOut < out(W.revealEnd) + 0.35 && (() => {
+        const s = popIn(frame, out(W.video), 9);
+        const open = 1 - lerp(tOut, [out(W.video) + 0.35, out(W.video) + 0.45], [0, 1]);
+        const leaving = lerp(tOut, [out(W.revealEnd), out(W.revealEnd) + 0.3], [0, 1]);
+        return (
+          <div style={{ position: "absolute", left: 890, top: 520, transform: `translate(-50%,-50%) scale(${s}) rotate(${8 + leaving * 60}deg)`, opacity: 1 - leaving }}>
+            <Clapper open={open} />
+          </div>
+        );
+      })()}
+    </AbsoluteFill>
+  );
+};
+
+const HatLabel: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const h = HATS.find((x) => tOut >= out(x.from) && tOut < out(Math.min(x.to, W.because)));
+  if (!h) return null;
+  const s = popIn(frame, out(h.from), 10);
+  return (
+    <div style={{ position: "absolute", top: 120, width: 1080, textAlign: "center" }}>
+      <div style={{
+        display: "inline-block", transform: `scale(${s})`, background: BLACK, color: LIME, fontFamily: MONT, fontWeight: 900,
+        fontSize: 70, padding: "12px 34px", borderRadius: 20, border: `5px solid ${LIME}`,
+      }}>{h.label}</div>
+    </div>
+  );
+};
+
+// ======================================================================
+// Fire on the palm
+// ======================================================================
+const Fire: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const a = out(W.ignite), z = out(W.fist);
+  if (tOut < a - 0.05 || tOut > z + 1.4) return null;
+  const tr = tOut - GAP; // rough-cut time (after the cutaway)
+  const [px, py] = firePalm(Math.min(tr, W.fist + 0.15));
+  const grow = lerp(tOut, [a, a + 0.3], [0, 1], Easing.out(Easing.back(2)));
+  const die = lerp(tOut, [z, z + 0.12], [1, 0]);
+  const size = grow * die;
+  const flick = 0.85 + 0.15 * Math.sin(tOut * 31) * Math.sin(tOut * 17 + 1);
+  const N = 70;
+  const parts = [];
+  if (size > 0.01) {
+    for (let i = 0; i < N; i++) {
+      const life = 0.45 + random(`l${i}`) * 0.35;
+      const p = (((tOut - a) / life) + random(`p${i}`)) % 1;
+      const sway = Math.sin((tOut + random(`s${i}`) * 5) * 9) * 18 * p;
+      const x = px + (random(`x${i}`) - 0.5) * 110 * (1 - p * 0.9) + sway;
+      const y = py - 10 - p * (390 + random(`h${i}`) * 170) * size;
+      const r = (40 - 32 * p) * (0.7 + random(`r${i}`) * 0.6) * size;
+      const col = p < 0.18 ? "#FFE27A" : p < 0.45 ? "#FFA42B" : p < 0.75 ? "#FF6A14" : "#D92E12";
+      parts.push(<ellipse key={i} cx={x} cy={y} rx={Math.max(0, r * 0.75)} ry={Math.max(0, r * 1.5)} fill={col} opacity={(1 - p) * 0.85} />);
+    }
+  }
+  // smoke after the fist closes
+  const smoke = [];
+  if (tOut >= z) {
+    const k = (tOut - z) / 1.3;
+    for (let i = 0; i < 9; i++) {
+      const kk = Math.min(1, k + random(`d${i}`) * 0.15);
+      smoke.push(<circle key={i} cx={px + (random(`sx${i}`) - 0.5) * 140 + kk * (random(`sv${i}`) - 0.5) * 160}
+        cy={py - 40 - kk * (220 + random(`sh${i}`) * 200)} r={30 + kk * 90} fill="#B9B9B2" opacity={0.55 * (1 - kk)} />);
+    }
+  }
+  return (
+    <AbsoluteFill>
+      {/* warm light on him */}
+      <AbsoluteFill style={{
+        background: `radial-gradient(circle at ${px + 120}px ${py - 260}px, rgba(255,150,40,${0.42 * size * flick}) 0%, rgba(255,120,30,${0.18 * size}) 30%, rgba(0,0,0,0) 62%)`,
+        mixBlendMode: "screen",
+      }} />
+      <svg width={1080} height={1920} style={{ position: "absolute", filter: "blur(4px)" }}>{parts}</svg>
+      <svg width={1080} height={1920} style={{ position: "absolute", filter: "blur(2px)" }}>
+        {size > 0.01 && <ellipse cx={px} cy={py - 50 * size} rx={30 * size} ry={55 * size * flick} fill="#FFF1B8" opacity={0.7} />}
+      </svg>
+      <svg width={1080} height={1920} style={{ position: "absolute", filter: "blur(10px)" }}>{smoke}</svg>
+    </AbsoluteFill>
+  );
+};
+
+// ======================================================================
+// Camera: everything that must move with him (video, palm props, hats, fire)
+// ======================================================================
+const IMPACTS = [W.minute, W.six, W.curious, W.energy, W.experiments].map(out);
+const shake = (tOut: number, amp = 14) => {
+  let x = 0, y = 0;
+  for (const at of IMPACTS) {
+    const d = tOut - at;
+    if (d >= 0 && d < 0.35) {
+      const e = Math.exp(-d * 12);
+      x += Math.sin(d * 95) * amp * e;
+      y += Math.cos(d * 80) * amp * 0.7 * e;
+    }
+  }
+  return [x, y];
+};
+
+const revealK = (tOut: number) => {
+  const a = out(W.because), b = out(W.revealEnd);
+  if (tOut < a || tOut > b + 0.3) return 0;
+  const inK = lerp(tOut, [a, a + 0.35], [0, 1], Easing.out(Easing.cubic));
+  const outK = lerp(tOut, [b, b + 0.3], [1, 0], Easing.in(Easing.cubic));
+  return Math.min(inK, outK);
+};
+const REVEAL_SCALE = 0.48;
+const REVEAL_CY = 1405; // centre of the shrunk video window
+
+const cameraStyle = (frame: number): React.CSSProperties => {
+  const tOut = frame / FPS;
+  let scale = 1, ox = 540, oy = 760, tx = 0, ty = 0, rot = 0;
+  let filter = "none";
+  if (tOut >= W.minute && tOut < 3.16) scale = 1.12; // punch-in on "one minute"
+  const zA = out(W.youre), zB = out(W.iCant);
+  if (tOut >= zA && tOut < zB + 0.3) {
+    scale = 1 + 0.09 * Math.min(lerp(tOut, [zA, zA + 0.18], [0, 1], Easing.out(Easing.cubic)), lerp(tOut, [zB, zB + 0.25], [1, 0]));
+  }
+  const [sx, sy] = shake(tOut);
+  tx += sx; ty += sy;
+  // glitch on "breaks", snaps back on "fun"
+  const gA = out(W.breaks), gB = out(W.fun);
+  if (tOut >= gA && tOut < gB) {
+    const strong = tOut < gA + 0.5 || (frame % 9 < 2);
+    const j = strong ? 34 : 5;
+    tx += (random(`gx${frame}`) - 0.5) * 2 * j;
+    ty += (random(`gy${frame}`) - 0.5) * j * 0.4;
+    rot += strong ? (random(`gr${frame}`) - 0.5) * 2 : 0;
+    filter = frame % 4 < 2 ? `hue-rotate(${Math.round(random(`gh${frame}`) * 90 - 45)}deg) saturate(1.6) contrast(1.15)` : "contrast(1.1)";
+  }
+  // Claude Code reveal: the live video shrinks into an editor window
+  const r = revealK(tOut);
+  if (r > 0) {
+    scale *= 1 - (1 - REVEAL_SCALE) * r;
+    ox = 540; oy = 960;
+    ty += (REVEAL_CY - 960) * r;
+  }
+  return {
+    transform: `translate(${tx}px, ${ty}px) rotate(${rot}deg) scale(${scale})`,
+    transformOrigin: `${ox}px ${oy}px`, filter, overflow: "hidden",
+    borderRadius: r > 0 ? 34 * r / REVEAL_SCALE : 0,
+  };
+};
+
+// ======================================================================
+// Chase cutaway (inserted at INS, GAP seconds long)
+// ======================================================================
+const SHOULDER = [190, 1010];
+const VP = [540, 820];
+const IMPACT = 1.68;
+
+const TrashCan: React.FC = () => (
+  <svg width={360} height={440} viewBox="0 0 360 440">
+    <path d="M40 90 L 320 90 L 290 430 L 70 430 Z" fill="#8A8A84" />
+    {[0, 1, 2, 3, 4].map((i) => <path key={i} d={`M${86 + i * 47} 110 L ${96 + i * 40} 410`} stroke="#6E6E68" strokeWidth={14} strokeLinecap="round" />)}
+    <rect x={20} y={64} width={320} height={40} rx={14} fill="#A3A39C" />
+    <rect x={150} y={36} width={60} height={30} rx={10} fill="#6E6E68" />
+    <ellipse cx={180} cy={80} rx={150} ry={10} fill="#5A5A55" opacity={0.6} />
+  </svg>
+);
+
+const chaseItemPos = (i: number, c: number) => {
+  // c = cutaway seconds. Items race away ahead of the camera, wobbling, then dive into the bin.
+  const start = [[230, 1250], [140, 1050], [330, 900]][i];
+  const orbitA = c * 2.6 + i * 2.1;
+  const mid = [VP[0] + Math.cos(orbitA) * (210 + i * 30), VP[1] + 180 + Math.sin(orbitA * 1.3) * 150];
+  const k1 = lerp(c, [0.22, 0.75], [0, 1], Easing.out(Easing.cubic));
+  const k2 = lerp(c, [1.15 + i * 0.06, IMPACT - 0.08 + i * 0.03], [0, 1], Easing.in(Easing.quad));
+  const binTop = [VP[0], VP[1] - 120 * binScale(c)];
+  const x = start[0] + (mid[0] - start[0]) * k1 + (binTop[0] - mid[0]) * k2;
+  const y = start[1] + (mid[1] - start[1]) * k1 + (binTop[1] - mid[1]) * k2;
+  const s = (1.5 - 0.85 * k1) * (1 - 0.7 * k2);
+  return [x, y, s];
+};
+const binScale = (c: number) => lerp(c, [0.6, IMPACT], [0.12, 1], Easing.in(Easing.quad));
+
+const Cutaway: React.FC<{ frame: number }> = ({ frame }) => {
+  const c = (frame - INS_F) / FPS;
+  if (c < 0 || c >= GAP) return null;
+  const zoomIn = lerp(c, [0, 0.3], [1, 6], Easing.in(Easing.cubic));
+  const zoomOut = lerp(c, [2.1, 2.4], [6, 1], Easing.out(Easing.cubic));
+  const showFreezeIn = c < 0.3, showFreezeOut = c >= 2.1;
+  const greyOp = showFreezeIn ? lerp(c, [0.12, 0.3], [0, 1]) : showFreezeOut ? lerp(c, [2.1, 2.3], [1, 0]) : 1;
+  const boomD = c - IMPACT;
+  const sh = boomD >= 0 && boomD < 0.5 ? Math.exp(-boomD * 8) * 30 : 0;
+  const shx = Math.sin(c * 110) * sh, shy = Math.cos(c * 90) * sh;
+  // speed lines
+  const lines = [];
+  for (let i = 0; i < 46; i++) {
+    const ang = random(`la${i}`) * Math.PI * 2;
+    const ph = ((c * (1.6 + random(`ls${i}`)) + random(`lp${i}`)) % 1);
+    const r0 = 60 + ph * ph * 1500, len = 60 + ph * 380;
+    lines.push(<line key={i} x1={VP[0] + Math.cos(ang) * r0} y1={VP[1] + Math.sin(ang) * r0}
+      x2={VP[0] + Math.cos(ang) * (r0 + len)} y2={VP[1] + Math.sin(ang) * (r0 + len)}
+      stroke={i % 3 === 0 ? "#FFFFFF" : GREY2} strokeWidth={3 + ph * 8} strokeLinecap="round" opacity={0.25 + 0.5 * ph} />);
+  }
+  const itemEls = [<Badge100 />, <RobotProp t={c} />, <Badge6x stamp={1} />];
+  const flying = c < IMPACT + 0.02;
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{ opacity: greyOp, transform: `translate(${shx}px,${shy}px)` }}>
+        <AbsoluteFill style={{ background: `radial-gradient(circle at ${VP[0]}px ${VP[1]}px, #EDEDE7 0%, ${GREY1} 35%, ${GREY2} 100%)` }} />
+        <svg width={1080} height={1920} style={{ position: "absolute" }}>{lines}</svg>
+        {/* the bin we are chasing toward */}
+        {c > 0.55 && boomD < 0.08 && (
+          <div style={{ position: "absolute", left: VP[0], top: VP[1], transform: `translate(-50%,-30%) scale(${binScale(c)})` }}><TrashCan /></div>
+        )}
+        {/* smoke trails + items */}
+        {flying && [0, 1, 2].map((i) => {
+          const puffs = [];
+          for (let k = 1; k <= 9; k++) {
+            const cc = c - k * 0.035;
+            if (cc < 0.22) continue;
+            const [x, y, s] = chaseItemPos(i, cc);
+            puffs.push(<circle key={k} cx={x} cy={y + 30 * s} r={(18 + k * 7) * s} fill="#FFFFFF" opacity={0.5 * (1 - k / 10)} />);
+          }
+          return <svg key={`t${i}`} width={1080} height={1920} style={{ position: "absolute", filter: "blur(6px)" }}>{puffs}</svg>;
+        })}
+        {flying && [0, 1, 2].map((i) => {
+          const [x, y, s] = chaseItemPos(i, Math.max(c, 0.22));
+          return (
+            <div key={i} style={{
+              position: "absolute", left: x, top: y,
+              transform: `translate(-50%,-50%) scale(${s}) rotate(${(c * (300 + i * 140)) % 360}deg)`,
+              filter: "drop-shadow(0 18px 14px rgba(0,0,0,0.35))",
+            }}>{itemEls[i]}</div>
+          );
+        })}
+        {boomD >= 0 && <Explosion d={boomD} />}
+      </AbsoluteFill>
+      {(showFreezeIn || showFreezeOut) && (
+        <AbsoluteFill style={{
+          opacity: 1 - (showFreezeIn ? greyOp : greyOp),
+          transform: `scale(${showFreezeIn ? zoomIn : zoomOut})`, transformOrigin: `${SHOULDER[0]}px ${SHOULDER[1]}px`,
+          filter: `blur(${((showFreezeIn ? zoomIn : zoomOut) - 1) * 3}px)`,
+        }}>
+          <Img src={staticFile("img/freeze.png")} style={{ width: 1080, height: 1920 }} />
+        </AbsoluteFill>
+      )}
+    </AbsoluteFill>
+  );
+};
+
+const Explosion: React.FC<{ d: number }> = ({ d }) => {
+  const [cx, cy] = [VP[0], VP[1] - 60];
+  const ring = (r0: number, r1: number, col: string, t0: number, t1: number, op: number) => {
+    const k = lerp(d, [t0, t1], [0, 1], Easing.out(Easing.cubic));
+    return <circle cx={cx} cy={cy} r={r0 + (r1 - r0) * k} fill={col} opacity={op * (1 - lerp(d, [t1 * 0.6, t1 + 0.25], [0, 1]))} />;
+  };
+  const blobs = [];
+  for (let i = 0; i < 16; i++) {
+    const a = random(`ba${i}`) * Math.PI * 2, dist = (120 + random(`bd${i}`) * 260) * lerp(d, [0, 0.35], [0, 1], Easing.out(Easing.cubic));
+    blobs.push(<circle key={i} cx={cx + Math.cos(a) * dist} cy={cy + Math.sin(a) * dist - d * 120} r={(70 + random(`br${i}`) * 90) * lerp(d, [0, 0.3], [0.3, 1])}
+      fill={i % 3 === 0 ? "#5A4A3F" : i % 3 === 1 ? "#FF7A1A" : "#FFB43A"} opacity={0.85 * (1 - lerp(d, [0.25, 0.75], [0, 1]))} />);
+  }
+  const debris = [];
+  for (let i = 0; i < 18; i++) {
+    const a = random(`da${i}`) * Math.PI * 2, v = 900 + random(`dv${i}`) * 900;
+    const x = cx + Math.cos(a) * v * d, y = cy + Math.sin(a) * v * d + 900 * d * d;
+    const col = i % 4 === 0 ? LIME : i % 4 === 1 ? BLACK : "#8A8A84";
+    debris.push(<rect key={i} x={x} y={y} width={22 + random(`dw${i}`) * 30} height={14 + random(`dh${i}`) * 18}
+      transform={`rotate(${d * 900 * (random(`dr${i}`) - 0.5)} ${x} ${y})`} fill={col} />);
+  }
+  return (
+    <AbsoluteFill>
+      <svg width={1080} height={1920} style={{ position: "absolute", filter: "blur(8px)" }}>
+        {ring(40, 760, "#4A403A", 0.05, 0.6, 0.4)}
+        {blobs}
+        {ring(30, 520, "#FF6A10", 0, 0.32, 0.95)}
+        {ring(20, 340, "#FFC93C", 0, 0.22, 1)}
+        {ring(10, 200, "#FFF6C8", 0, 0.14, 1)}
+      </svg>
+      <svg width={1080} height={1920} style={{ position: "absolute" }}>{debris}</svg>
+      <AbsoluteFill style={{ background: "#FFFFFF", opacity: lerp(d, [0, 0.14], [0.95, 0]) }} />
+      {d > 0.04 && (
+        <div style={{
+          position: "absolute", top: 380, width: 1080, textAlign: "center", fontFamily: MONT, fontWeight: 900, fontSize: 150,
+          color: LIME, WebkitTextStroke: `8px ${BLACK}`, transform: `scale(${popInLocal(d)}) rotate(-6deg)`,
+          opacity: 1 - lerp(d, [0.35, 0.45], [0, 1]),
+        }}>BOOM!</div>
+      )}
+    </AbsoluteFill>
+  );
+};
+const popInLocal = (d: number) => spring({ frame: Math.round(d * FPS), fps: FPS, config: { damping: 8, stiffness: 220, mass: 0.5 } });
+
+// smoke drifting in from the left right after the cutaway
+const DriftSmoke: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const a = INS + GAP;
+  if (tOut < a || tOut > a + 1.6) return null;
+  const k = (tOut - a) / 1.6;
+  const puffs = [];
+  for (let i = 0; i < 7; i++) {
+    puffs.push(<circle key={i} cx={-120 + k * (380 + random(`ds${i}`) * 200)} cy={700 + i * 120 + Math.sin(k * 4 + i) * 30}
+      r={90 + random(`dr${i}`) * 70 + k * 60} fill="#DADAD3" opacity={0.3 * Math.sin(Math.PI * k)} />);
+  }
+  return <svg width={1080} height={1920} style={{ position: "absolute", filter: "blur(18px)" }}>{puffs}</svg>;
+};
+
+// ======================================================================
+// HUD overlays
+// ======================================================================
+const Timer: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const a = W.minute, z = out(W.watching);
+  if (tOut < a || tOut >= out(W.endCard)) return null;
+  const remain = Math.max(0, 60 * (1 - (tOut - a) / (z - a)));
+  const secs = Math.ceil(remain - 1e-6);
+  const txt = `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}`;
+  // slams in big, then flies into the corner
+  const fly = lerp(tOut, [a + 0.35, a + 0.75], [0, 1], Easing.inOut(Easing.cubic));
+  const s0 = popIn(frame, a, 8);
+  const scale = (2.4 - 1.4 * fly) * s0;
+  const x = 540 + (930 - 540) * fly, y = 280 + (110 - 280) * fly;
+  const done = tOut >= z;
+  const last = remain < 4 && !done;
+  return (
+    <div style={{
+      position: "absolute", left: x, top: y, transform: `translate(-50%,-50%) scale(${scale * (last && frame % 30 < 4 ? 1.08 : 1)})`,
+      background: done ? LIME : BLACK, color: done ? BLACK : LIME, border: `4px solid ${LIME}`, borderRadius: 18,
+      padding: "6px 18px 4px", fontFamily: MONO, fontWeight: 700, fontSize: 62, lineHeight: 1.1,
+      boxShadow: "0 8px 22px rgba(0,0,0,0.35)",
+    }}>{txt}</div>
+  );
+};
+
+const Word: React.FC<{ frame: number; at: number; text: string; y: number; rot: number; lit: boolean }> = ({ frame, at, text, y, rot, lit }) => {
+  const s = spring({ frame: frame - out(at) * FPS, fps: FPS, config: { damping: 14, stiffness: 260, mass: 0.6 } });
+  if (frame < out(at) * FPS) return null;
+  return (
+    <div style={{ position: "absolute", top: y, width: 1080, textAlign: "center" }}>
+      <div style={{
+        display: "inline-block", transform: `scale(${2.3 - 1.3 * s}) rotate(${rot}deg)`, opacity: Math.min(1, s * 2),
+        background: lit ? LIME : BLACK, color: lit ? BLACK : LIME, fontFamily: MONT, fontWeight: 900, fontSize: 92,
+        padding: "8px 30px", borderRadius: 18, boxShadow: "0 10px 26px rgba(0,0,0,0.35)",
+      }}>{text}</div>
+    </div>
+  );
+};
+
+const StartupWords: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  if (tOut < out(W.curious) - 0.1 || tOut > out(W.iCant) + 0.25) return null;
+  const lit = tOut >= out(W.exactlyMe);
+  const leave = lerp(tOut, [out(W.iCant), out(W.iCant) + 0.25], [0, 1], Easing.in(Easing.quad));
+  return (
+    <AbsoluteFill style={{ transform: `translateX(${leave * -1200}px)` }}>
+      <Word frame={frame} at={W.curious} text="CURIOUS" y={90} rot={-3} lit={lit} />
+      <Word frame={frame} at={W.energy} text="ENERGY" y={225} rot={2} lit={lit} />
+      <Word frame={frame} at={W.experiments} text="EXPERIMENTS" y={360} rot={-2} lit={lit} />
+      {lit && (
+        <div style={{ position: "absolute", top: 1180, left: 640, fontFamily: MARKER, fontSize: 96, color: LIME,
+          WebkitTextStroke: `3px ${BLACK}`, transform: `scale(${popIn(frame, out(W.exactlyMe), 9)}) rotate(-8deg)` }}>= ME</div>
+      )}
+    </AbsoluteFill>
+  );
+};
+
+const WhatIf: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const a = out(W.whatIf), z = out(W.inASmall);
+  if (tOut < a || tOut > z + 0.2) return null;
+  const draw = lerp(tOut, [a, a + 0.6], [0, 1], Easing.out(Easing.quad));
+  const fade = 1 - lerp(tOut, [z, z + 0.2], [0, 1]);
+  return (
+    <div style={{ position: "absolute", top: 150, width: 1080, textAlign: "center", opacity: fade }}>
+      <div style={{ display: "inline-block", clipPath: `inset(0 ${100 - draw * 100}% 0 0)`, transform: "rotate(-5deg)" }}>
+        <div style={{ fontFamily: MARKER, fontSize: 150, color: LIME, WebkitTextStroke: `4px ${BLACK}`, lineHeight: 1 }}>WHAT IF...?</div>
+        <svg width={760} height={50} viewBox="0 0 760 50">
+          <path d="M10 30 C 120 5, 220 45, 340 25 S 560 10, 750 28" stroke={OFF} strokeWidth={10} fill="none" strokeLinecap="round" />
+        </svg>
+      </div>
+    </div>
+  );
+};
+
+const Cracks: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const a = out(W.breaks), z = out(W.fun);
+  if (tOut < a || tOut >= z + 0.12) return null;
+  const grow = lerp(tOut, [a, a + 0.18], [0, 1], Easing.out(Easing.cubic));
+  const flash = lerp(tOut, [z, z + 0.12], [0.9, 0]);
+  const C = [700, 700];
+  const paths = [
+    "M700 700 L 860 560 L 930 600 L 1090 430", "M700 700 L 620 520 L 660 380 L 560 120",
+    "M700 700 L 470 760 L 380 700 L -10 820", "M700 700 L 760 900 L 700 1010 L 820 1400",
+    "M700 700 L 900 780 L 960 900 L 1090 940", "M700 700 L 560 650 L 420 470 L 300 330",
+    "M860 560 L 900 470", "M620 520 L 520 560", "M470 760 L 450 900", "M760 900 L 900 960",
+  ];
+  const bars = [];
+  if (tOut < z && (tOut < a + 0.5 || frame % 9 < 2)) {
+    for (let i = 0; i < 6; i++) {
+      bars.push(<div key={i} style={{ position: "absolute", left: 0, top: random(`by${frame}${i}`) * 1920, width: 1080, height: 8 + random(`bh${frame}${i}`) * 50,
+        background: i % 2 ? LIME : "#FF2BD6", opacity: 0.35, mixBlendMode: "screen", transform: `translateX(${(random(`bx${frame}${i}`) - 0.5) * 200}px)` }} />);
+    }
+  }
+  return (
+    <AbsoluteFill>
+      {bars}
+      {tOut < z && (
+        <svg width={1080} height={1920} style={{ position: "absolute" }}>
+          {paths.map((d, i) => (
+            <path key={i} d={d} stroke="#FFFFFF" strokeWidth={i < 6 ? 7 : 4} fill="none" strokeLinejoin="round"
+              pathLength={1} strokeDasharray={1} strokeDashoffset={1 - grow} style={{ filter: "drop-shadow(0 0 4px rgba(0,0,0,0.8))" }} />
+          ))}
+          <circle cx={C[0]} cy={C[1]} r={26 * grow} fill="#FFFFFF" opacity={0.9} />
+        </svg>
+      )}
+      <AbsoluteFill style={{ background: "#FFFFFF", opacity: tOut >= z ? flash : 0 }} />
+    </AbsoluteFill>
+  );
+};
+
+// Claude Code panel above the shrunk video. Steps are the real ones used to make this video.
+const STEPS: [string, string][] = [
+  ["> ", "make my Syncrowin intro from the long take"],
+  ["● ", "Bash(python transcribe.py \"Raw Takes/…102801.mp4\")"],
+  ["  ⎿ ", "8 min transcribed, word timestamps saved"],
+  ["● ", "Bash(python cut_talking_track.py)"],
+  ["  ⎿ ", "Rough cut: 59.2 s from the best takes"],
+  ["● ", "Write(editor/src/Video.tsx)"],
+  ["  ⎿ ", "palm props, hats, chase, fire, timer"],
+  ["● ", "Bash(npx remotion render Syncrowin)"],
+  ["  ⎿ ", "Rendering 1852 frames…"],
+];
+const RevealPanel: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const r = revealK(tOut);
+  if (r <= 0) return null;
+  const a = out(W.because) + 0.3;
+  const per = 0.42;
+  const winW = 1080 * REVEAL_SCALE, winTop = REVEAL_CY - 960 * REVEAL_SCALE;
+  return (
+    <AbsoluteFill style={{ opacity: Math.min(1, r * 1.6) }}>
+      <AbsoluteFill style={{ background: BLACK }} />
+      <AbsoluteFill style={{ backgroundImage: `radial-gradient(${INK} 2px, transparent 2px)`, backgroundSize: "36px 36px", opacity: 0.9 }} />
+      {/* terminal */}
+      <div style={{
+        position: "absolute", left: 40, top: 170, width: 1000, height: 600, borderRadius: 26, background: "#161614",
+        border: `2px solid #2A2A27`, boxShadow: "0 20px 50px rgba(0,0,0,0.6)", overflow: "hidden",
+        transform: `translateY(${(1 - r) * -120}px)`,
+      }}>
+        <div style={{ height: 58, background: "#1F1F1C", display: "flex", alignItems: "center", padding: "0 22px", gap: 12 }}>
+          {["#FF5F57", "#FEBC2E", "#28C840"].map((c) => <div key={c} style={{ width: 18, height: 18, borderRadius: 9, background: c }} />)}
+          <div style={{ marginLeft: 18, fontFamily: MONO, fontSize: 26, color: GREY1 }}>✻ Claude Code — syncrowin/editor</div>
+        </div>
+        <div style={{ padding: "26px 30px", fontFamily: MONO, fontSize: 31, lineHeight: 1.55 }}>
+          {STEPS.map(([pre, body], i) => {
+            const t0 = a + i * per;
+            if (tOut < t0) return null;
+            const n = Math.floor(lerp(tOut, [t0, t0 + per * 0.8], [0, body.length]));
+            const col = pre.startsWith(">") ? OFF : pre.startsWith("●") ? LIME : GREY1;
+            return (
+              <div key={i} style={{ color: col, whiteSpace: "nowrap" }}>
+                <span style={{ color: pre.startsWith("●") ? LIME : GREY2 }}>{pre}</span>{body.slice(0, n)}
+                {n < body.length && frame % 10 < 6 && <span style={{ background: OFF }}>&nbsp;</span>}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* window chrome around the live video */}
+      <div style={{
+        position: "absolute", left: 540 - winW / 2 - 6, top: winTop - 52, width: winW + 12, height: 58,
+        background: "#1F1F1C", borderRadius: "22px 22px 0 0", display: "flex", alignItems: "center", padding: "0 18px",
+        fontFamily: MONO, fontSize: 22, color: GREY1, gap: 10,
+      }}>
+        <div style={{ width: 12, height: 12, borderRadius: 6, background: LIME }} /> Preview · Syncrowin.mp4
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const FireCaption: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const a = out(W.imagine), z = out(W.name) - 0.1;
+  if (tOut < a || tOut > z) return null;
+  const s = popIn(frame, a, 12);
+  const big = popIn(frame, out(W.syncrowin), 8);
+  return (
+    <div style={{ position: "absolute", top: 150, width: 1080, textAlign: "center", fontFamily: MONT, fontWeight: 900, opacity: 1 - lerp(tOut, [z - 0.2, z], [0, 1]) }}>
+      <div style={{ fontSize: 60, color: OFF, transform: `scale(${s})`, textShadow: "0 4px 16px rgba(0,0,0,0.5)" }}>Imagine that for</div>
+      <div style={{ display: "inline-block", marginTop: 12, fontSize: 104, background: LIME, color: BLACK, padding: "4px 30px", borderRadius: 18, transform: `scale(${big})` }}>SYNCROWIN</div>
+    </div>
+  );
+};
+
+const NameTag: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const a = out(W.name), z = out(W.endCard);
+  if (tOut < a || tOut >= z) return null;
+  const s = lerp(tOut, [a, a + 0.3], [0, 1], Easing.out(Easing.back(1.6)));
+  return (
+    <div style={{ position: "absolute", left: 60, top: 260, transform: `translateX(${(1 - s) * -700}px)` }}>
+      <div style={{ display: "inline-block", background: LIME, color: BLACK, fontFamily: MONT, fontWeight: 900, fontSize: 70, padding: "8px 26px", borderRadius: "16px 16px 16px 0" }}>Manit Khera</div>
+      <br />
+      <div style={{ display: "inline-block", background: BLACK, color: OFF, fontFamily: MONT, fontWeight: 700, fontSize: 32, padding: "10px 24px", borderRadius: "0 0 16px 16px" }}>Software Engineering student · Deakin</div>
+    </div>
+  );
+};
+
+const EndCard: React.FC<{ frame: number }> = ({ frame }) => {
+  const tOut = frame / FPS;
+  const a = out(W.endCard);
+  if (tOut < a) return null;
+  const k = lerp(tOut, [a, a + 0.25], [0, 1], Easing.out(Easing.cubic));
+  const row = (d: number): React.CSSProperties => {
+    const p = lerp(tOut, [a + d / FPS, a + (d + 8) / FPS], [0, 1], Easing.out(Easing.cubic));
+    return { opacity: p, transform: `translateY(${(1 - p) * 30}px)` };
+  };
+  return (
+    <AbsoluteFill style={{ clipPath: `circle(${k * 1200}px at 540px 960px)`, background: BLACK, justifyContent: "center", alignItems: "center", fontFamily: MONT, color: OFF, textAlign: "center" }}>
+      <div style={{ ...row(3), fontSize: 110, fontWeight: 900, lineHeight: 1 }}>Manit Khera</div>
+      <div style={{ ...row(7), fontSize: 40, fontWeight: 600, marginTop: 24 }}>Software Engineering student · Deakin University</div>
+      <div style={{ ...row(11), marginTop: 70, display: "inline-block", background: LIME, color: BLACK, fontSize: 44, fontWeight: 800, padding: "14px 30px", borderRadius: 16 }}>manitkhera26@gmail.com</div>
+      <div style={{ ...row(15), marginTop: 26, fontSize: 38, fontWeight: 700 }}>linkedin.com/in/manit-khera-603957252</div>
+      <div style={{ ...row(22), marginTop: 110, fontFamily: MARKER, fontSize: 70, color: LIME }}>Give me a "what if".</div>
+    </AbsoluteFill>
+  );
+};
+
+// ======================================================================
+// Sound
+// ======================================================================
+const SFX: [string, number, number, number?][] = [
+  // [file, rough-cut second (or output second if marked raw below), volume, maxSeconds]
+  ["slam", W.minute, 0.55], ["tick", W.minute + 0.75, 0.6],
+  ["ding", W.hundred, 0.45], ["pop", W.project, 0.4], ["pop", W.fiveK, 0.4], ["slam", W.six, 0.55],
+  ["whoosh", W.tossStart, 0.7],
+  ["slam", W.curious, 0.5], ["slam", W.energy, 0.5], ["slam", W.experiments, 0.5], ["sparkle", W.exactlyMe, 0.45],
+  ["scribble", W.whatIf, 0.55], ["glitch", W.breaks, 0.6], ["bloop", W.fun, 0.6],
+  ["pop", W.backend, 0.4], ["pop", W.hardware, 0.4], ["pop", W.it, 0.4], ["pop", W.video, 0.4], ["clap", W.video + 0.4, 0.7],
+  ["scratch", W.because, 0.7], ["typing", W.because + 0.35, 0.35], ["typing", W.because + 1.95, 0.35], ["whoosh", W.revealEnd, 0.6],
+  ["ignite", W.ignite, 0.45], ["puff", W.fist, 0.6], ["whip", W.name, 0.5], ["ding2", W.watching, 0.5],
+];
+// cutaway sounds, in seconds from the start of the cutaway
+const CUT_SFX: [string, number, number, number?][] = [
+  ["whip", 0.0, 0.6], ["rocket", 0.25, 0.55, IMPACT - 0.25], ["boom", IMPACT, 0.85], ["whip", 2.1, 0.6], ["tinkle", 2.45, 0.4],
+];
+
+const Music: React.FC = () => {
+  const a1 = F(W.minute), b1 = Math.round(14.92 * FPS); // off on "that"
+  const a2 = F(W.youre);
+  const fireA = F(47.44), fireB = F(W.imagine), endA = F(W.endCard);
+  return (
+    <>
+      <Sequence from={a1} durationInFrames={b1 - a1 + 4}>
+        <Audio src={staticFile("music/stroll.mp3")} startFrom={Math.round(23.8 * FPS)}
+          volume={(f) => 0.11 * interpolate(f, [0, 4, b1 - a1, b1 - a1 + 4], [0, 1, 1, 0], clamp)} />
+      </Sequence>
+      <Sequence from={a2} durationInFrames={TOTAL_FRAMES - a2}>
+        <Audio src={staticFile("music/stroll.mp3")} startFrom={Math.round(62.5 * FPS)}
+          volume={(f) => {
+            const g = f + a2;
+            let v = 0.11;
+            if (g >= fireA && g < fireB) v = 0.16; // nobody talking while the fire burns
+            if (g >= endA) v = 0.25;
+            const fadeIn = interpolate(f, [0, 6], [0, 1], clamp);
+            const fadeOut = interpolate(g, [TOTAL_FRAMES - 24, TOTAL_FRAMES - 1], [1, 0], clamp);
+            return v * fadeIn * fadeOut;
+          }} />
+      </Sequence>
+      {/* crackle while the fire burns */}
+      <Sequence from={F(W.ignite) + 6} durationInFrames={F(W.fist) - F(W.ignite) - 6}>
+        <Audio src={staticFile("sfx/crackle.wav")} volume={(f) => 0.35 * interpolate(f, [0, 6], [0, 1], clamp)} />
+      </Sequence>
+    </>
+  );
+};
+
+// ======================================================================
+export const Syncrowin: React.FC = () => {
+  const frame = useCurrentFrame();
+  const inCut = frame >= INS_F && frame < INS_F + GAP_F;
+  return (
+    <AbsoluteFill style={{ background: BLACK }}>
+      <RevealPanel frame={frame} />
+      <AbsoluteFill style={cameraStyle(frame)}>
+        <Sequence from={0} durationInFrames={INS_F}>
+          <OffthreadVideo src={staticFile("th/track.mp4")} />
+        </Sequence>
+        <Sequence from={INS_F + GAP_F}>
+          <OffthreadVideo src={staticFile("th/track.mp4")} startFrom={INS_F} />
+        </Sequence>
+        {!inCut && <PalmProps frame={frame} />}
+        <Hats frame={frame} />
+        <Fire frame={frame} />
+      </AbsoluteFill>
+      <Cutaway frame={frame} />
+      <DriftSmoke frame={frame} />
+      <StartupWords frame={frame} />
+      <WhatIf frame={frame} />
+      <Cracks frame={frame} />
+      <HatLabel frame={frame} />
+      <FireCaption frame={frame} />
+      <NameTag frame={frame} />
+      <Timer frame={frame} />
+      <EndCard frame={frame} />
+
+      <Music />
+      {SFX.map(([name, at, vol, max], i) => (
+        <Sequence key={`s${i}`} from={F(at)} durationInFrames={max ? Math.round(max * FPS) : undefined}>
+          <Audio src={staticFile(`sfx/${name}.wav`)} volume={vol} />
+        </Sequence>
+      ))}
+      {CUT_SFX.map(([name, at, vol, max], i) => (
+        <Sequence key={`c${i}`} from={INS_F + Math.round(at * FPS)} durationInFrames={max ? Math.round(max * FPS) : undefined}>
+          <Audio src={staticFile(`sfx/${name}.wav`)} volume={vol} />
+        </Sequence>
+      ))}
+      {CAPTIONS && null}
+    </AbsoluteFill>
+  );
+};

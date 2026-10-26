@@ -1,0 +1,19 @@
+started 2026-10-26 00:54  exit 0
+usage: claude-sonnet-5-5 | in 26 + cache write 57,024 + cache read 659,452 | out 5,851 | 23 turns | 1.2 min | API-equivalent cost $0.35
+
+## Scrape 2026-10-26: no new matches
+
+I ran 9 searches across the two enabled portals, with results limited to the last 14 days.
+- **linkedin-search (Melbourne):** robotics intern, embedded software, software engineer intern, junior developer.
+- **freehire-search (Australia):** robotics, embedded, firmware, intern and junior roles.
+
+Every relevant hit was already in `job_scraper/seen_jobs.json`, `job_search_tracker.csv` or `planned_applications.csv`. The one unseen freehire hit was ELMO's "Junior Full Stack Developer". I read the posting and it is Schoolbox's ad, which is already in the tracker. The other unseen hits were junior data engineer, analyst and accounting roles outside your profile. I didn't record them in `seen_jobs.json`.
+
+- **Skipped (disabled):** jobbank-search, jobdanmark-search, jobindex-search and jobnet-search.
+- **Not run:** I didn't run the WebSearch fallback (seek.com.au, gradconnection, prosple), so those boards weren't covered this run.
+- **Health:** no portal problems found.
+- **Leftover file:** I couldn't delete `job_scraper/run_scrape_tmp.py`, a script I wrote and then couldn't run without approval, because deleting it needs approval. It's safe to delete.
+
+I wrote `job_scraper/latest_scrape.md` with this result.
+
+NOTIFY-NONE

@@ -1,0 +1,32 @@
+# [YOUR_NAME]
+[YOUR_SUBURB], [STATE] | [YOUR_PHONE] | [YOUR_EMAIL]
+[YOUR_LINKEDIN_URL] | [YOUR_GITHUB_URL]
+
+## PROFILE
+[Two to four sentences aimed at this role: who you are, what you build, what you want to do for them.]
+
+## EDUCATION
+**[Degree] — [University, Campus]** | **[Mon YYYY] - [YYYY] (expected)**
+- [Academic standing and top unit marks]
+
+## TECHNICAL SKILLS
+**Languages:** [..]
+**Backend & Data:** [..]
+**Frontend & Embedded:** [..]
+**Cloud, DevOps & Testing:** [..]
+
+## PROJECTS
+**[Project name]** | [Tech, Tech, Tech] | [Demo video]([URL]) · [Source code]([URL])
+- [Action, what you built, measurable result with **bold numbers**]
+- [..]
+
+## EXPERIENCE
+**[Role] — [Organisation, Location]** | [Mon YYYY] - [Mon YYYY or Present]
+- [..]
+
+## LEADERSHIP
+**[Role] — [Club or organisation]** | [Mon YYYY] - Present
+- [..]
+
+## REFERENCES
+**[Referee name]** — [Role, Organisation] | [email]  |  [phone]

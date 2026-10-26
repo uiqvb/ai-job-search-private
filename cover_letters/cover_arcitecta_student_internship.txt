@@ -1,0 +1,40 @@
+## Sender
+Manit Khera
+12 Jenner Street
+Blackburn South, VIC 3130
+0412 761 206
+manitkhera26@gmail.com
+
+## Date
+Tuesday 20 October 2026
+
+## Recipient
+Hiring Manager
+Arcitecta
+15 Little Bakers Lane
+Northcote, VIC 3070
+
+## Greeting
+Dear Hiring Manager,
+
+## RE
+RE: Student Internship position
+
+## Body
+I found your Student Internships on the Arcitecta careers page, and one line felt written for me: you want makers who will step into problems “even when there are many unknowns”. I go looking for those on purpose.
+
+I am a third-year student in a Bachelor of Software Engineering (Honours) at Deakin University, finishing in 2028, with a WAM of 81.33 and 100 in Data Structures and Algorithms. My backend unit chair had a habit of telling me “nah, you can't do this”, which works on me every time. So I made my C# REST API drive a robot I had wired myself. It scored 100/100 and I demonstrated it live at Deakin Open Day, which fits your “regularly demonstrate working software” line.
+
+You also ask for pragmatism over dogma. My robot only behaved on fresh batteries. Rather than guess, I read its own boot and reset logs, which blamed a failing buck converter, not my code. By then I had bought a small pile of batteries that are now all about 90 percent full. On concurrency, I audited a robot dispatch API for race conditions and fixed them with atomic PostgreSQL job claims, so each job is claimed exactly once.
+
+Mediaflux is the kind of software I want to learn from. The National Film and Sound Archive chose it as its central digital asset management system, and Mediaflux Real-Time won a 2025 NAB Show Product of the Year award. You own your entire technology architecture, and I like working across layers too: my robot runs from Arduino firmware up to a C# REST API.
+
+One gap: I have not written Java yet. I work mostly in C#, plus C++ for Arduino firmware and JavaScript for React, and you say you will help, so I will hold you to that. I am on a student visa, so I can work full-time from November to February and two to three days a week during trimester.
+
+My resume is attached. I would love an interview, ideally with the robot in tow. Thanks for reading!
+
+## Sign-off
+Kind regards,
+
+## Name
+Manit Khera

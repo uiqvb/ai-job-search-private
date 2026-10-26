@@ -12,69 +12,86 @@ The `site:` query templates in this file are the **WebSearch fallback** — for 
 
 ## Search Sites
 
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by `linkedin-search` CLI
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
+Market: **Melbourne, Australia** (plus remote roles anywhere). Installed CLIs `linkedin-search` and `freehire-search` run first; the Danish portals stay disabled.
+
+Primary:
+- **seek.com.au** - Australia's largest board (no CLI yet; add one with `/add-portal`, until then use the `site:` queries below)
+- **linkedin.com/jobs** - also covered by the `linkedin-search` CLI (location: Melbourne, Victoria, Australia)
+- **gradconnection.com** and **prosple.com** - Australian intern/vacation program boards
+- **Deakin Jobs and Internships Board (DeakinTALENT)** - student-only listings, check manually
 
 Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+- Melbourne robotics/hardware/AI startups: Andromeda Robotics, Tekt Industries, NxtGen Industries, ReSource, Aurova, Element Robotics, August Robotics, black.ai, AOS Group, Exergenics, Apollo Medical Imaging, Rosterfy, Clipchamp
+- Kids' STEM / coding education (bridging roles): Code Camp, Rocket Academy, Bricks 4 Kidz Boroondara, Innovate Technology & Robotics Academy, Skill Samurai, Play AI, Kids2Coding, STEM Birds, ThinkerLab, Inspire Robotics
 
 ## Query Categories
 
-Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
+Queries are in English only (Hindi is spoken-only and not a working language for postings). Most results should be **intern / vacation / junior / casual / part-time**: add those words to queries. Skip anything requiring a graduate degree already held, citizenship/PR, a security clearance, or a driver's licence and car.
 
-**Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
+### Priority 1: Robotics, embedded and firmware software (internships)
 
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
-
-These match your strongest and most desired career direction.
+Software that drives real hardware: firmware, sensor integration, robot control backends.
 
 ```
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_2]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_COUNTRY]
+site:seek.com.au "robotics" intern Melbourne
+site:seek.com.au "embedded software" intern OR graduate Melbourne
+site:seek.com.au "firmware" intern Melbourne
+site:seek.com.au "mechatronics" intern Melbourne
+site:linkedin.com/jobs "robotics software" intern Melbourne
+site:linkedin.com/jobs "embedded" "summer intern" Australia
+site:gradconnection.com robotics OR embedded internship Victoria
 ```
 
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
+### Priority 2: Backend / software engineering internships
 
-These match your domain expertise.
-
-```
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
-```
-
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
-
-Adjacent roles you could pivot into.
+C#/.NET, APIs, PostgreSQL, cloud, testing.
 
 ```
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
+site:seek.com.au "software engineering intern" Melbourne
+site:seek.com.au "backend developer" intern OR junior Melbourne
+site:seek.com.au ".NET" OR "C#" intern OR junior Melbourne
+site:linkedin.com/jobs "software engineer intern" Melbourne
+site:linkedin.com/jobs "software developer" "part-time" student Melbourne
+site:prosple.com software engineering internship Melbourne
+site:gradconnection.com "summer internship" software Melbourne
 ```
 
-### Priority 4: Broader Technical / Consulting
-
-Wider net for general technical roles.
+### Priority 3: AI and agent research / applied AI
 
 ```
-site:[YOUR_JOB_BOARD] [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+site:linkedin.com/jobs "AI engineer" intern Melbourne OR remote Australia
+site:seek.com.au "machine learning" OR "AI" intern Melbourne
+site:linkedin.com/jobs "research intern" AI Australia remote
+"research internship" "applied AI" Deakin OR Monash OR RMIT OR Melbourne
+```
+
+### Priority 4: Tutoring and kids' STEM facilitation (bridging roles, casual)
+
+Eastern suburbs preferred: Glen Waverley, Mount Waverley, Box Hill, Burwood, Blackburn, Camberwell, Hawthorn, Doncaster, Chadstone.
+
+```
+site:seek.com.au "STEM" facilitator OR educator casual Melbourne
+site:seek.com.au "coding" tutor OR instructor casual Melbourne
+site:seek.com.au "robotics" instructor OR teacher casual Melbourne
+site:linkedin.com/jobs "coding instructor" Melbourne
+"PASS Leader" OR "peer mentor" Deakin careers
+```
+
+### Priority 5: Remote software roles (wider net)
+
+```
+site:linkedin.com/jobs "software engineer intern" remote Australia
+site:linkedin.com/jobs "junior developer" remote "C#" OR "TypeScript"
 ```
 
 ## Location Filter
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+Home: Blackburn South VIC 3130. **No driver's licence; public transport only.**
+- **Ideal:** Box Hill, Burwood, Blackburn, Glen Waverley, Mount Waverley, Camberwell, Hawthorn, Doncaster, Chadstone, Clayton, Ringwood
+- **Acceptable:** Melbourne CBD, Southbank, Docklands, Richmond, Cremorne, Collingwood, any suburb on the Belgrave/Lilydale/Glen Waverley lines
+- **Borderline (~75+ min by transit, check the route):** Keilor East, Tullamarine, Dandenong South, outer west and north industrial estates
+- **Too far / FAIL:** anything requiring a car; onsite roles outside Melbourne (Sydney, Brisbane, regional VIC)
+- **Remote:** PASS from anywhere
 
 ## Language Filter
 

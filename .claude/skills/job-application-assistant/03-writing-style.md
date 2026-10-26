@@ -104,6 +104,42 @@ The cover letter is **not a CV repetition**. It should be forward-looking:
 - Lead with project management, mentoring, course development
 - Frame advanced degrees as evidence of independent project delivery
 
+## DeakinTALENT Rules (Manit's preferred source of writing guidance)
+
+Source: `documents/notes/guides/` (DeakinTALENT Resume Guide v6 and Cover Letter Guide, plus `Checklists.md`). Manit asked for these to be used as the source of tips. Where they conflict with generic advice above, these win for content and wording. CVs use the one-page master v7 Word layout (Manit's call, 2026-10-20: Australian resumes are one page): `templates/cv/master-v7/`. Cover letters use the DeakinTALENT Word template itself (Manit's call, 2026-10-20): `templates/cover_letters/deakintalent/`.
+
+**Both documents**
+- UK/Australian spelling. No em dashes anywhere (Manit's rule).
+- Short sentences, plain English, readable on a fast skim. Acronyms only when needed, defined on first use.
+- Use the posting's own words for skills it names, not synonyms.
+- Never write a count, score, date or pattern name from memory; check `01-candidate-profile.md` (and the Resume folder's CLAUDE.md).
+
+**Resume**
+- Profile heading "Profile" or "Career Profile", 3 to 6 lines, **no personal pronouns**, no bold inside it.
+- Bullets follow **Action verb + Problem/Project + Result** (APR). Past tense for past roles, present for current.
+- Skills section lists technical skills only; no soft skills like "strong communicator".
+- Every entry has month and year start and end dates, full organisation name, full title, suburb.
+- No photo, age, nationality, or the words "CV"/"Resume" on the page.
+- Referees optional; default "Available upon request."
+- File name: `Manit Khera Resume.pdf`.
+
+**Cover letter**
+- Introduction: full correct position title and organisation name, **where the ad was found**, any referral or person met, one or two lines on why.
+- Body one: current degree, expected completion (2028), academic average (WAM), awards, then **two or three** skills each proven with a specific example.
+- Body two: specific research on the organisation, beyond the basics.
+- Closing: restate value, mention attached documents, ask for an interview, thank them.
+- **Prose only: no bullet lists, headings, tables or colour** in the letter (DeakinTALENT checklist). This overrides the bullet-list guidance above and the itemize block in `06-cover-letter-templates.md`.
+- Numbers one to ten written as words. Avoid "passionate", "expert", "dynamic", "perfect fit", "best candidate", "willing to do anything", "I hereby apply".
+- Must add context to the resume, not repeat it. Must not repeat lines from the portfolio either (Manit's feedback, 16 Oct 2026).
+- Sign-off: "Kind regards," then full name. File name: `Manit Khera Cover Letter.pdf`.
+
+## Patterns Observed in Past Applications
+*[Inferred from ~15 cover letters and emails, Jul to Oct 2026. Review before relying on this.]*
+- Letters are assembled from the story bank (`documents/notes/stories/`), one carrying story plus two or three supporting items, not copied from the last letter.
+- Missing requirements are named outright using the "Naming the Gap" move (Story 10): name it, say where it matters, give the concrete substrate, give a dated plan.
+- For startups and robotics companies Manit likes a warmer, more playful voice (Andromeda, Inspire); for research and corporate roles he wants it professional and template-structured (NxtGen rewrite, A2I2).
+- Speculative/cold emails: one shared body plus a one-line hook specific to each company.
+
 ## Multi-language Applications
 - Default to the language of the job posting
 - Cover letters in the posting's language should feel natural, not translated

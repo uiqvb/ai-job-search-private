@@ -1,0 +1,475 @@
+{
+ "files": [
+  {
+   "file": "20261022_210409.mp4",
+   "duration": 440.01,
+   "size": [
+    1920,
+    1080
+   ],
+   "words": 454
+  }
+ ],
+ "lines": [
+  {
+   "id": "1 Hook",
+   "text": "Okay, Infosys. At the Australian Open, you brought a robot to the Fan Zone.",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 26.98,
+     "end": 29.98,
+     "score": 1.0,
+     "said": "Okay Infosys, at the Australian Open you brought a robot to the Fan Zone.",
+     "longest_pause": 0.06,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Okay",
+      "the",
+      "to",
+      "the",
+      "Fan",
+      "Zone."
+     ],
+     "level_db": -13.3
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 37.16,
+     "end": 41.38,
+     "score": 1.0,
+     "said": "Okay Infosys, at the Australian Open you brought a robot to the Fan Zone.",
+     "longest_pause": 0.26,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Okay",
+      "the",
+      "to",
+      "the",
+      "Fan"
+     ],
+     "level_db": -14.8
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 49.16,
+     "end": 53.0,
+     "score": 1.0,
+     "said": "Okay Infosys, at the Australian Open you brought a robot to the Fan Zone.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "at",
+      "the",
+      "to",
+      "the",
+      "Fan"
+     ],
+     "level_db": -15.6,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "2 Open Day",
+   "text": "I brought mine to Deakin Open Day",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 29.98,
+     "end": 29.98,
+     "score": 0.6,
+     "said": "Deakin Open Day.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Deakin",
+      "Open",
+      "Day."
+     ],
+     "level_db": -19.0
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 60.06,
+     "end": 62.64,
+     "score": 0.88,
+     "said": "I too brought mine to the Deakin Open Day.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Open"
+     ],
+     "level_db": -19.7
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 71.56,
+     "end": 73.84,
+     "score": 0.88,
+     "said": "I too brought mine to the Deakin Open Day.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -16.7
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 80.82,
+     "end": 82.58,
+     "score": 0.71,
+     "said": "I too brought mine to the Deakin",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -13.4,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "3 Meet",
+   "text": "two separate uni projects, backend API and a robot, nothing said they should meet, so I made them meet",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 147.74,
+     "end": 153.31,
+     "score": 0.82,
+     "said": "two separate uni projects, an API and a robot. Nobody said they should meet but I still made them meet.",
+     "longest_pause": 0.56,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "but"
+     ],
+     "level_db": -13.8
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 160.34,
+     "end": 166.19,
+     "score": 0.68,
+     "said": "two separate uni projects, a robot and an API. No one said that they should meet but I still made them meet.",
+     "longest_pause": 0.38,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -14.8
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 175.27,
+     "end": 181.77,
+     "score": 0.8,
+     "said": "two separate uni projects, an API and a robot. Nobody said that they should meet but I still made them meet.",
+     "longest_pause": 0.34,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "but"
+     ],
+     "level_db": -12.8
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 193.59,
+     "end": 202.93,
+     "score": 0.8,
+     "said": "two separate uni projects, an API and a robot. Nobody said that they should meet but I still made them meet.",
+     "longest_pause": 0.54,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Nobody"
+     ],
+     "level_db": -16.4,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "4 Chair",
+   "text": "unit chair said I might finish neither, and for a month he was right",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 225.33,
+     "end": 228.33,
+     "score": 0.88,
+     "said": "I might finish neither and for a month he was right.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -15.3
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 231.89,
+     "end": 235.63,
+     "score": 0.85,
+     "said": "I might not finish neither and for a month he was right.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "neither"
+     ],
+     "level_db": -16.0,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "5 Worked",
+   "text": "then it worked, 100 out of 100, picked for Open Day",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 244.55,
+     "end": 248.93,
+     "score": 0.85,
+     "said": "Then it worked. 100 out of 100 and it got picked for Deakin's open day.",
+     "longest_pause": 0.3,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -13.5,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "6 MatchFeel",
+   "text": "that's why MatchFeel got me, nobody expects to follow tennis by touch, you built it anyway",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 265.41,
+     "end": 270.31,
+     "score": 0.53,
+     "said": "That's why Matchfield got me. No one expects tennis to be played by touch.",
+     "longest_pause": 0.24,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -12.9
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 275.71,
+     "end": 280.89,
+     "score": 0.81,
+     "said": "That's why Matchfield got me. No one expects to follow tennis by touch. You built it",
+     "longest_pause": 0.4,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -10.9,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "7 Robot",
+   "text": "same with my robot, nobody asked me for it, I built it anyway",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 289.29,
+     "end": 293.35,
+     "score": 0.76,
+     "said": "Same with my robot. No one really asked for it but I still built it anyway.",
+     "longest_pause": 0.14,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "but"
+     ],
+     "level_db": -11.2
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 305.91,
+     "end": 310.03,
+     "score": 0.73,
+     "said": "Same with my robot. No one asked me to build it but I still built it anyway.",
+     "longest_pause": 0.12,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "but"
+     ],
+     "level_db": -11.1
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 313.25,
+     "end": 317.37,
+     "score": 0.73,
+     "said": "Same with my robot. No one asked me to build it but I still built it anyway.",
+     "longest_pause": 0.1,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "No"
+     ],
+     "level_db": -12.1
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 320.91,
+     "end": 325.45,
+     "score": 0.73,
+     "said": "Same with my robot. No one asked me to build it but I still built it anyway.",
+     "longest_pause": 0.14,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "but"
+     ],
+     "level_db": -12.9
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 327.63,
+     "end": 331.97,
+     "score": 0.73,
+     "said": "Same with my robot. No one asked me to build it but I still built it anyway.",
+     "longest_pause": 0.2,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "No"
+     ],
+     "level_db": -13.0,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "8 InStep",
+   "text": "that's the work I want at InStep, AI and robots that leave the screen",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 343.07,
+     "end": 347.63,
+     "score": 0.73,
+     "said": "That's the work that I wanted in step. AI and robots that leave the actual screen.",
+     "longest_pause": 0.32,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -12.9
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 378.15,
+     "end": 385.63,
+     "score": 0.73,
+     "said": "That's the work that I wanted in step. AI and robots that leave the actual screen.",
+     "longest_pause": 0.32,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "that",
+      "actual"
+     ],
+     "level_db": -14.0,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "9 ML gap",
+   "text": "I haven't trained an ML model yet, that's what I want your mentors for",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 399.05,
+     "end": 404.69,
+     "score": 0.67,
+     "said": "I haven't trained a machine learning model yet but that's what I want",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "learning",
+      "but"
+     ],
+     "level_db": -12.9
+    },
+    {
+     "file": "20261022_210409.mp4",
+     "start": 408.89,
+     "end": 416.37,
+     "score": 0.67,
+     "said": "I haven't trained a machine learning model yet but that's what I want",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "learning",
+      "but"
+     ],
+     "level_db": -13.6,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "10 Close",
+   "text": "So yeah, I'm Manit Khera. I usually end up doing more than the brief asks. Thanks for watching.",
+   "attempts": [
+    {
+     "file": "20261022_210409.mp4",
+     "start": 425.93,
+     "end": 429.35,
+     "score": 0.77,
+     "said": "So yeah, I'm Manit Khera and I usually end up doing more than",
+     "longest_pause": 0.22,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -12.0,
+     "last": true
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+To: info@inspirerobotics.com.au
+Subject: Junior Facilitator application (Manit Khera)
+Attach: Manit Khera Resume.pdf, Manit Khera Portfolio.pdf, Working with Children Check card (optional)
+
+Hi Inspire Robotics team,
+
+I'd love to apply for the casual Junior Facilitator role. My resume and a two-page project portfolio are attached.
+
+I'm a third-year Software Engineering (Honours) student at Deakin University, and I build robots with my own hands. My favourite is a two-wheel Arduino and Raspberry Pi robot that I wired and programmed myself: it follows a line, reads rain and light sensors, and carries washing to shelter when rain is coming. I later wrote a backend to control it, and took it to Deakin Open Day, where I ran it live for prospective students and their parents. Watching people go from "what is that?" to "how does it know where the line is?" was the best part of the whole project, and it's a big reason I'm applying.
+
+I've also spent a lot of time helping people learn. I trained new starters at 7-Eleven and new volunteers at the Boroondara Stroke Support Group until they could do the job without me, and at a 30-person club workshop I built the app the session used and walked the room helping attendees who got stuck. I also worked Open Day as a paid Deakin Student Ambassador.
+
+A few practical things:
+- I hold a current Working with Children Check (Employee).
+- My weekday availability is set each term around my university timetable, and I can commit to a regular day at a school for the full term.
+- I don't drive yet, so I travel by public transport.
+
+Your approach of teaching maths and science through real engineering projects is exactly how I learnt the most myself, and I would love to help students have that same "it works!" moment.
+
+Thank you for your time, and I'd be glad to chat whenever suits.
+
+Kind regards,
+
+Manit Khera
+0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252 | github.com/uiqvb

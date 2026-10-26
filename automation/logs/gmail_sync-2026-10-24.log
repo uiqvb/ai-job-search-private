@@ -1,0 +1,23 @@
+started 2026-10-24 12:02  exit 0
+usage: claude-sonnet-5-5 | in 18 + cache write 80,516 + cache read 562,704 | out 4,588 | 19 turns | 0.6 min | API-equivalent cost $0.42
+
+## Gmail Sync (unattended) - 2026-10-24
+
+I scanned 21 threads (18 new messages) since 2026-10-22. I made no changes to the tracker or any `outcome.md`.
+
+**Queued for approval (`gmail_sync/pending.md`)**
+- **Tesla**, Industrial Product Engineering Intern: the application acknowledgement email (ref 287709, dated 2026-10-23) was read in full. The proposed change is `drafted` → `applied`, with the date set to 2026-10-23. The interactive run will ask for the real submission date.
+- **Arcitecta**: the Hack2Hire sign-up is still waiting for your answer on whether the internship application was submitted.
+
+**Noise, no change**
+- The Infosys InStep message is an out-of-office auto-reply from Benn Phua, back 2 Nov. The contacts it names are Shweta Dhall (covering) and Fedora Rocque (urgent matters).
+- The rest was LinkedIn job alerts and messaging digests, plus a Google "shared account data with Apollo" notice.
+- Tracker status of the Infosys row is `drafted`, although its notes say "applied (marked via /outcome)".
+
+**Events:** the only new Meetup email was a Socrates Cafe "Just scheduled" event, which is on the ignored-groups list. `events.md` is unchanged, and the events memory's date is refreshed.
+
+**Stale:** none flagged this run.
+
+NOTIFY: 1 status change waiting for approval
+NOTIFY: Tesla application ack received - approve drafted -> applied in /gmail-sync
+NOTIFY: 2 pending updates waiting for approval

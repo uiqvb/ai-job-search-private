@@ -1,0 +1,79 @@
+{
+ "company": "Infosys",
+ "raw": "Raw Takes",
+ "editor": "pipeline/editor",
+ "transcribe_prompt": "Okay Infosys, at the Australian Open you brought a robot to the Fan Zone. Deakin Open Day. MatchFeel. InStep. Manit Khera. API.",
+ "grade": "huesaturation=hue=0:saturation=-0.45:colors=b+c,colortemperature=temperature=4700:mix=0.75,eq=gamma=1.08:contrast=0.95:saturation=0.95,colorbalance=rh=0.04:gh=0.02:bh=-0.04",
+ "end_hold": 2.0,
+ "lines": [
+  {
+   "id": "1 Hook",
+   "text": "Okay, Infosys. At the Australian Open, you brought a robot to the Fan Zone.",
+   "exact": true
+  },
+  {
+   "id": "2 Open Day",
+   "text": "I brought mine to Deakin Open Day"
+  },
+  {
+   "id": "3 Meet",
+   "text": "two separate uni projects, backend API and a robot, nothing said they should meet, so I made them meet",
+   "action": "fists out wide, fists together on meet, both hands up and look up, hold 1 s"
+  },
+  {
+   "id": "4 Chair",
+   "text": "unit chair said I might finish neither, and for a month he was right",
+   "action": "straight face, hold 1 s"
+  },
+  {
+   "id": "5 Worked",
+   "text": "then it worked, 100 out of 100, picked for Open Day",
+   "action": "grin"
+  },
+  {
+   "id": "6 MatchFeel",
+   "text": "that's why MatchFeel got me, nobody expects to follow tennis by touch, you built it anyway"
+  },
+  {
+   "id": "7 Robot",
+   "text": "same with my robot, nobody asked me for it, I built it anyway",
+   "action": "point at yourself"
+  },
+  {
+   "id": "8 InStep",
+   "text": "that's the work I want at InStep, AI and robots that leave the screen",
+   "action": "push hand toward lens"
+  },
+  {
+   "id": "9 ML gap",
+   "text": "I haven't trained an ML model yet, that's what I want your mentors for",
+   "action": "small shrug"
+  },
+  {
+   "id": "10 Close",
+   "text": "So yeah, I'm Manit Khera. I usually end up doing more than the brief asks. Thanks for watching.",
+   "exact": true,
+   "action": "small wave"
+  }
+ ],
+ "music": {
+  "file": "documents/video/music/A Stroll - The Grey Room _ Density & Time.mp3",
+  "volume": 0.11,
+  "music_at": 16.25,
+  "anchor": {
+   "word": "Open Day",
+   "n": 1
+  },
+  "dips": [],
+  "end_boost": 2.3,
+  "credit": "YouTube Audio Library, no attribution needed"
+ },
+ "end_card": {
+  "name": "MANIT KHERA",
+  "subtitle": "Software Engineering student · Deakin University",
+  "lines": [
+   "manitkhera26@gmail.com",
+   "linkedin.com/in/manit-khera-603957252"
+  ]
+ }
+}

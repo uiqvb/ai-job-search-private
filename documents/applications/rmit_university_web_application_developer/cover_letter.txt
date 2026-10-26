@@ -1,0 +1,37 @@
+## Sender
+Manit Khera
+12 Jenner Street
+Blackburn South, VIC 3130
+0412 761 206
+manitkhera26@gmail.com
+
+## Date
+Wednesday 21 October 2026
+
+## Recipient
+Hiring Manager
+Learning and Teaching, College of Business and Law
+RMIT University
+124 La Trobe Street
+Melbourne, VIC 3000
+
+## Greeting
+Dear Hiring Manager,
+
+## RE
+RE: Web Application Developer position, REF: JR51349
+
+## Body
+I am writing to apply for the casual Web Application Developer position with the Learning and Teaching team in RMIT's College of Business and Law, which I found on the RMIT careers site. Turning a spreadsheet game into a web application that students enjoy using is the kind of problem I like most: the rules have to be exactly right, and the interface has to make them feel simple.
+
+I am a third-year (penultimate-year) student in a Bachelor of Software Engineering (Honours) at Deakin University, finishing in 2028, with a WAM of 81.33 and marks of 100 in Data Structures and Algorithms and in Backend Development. I have developed and deployed a full-stack web application in JavaScript and React. DEV@Deakin is live and covered by 24 automated tests, and its voting feature updates the screen instantly and rolls back if the server disagrees. I am used to turning rules into reliable code. In my Robot Controller API, which scored 100/100, the server replays every action a robot reports through a simulation before it records the result, so the logic has to match the real world exactly. I also work well with non-technical people: for over a year I have maintained the Boroondara Stroke Support Group's website with volunteers, rolled back a change that broke a live page, and trained new volunteers to publish the monthly calendar themselves.
+
+I was glad to read about the College's BizRight business law simulation, where students learn as trainees and unlock rewards as they progress. It shows the College already treats games as a serious way to teach. For the Excel-based simulation in this role, translation means first understanding why each formula exists. I would sit with the learning designers and academics to check every rule and score, then write automated tests that reproduce the spreadsheet's results before building on them. That approach fits RMIT's value of Integrity, which commits to using expertise and evidence to make decisions.
+
+The role lists a relevant tertiary qualification. I am in the third year of four and will complete mine in 2028, and my deployed projects show I can do this work now. I already hold a Working with Children Check and can work casual hours alongside my studies. My resume is attached, and I would welcome an interview to discuss the simulation. Thank you for your consideration.
+
+## Sign-off
+Kind regards,
+
+## Name
+Manit Khera

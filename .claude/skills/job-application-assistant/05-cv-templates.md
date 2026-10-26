@@ -4,6 +4,20 @@ framework_version: 1.4.7
 
 # CV Templates and Tailoring Guide
 
+<!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
+> **Active template override: `master-v7`**
+>
+> A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
+>
+> - **Template skeleton:** `templates/cv/master-v7/template.txt` — use this as the structural reference instead of the stock template; start the content from `documents/cv/Manit_Khera_Resume_Rewrite.md` (the v7 master)
+> - **Manifest:** `templates/cv/master-v7/TEMPLATE.md` — read this for style rules and known pitfalls before drafting
+> - **Source extension:** `.txt` (not `.tex`; markdown-like text, no LaTeX escaping)
+> - **Compile command:** `python ../templates/cv/master-v7/build_cv.py <file>.txt` (not the lualatex command in the stock guidance below — `/apply`'s compile step must use this instead). Run it from `cv/`. It writes `<file>.docx` and `<file>.pdf` via Microsoft Word; no `build/` folder, nothing to clean up, keep both outputs
+> - **Fonts:** Calibri (system font, from the base .docx)
+> - **Page limit:** exactly 1 page(s)
+> - **Output file:** `cv/main_<company>_<role>.txt` (plus the generated `.docx` and `.pdf`); the template files are referenced by relative path, nothing to copy
+<!-- END ACTIVE-TEMPLATE -->
+
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
 ## Template: LaTeX moderncv (Banking Style)
@@ -59,7 +73,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Manit Khera - Resume},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -69,13 +83,13 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{Manit}{Khera}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{Blackburn South, VIC 3130}{}{}
+\phone[mobile]{0412 761 206}
+\email{manitkhera26@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/manit-khera-603957252}{linkedin.com/in/manit-khera-603957252}, \href{https://github.com/uiqvb}{github.com/uiqvb}}
 
 \begin{document}
 \makecvtitle
@@ -137,11 +151,26 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+Per DeakinTALENT: 3 to 6 lines, no personal pronouns, no bold inside. Facts come from `01-candidate-profile.md`.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For robotics / embedded / firmware internships:**
+> Software Engineering (Honours) student at Deakin University building software that works with real hardware: firmware, sensor integration and the backend systems behind them. Wired and programmed an Arduino and Raspberry Pi robot, then made a self-built REST platform drive it, earning 100/100 and selection for the Deakin Open Day showcase. Tests on physical hardware and validates changes with automated tests.
+
+**For backend / software engineering internships:**
+> Backend-focused Software Engineering (Honours) student at Deakin University (WAM 81.33, 100 in Data Structures and Algorithms and in Backend Development). Builds C#/.NET and PostgreSQL APIs and measures them under load: raised a robot dispatch API to 6.05x baseline throughput across two Azure replicas, validated by 54 automated tests and 80 benchmark runs. Uses Claude Code daily in development.
+
+**For AI / agent research internships:**
+> Software Engineering (Honours) student at Deakin University who builds systems that must prove what happened, not just report it: execution histories replayed through simulation before commit, telemetry that diagnoses intermittent hardware faults, and load tests that measure every change. Uses Claude Code daily in development.
+
+**For tutoring / kids' STEM facilitator roles:**
+> Software Engineering (Honours) student at Deakin University who builds robots and enjoys explaining them. Demonstrated a self-built robot to prospective students and families at Deakin Open Day, designed the bugs for a 30-attendee club debugging workshop, and trained new volunteers and staff until they could work without help. Holds a Working with Children Check.
+
+**Candidate-specific defaults (Manit):**
+- Education entry: `Mar 2025 - 2028` with "In progress, expected 2028." No completion month (his closed decision).
+- Headings: Profile, Education, Technical Skills, Projects, Experience, Leadership, Referees. "Projects" is allowed by DeakinTALENT and holds his strongest evidence; for technical roles it goes above Experience.
+- Never include ParkSense / the DDSC hackathon.
+- Update the WAM once new results land (~30 Oct 2026).
+- **One page, always** (Manit, 2026-10-20: Australian resumes are one page). The active `master-v7` template enforces it; the 2-page moderncv guidance below applies only if the stock template is reactivated.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
@@ -274,7 +303,7 @@ Restore the highest-relevance item that was previously cut — a CV that ends mi
 Most employers run CVs through an ATS before a human sees them, and the ATS reads the PDF's embedded **text layer**, not the rendered page. A CV can pass visual inspection and still extract as garbage. After the layout passes the compile-and-inspect loop, verify the text layer:
 
 ```bash
-python tools/verify_pdf.py cv/main_<company>_<role>.pdf --dump-text cv/main_<company>_<role>.txt
+python tools/verify_pdf.py cv/main_<company>_<role>.pdf --dump-text cv/main_<company>_<role>.ats.txt
 ```
 
 Extraction tries **pypdf** first (`pip install pypdf`, BSD license), then Poppler `pdftotext`. If a fallback still uses `pdftotext -layout`, it must also pass `-enc UTF-8`: Xpdf-based builds default to Latin-1, which makes every non-ASCII character in a perfectly good CV read back as a replacement character. If neither extractor is available, skip the mechanical check with a warning and rely on the visual PDF read for keyword coverage.

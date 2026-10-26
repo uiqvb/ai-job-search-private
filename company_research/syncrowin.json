@@ -1,0 +1,36 @@
+{
+  "company": "Syncrowin",
+  "fetched_date": "2026-10-21",
+  "summary": "Melbourne industrial AI startup: 'The Intelligence Layer for the Industrial World' / 'the AI operating system for critical infrastructure'. Connects a site's isolated systems (control systems, sensors, maintenance records, production plans) into one view; early warning days before output drops, energy per tonne, data-to-decision time, catching equipment wear so stops can be planned. Sectors: energy and renewables (wind, solar inverters, grid), oil and gas (pumps, compressors, process sensors), manufacturing (furnaces, lines, quality). Tiny team (RocketReach ~4 staff, unverified).",
+  "principles_how_we_work": [
+    "Precision over volume: answers, not more dashboards; every feature has to earn its place",
+    "Built for reality: designed for real, high-stakes operations, not demos",
+    "Trust through transparency: every recommendation shows its reasoning"
+  ],
+  "people": {
+    "ceo": "Aisshwarya (Ash) Kansakaar, Co-founder and CEO (company spelling; official AOTY spelling 'Aishwarya Kansakar'). Industrial operator (sites in Australia and Japan). 2025 Young Australian of the Year for Victoria (verified, australianoftheyear.org.au). Forbes Australia 30 Under 30 (company release only). Grew up during Nepal's civil war, taught herself computing; COO of Women 4 STEM (AOTY release). LinkedIn: linkedin.com/in/aisshwaryakansakar",
+    "cto": "Jaideep Upadhyay, Co-founder and CTO (About page says Product). Mechanical engineer, mechatronics and industrial systems background, named inventor on patents, six published works."
+  },
+  "funding": "A$3M oversubscribed pre-seed/seed closed 19 Oct 2026, led by Collide Capital (NY); Hustle Fund, POV Ventures, Co-Ventures, Ventari, angels. Funds: deploy the AI OS in energy and manufacturing, core tech roadmap, grow AI and engineering teams in Australia and San Francisco. Claimed largest raise by a female-CEO-led team at that stage in Australia in 2026.",
+  "milestones": [
+    "Winner, DTECH 2026 Initiate pitch competition, San Diego",
+    "Energy Labs Scale Up program (600+ applicants, Europe and ANZ)",
+    "CSIRO RISE Accelerator Round 3 (renewables), Aug 2025",
+    "University of Melbourne MAP accelerator, 2025",
+    "Tech Week Singapore Bronze Sponsor, Oct 2025",
+    "Returning to All Energy Expo 2026 (announced 18 Oct 2026)",
+    "Supporters named on site: CSIRO, Microsoft, Melbourne Accelerator Program"
+  ],
+  "open_roles_2026_10_21": [
+    "Early Career Data Scientist (Hybrid), Melbourne/Sydney: https://syncrowin.com.au/careers/early-career-data-scientist-hybrid (apply: https://form.typeform.com/to/PYTHmhmL)",
+    "AI Engineer (Hybrid), 4-7 yrs",
+    "Senior AI Engineer (Hybrid)"
+  ],
+  "careers_page_lines": "'Apply even if you don't match every point'; 'what you build goes into real operations, not demos'. Role page: 'We value demonstrated ability, initiative, and a willingness to learn over years of experience.'",
+  "contact": "contact@syncrowin.com.au; linkedin.com/company/syncrowin; Melbourne (repo note said Carlton, unverified on site)",
+  "sources": [
+    "https://syncrowin.com.au", "https://syncrowin.com.au/about", "https://syncrowin.com.au/careers",
+    "https://syncrowin.com.au/news/syncrowin-raises-a3-million-oversubscribed-round",
+    "https://australianoftheyear.org.au/news-and-media/news/article/2025-australians-year-victoria-announced"
+  ]
+}

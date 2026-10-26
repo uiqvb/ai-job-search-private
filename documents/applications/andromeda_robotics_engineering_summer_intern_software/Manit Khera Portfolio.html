@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Manit Khera, Engineering Portfolio</title>
+<style>
+  @page { size: A4; margin: 8mm 12mm; }
+  :root { --navy: #1F3A5F; --grey: #555555; --rule: #c9d2de; --tint: #f2f5f9; --sun: #E39A1C; --suntint: #FDF4E3; }
+  * { box-sizing: border-box; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; font-size: 9.8pt; line-height: 1.3; color: #111; margin: 0; }
+  a { color: var(--navy); }
+  h1 { font-size: 21pt; letter-spacing: 2.5pt; color: var(--navy); margin: 0; text-align: center; }
+  .sub { text-align: center; color: var(--sun); font-weight: bold; font-size: 11pt; margin: 1pt 0; }
+  .contact { text-align: center; color: var(--grey); font-size: 9.2pt; }
+
+  .about { margin: 7pt 0 0; padding: 7pt 10pt; background: var(--suntint); border-left: 3pt solid var(--sun); }
+  .about h2 { font-size: 12pt; color: var(--navy); margin: 0 0 3pt; }
+  .about p { margin: 0 0 4pt; }
+  .about p:last-child { margin: 0; }
+
+  .values-title { font-size: 11.5pt; font-weight: bold; color: var(--navy); margin: 8pt 0 3pt; }
+  .values { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5pt; }
+  .value { background: var(--tint); padding: 5pt 6pt; font-size: 8.8pt; line-height: 1.25; border-top: 2pt solid var(--sun); }
+  .value b { display: block; font-size: 10.5pt; color: var(--navy); margin-bottom: 1.5pt; }
+
+  .project { margin-top: 9pt; break-inside: avoid; }
+  .head { display: flex; justify-content: space-between; align-items: baseline;
+          border-bottom: 0.75pt solid var(--navy); padding-bottom: 1.5pt; }
+  .head h2 { font-size: 13pt; color: var(--navy); margin: 0; }
+  .head h2 span { color: var(--sun); }
+  .head .where { color: var(--grey); font-style: italic; font-size: 9pt; }
+  .tech { color: var(--grey); font-style: italic; font-size: 8.8pt; margin: 2pt 0 2pt; }
+  .trail { display: flex; flex-wrap: wrap; align-items: center; gap: 2pt 5pt; margin: 0 0 4.5pt; font-size: 8.8pt; }
+  .trail .t { font-weight: bold; color: var(--navy); }
+  .trail .s { background: var(--tint); padding: 1pt 5pt; white-space: nowrap; }
+  .trail .s i { font-style: normal; font-weight: bold; color: var(--sun); margin-right: 2pt; }
+  .trail .a { color: var(--grey); }
+  .cols { display: flex; gap: 10pt; }
+  .text { flex: 1; }
+  .side { width: 62mm; flex: none; }
+  .text p { margin: 0 0 4pt; }
+  .label { font-weight: bold; color: var(--navy); }
+  .shot { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; border: 0.5pt solid var(--rule); }
+  .cap { font-size: 8pt; color: var(--grey); margin: 1.5pt 0 5pt; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 4pt; }
+  .stat { background: var(--tint); padding: 3.5pt 5pt; }
+  .stat b { display: block; font-size: 12pt; color: var(--navy); line-height: 1.1; }
+  .stat span { font-size: 8pt; color: var(--grey); }
+
+  table { border-collapse: collapse; width: 100%; font-size: 9pt; margin-top: 2pt; }
+  th, td { text-align: left; padding: 2pt 4pt; border-bottom: 0.5pt solid var(--rule); vertical-align: middle; }
+  td:first-child { white-space: nowrap; }
+  th { color: var(--navy); font-size: 8.4pt; }
+  td.n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .bar { height: 7pt; background: var(--sun); }
+  .bar.old { background: #9aa7b8; }
+  .barcell { width: 30%; }
+  .top { display: flex; gap: 8pt; margin-top: 7pt; }
+  .top .about { margin: 0; flex: 1; }
+  .badge { width: 58mm; flex: none; border: 1pt dashed var(--navy); padding: 6pt 8pt; font-size: 8.8pt; line-height: 1.25; }
+  .badge h3 { margin: 0 0 3pt; font-size: 11.5pt; color: var(--navy); }
+  .badge p { margin: 0 0 3pt; }
+  .badge b { color: var(--navy); }
+  .note { font-family: "Segoe Print", "Ink Free", cursive; color: var(--sun); font-size: 8.6pt; line-height: 1.2;
+          transform: rotate(-2deg); margin: 3pt 0 4pt; }
+  .learned { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5pt; margin-top: 4pt; }
+  .learned div { background: var(--tint); padding: 5pt 7pt; font-size: 9pt; border-top: 2pt solid var(--sun); }
+  .learned b { color: var(--navy); }
+  .foot { margin-top: 10pt; padding: 6pt 10pt; background: var(--suntint); border-left: 3pt solid var(--sun); font-size: 9.4pt; }
+</style>
+</head>
+<body>
+
+<h1>MANIT KHERA</h1>
+<div class="sub">One cardboard robot, three university units, and a student who could not leave it alone</div>
+<div class="contact">0412 761 206 &nbsp;|&nbsp; manitkhera26@gmail.com &nbsp;|&nbsp;
+  <a href="https://github.com/uiqvb">github.com/uiqvb</a> &nbsp;|&nbsp;
+  <a href="https://www.linkedin.com/in/manit-khera-603957252">linkedin.com/in/manit-khera-603957252</a></div>
+
+<div class="top">
+<div class="about">
+  <h2>About me</h2>
+  <p>Hi, I'm Manit. Third-year Software Engineering student at Deakin, applying for the Software, Firmware &amp;
+  Autonomy stream, and apparently incapable of leaving a finished project alone.</p>
+  <p>Here is the pattern. I get an assignment. I finish it. Then I look at it and think: what else could this do?
+  Last trimester that meant joining two completely unrelated assignments, a robot from one unit and a backend from
+  another, purely because I wanted to watch my own code push a real thing across the floor. A month of build, break, rebuild later, the backend spoke and the robot listened.</p>
+  <p>I should credit my unit chair, Maksym. Every time I pitched an idea he would say "nah, you can't do that". Not
+  to put me off: he had worked out that I do my best work trying to prove him wrong. Then, when I got there, he
+  moved the target further out. He rage baited me through the whole unit, and in between we would sit there like
+  two kids going "okay, but what if...". It was a proper love-hate arrangement and I would do it again.</p>
+  <p>Then the robot went to Open Day. Then into a third unit, where I asked what happens if there are 5,000 of it.
+  So this is not really three projects. It is one robot that I keep volunteering for jobs it never applied for. I
+  experiment, I break things on purpose, and I write down what happened, including the bits that still do not
+  work.</p>
+</div>
+<div class="badge">
+  <h3>🤖 Meet the robot</h3>
+  <p><b>Build:</b> two wheels, six sensors, one cardboard body.</p>
+  <p><b>Jobs so far:</b> laundry attendant, class demo, Open Day exhibit, and the model for 5,000 imaginary
+  colleagues.</p>
+  <p><b>Good at:</b> running for shelter when it rains, and retracing its steps when it gets lost.</p>
+  <p><b>Bad at:</b> wonky tape, and any battery below 90 percent.</p>
+  <p><b>Marks it earned me:</b> 93 and 100/100.</p>
+  <div class="note">it has never once complained about the extra work</div>
+</div>
+</div>
+<div class="values-title">Your values, and where I already live them</div>
+<div class="values">
+  <div class="value"><b>🤝 Empathy</b>I volunteer with a stroke support group, keeping their website running and
+    teaching other volunteers to update it themselves, so they never have to wait on me.</div>
+  <div class="value"><b>🎈 Play</b>A robot that rescues your clothes from the rain is a slightly silly idea. That is
+    exactly why I built it. Then I tested it by getting it wet and lying to it about the weather.</div>
+  <div class="value"><b>🚀 Never Settle</b>The backend scored 100/100. I rebuilt it anyway, because it had only ever
+    been tested with one robot and I wanted to know where it broke.</div>
+  <div class="value"><b>🔧 Tenacity</b>The voltage sagged. The robot sulked on any battery below 90 percent. It and
+    the backend disagreed for a month. Each of those became a fix you can read about below.</div>
+  <div class="value"><b>🧩 Unity</b>Two student club committees. I host one club's networking nights and helped sign
+    up 100+ new members face to face. I like being useful more than being in charge.</div>
+</div>
+
+<!-- ------------------------------------------------------------------ 1 -->
+<section class="project">
+  <div class="head"><h2><span>Chapter 1.</span> The robot that saves your clothes</h2>
+    <span class="where">Smart Clothesline Robot. Embedded Systems unit, awarded 93.</span></div>
+  <div class="tech">Arduino Nano, C++, Raspberry Pi, Python/Flask, MQTT</div>
+  <div class="trail"><span class="t">Follow the build:</span>
+    <span class="s"><i>1</i><a href="https://youtu.be/7QVj2lUGF2s">First demo</a></span><span class="a">→</span>
+    <span class="s"><i>2</i><a href="https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=c237781c-c577-454b-8769-b45f0017c32f&amp;start=499.396751">Second demo</a></span><span class="a">→</span>
+    <span class="s"><i>3</i><a href="https://www.hackster.io/manitkhera26/smart-clothesline-robot-using-arduino-nano-and-mqtt-7f6c5b">Build write-up on Hackster.io</a></span><span class="a">→</span>
+    <span class="s"><i>4</i><a href="https://github.com/uiqvb/SIT210/tree/main/Task11.1HD">Source code on GitHub</a></span></div>
+  <div class="cols">
+    <div class="text">
+      <p><span class="label">The idea.</span> Clothes get rained on. So a small robot carries them between a sunny
+      spot and a sheltered one, follows a line of black tape to get there, and turns to face the sun while it
+      waits. I built and wired it myself: two wheels, three line sensors, two light sensors, one rain sensor and
+      a cardboard body.</p>
+      <p><span class="label">How I tested it.</span> I got it wet. On purpose. Wetting the rain sensor sent it off to shelter,
+      as it should. Then I lied to it: I fed it fake rain readings to check it would trust the weather forecast
+      over a broken sensor. It did.</p>
+      <p><span class="label">Plot twist.</span> The robot had a voltage problem I could not see. On fresh
+      batteries it behaved perfectly. Once they dropped below about 90 percent, it started acting up. So I kept
+      buying new ones, probably $100 worth, before I tracked the real culprit, the voltage converter, down in the
+      robot's own logs instead of with a multimeter.</p>
+      <div class="note">I now own a large pile of batteries that are 90% full and useless to me</div>
+      <p><span class="label">Still sulking.</span> Its steering is simple, so it struggles on bad tape. Smarter
+      steering is the next thing I want to try.</p>
+    </div>
+    <div class="side">
+      <img class="shot" src="portfolio-assets/clothesline-robot.jpg" alt="The robot on its test track">
+      <div class="cap">The robot on its tape track, from the first demo.</div>
+      <div class="note">yes, the body really is cardboard</div>
+      <div class="stats">
+        <div class="stat"><b>6</b><span>sensors, all wired by hand</span></div>
+        <div class="stat"><b>93</b><span>unit mark</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ------------------------------------------------------------------ 2 -->
+<section class="project">
+  <div class="head"><h2><span>Chapter 2.</span> Giving it a brain it never asked for</h2>
+    <span class="where">Robot Controller API. Backend Development unit, awarded 100/100.</span></div>
+  <div class="tech">.NET 8, C#, PostgreSQL, Arduino C++, Docker, Jenkins</div>
+  <div class="trail"><span class="t">Follow the build:</span>
+    <span class="s"><i>1</i><a href="https://www.linkedin.com/feed/update/urn:li:activity:7484091368940650496/">First demo, in class with my unit chair</a></span><span class="a">→</span>
+    <span class="s"><i>2</i><a href="https://youtu.be/unDSeDkGBI0">Open Day demo</a></span><span class="a">→</span>
+    <span class="s"><i>3</i>GitHub: <a href="https://github.com/uiqvb/RobotControllerApi">first build</a>,
+      <a href="https://github.com/uiqvb/RobotControllerApi/tree/openday">Open Day branch</a>,
+      <a href="https://github.com/uiqvb/RobotControllerApi/tree/deploying">deploying branch</a></span></div>
+  <div class="cols">
+    <div class="text">
+      <p><span class="label">The idea.</span> A different unit entirely. I built a backend that does all the
+      thinking, so a robot only has to ask "what next?" over Wi-Fi and do as it is told. Then I pointed it at
+      the clothesline robot to see what would happen. For a while, not much: sometimes the backend worked and
+      the robot ignored it, and sometimes the robot moved while the software believed something else entirely. Two confident liars.</p>
+      <p><span class="label">My favourite what-if.</span> What if the Wi-Fi drops? A robot with no plan of its
+      own would be lost. So I built for it before it ever happened: every command arrives with its own undo. After 7 seconds of silence the robot retraces its
+      last five moves by itself, back toward signal, then tells the server what it did. The server checks that
+      story in a simulation before believing it. When I tested it on the real robot, it ended up exactly where
+      the server predicted.</p>
+      <p><span class="label">Party trick.</span> It is also an RC car. You can drive it from the dashboard with the
+      WASD keys, like a video game. There is nothing fancy underneath: no special radio link, only ordinary web requests. The robot
+      keeps asking the server "anything for me?" and the server answers.</p>
+      <p><span class="label">Where it went.</span> A first demo in class with my unit chair, then selected for
+      Deakin Open Day, where I ran it live for prospective students and their parents.</p>
+    </div>
+    <div class="side">
+      <img class="shot" src="portfolio-assets/robot-controller-demo.jpg" alt="Dashboard on a laptop driving the robot on the floor">
+      <div class="cap">My dashboard driving the robot across the floor.</div>
+      <div class="note">the robot is the small thing, bottom right</div>
+      <div class="stats">
+        <div class="stat"><b>7 s</b><span>of silence before it rescues itself</span></div>
+        <div class="stat"><b>100/100</b><span>unit mark</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ------------------------------------------------------------------ 3 -->
+<section class="project">
+  <div class="head"><h2><span>Chapter 3.</span> What if there were 5,000 of them?</h2>
+    <span class="where">Scaling the Robot Dispatch API. Distributed Programming unit.</span></div>
+  <div class="tech">C#, ASP.NET Core, PostgreSQL, Azure, Docker, NBomber, xUnit</div>
+  <div class="trail"><span class="t">Follow the build:</span>
+    <span class="s"><i>1</i><a href="https://github.com/uiqvb/SIT315-RobotDispatch/tree/old">Starting point: the Chapter 2 code</a></span><span class="a">→</span>
+    <span class="s"><i>2</i><a href="https://github.com/uiqvb/SIT315-RobotDispatch">Rebuilt code on GitHub</a></span><span class="a">→</span>
+    <span class="s"><i>3</i><a href="https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=dcbbdbc3-a0bf-4ee4-87fa-b4db001c2a9d">Demo video</a></span><span class="a">→</span>
+    <span class="s"><i>4</i><a href="https://github.com/uiqvb/SIT315-RobotDispatch/blob/main/report/M4T1D_report.pdf">Full report</a></span></div>
+  <div class="cols">
+    <div class="text">
+      <p><span class="label">The idea.</span> One robot worked. So in a third unit I asked the uncomfortable
+      question, built a pretend fleet in the cloud, and pointed it at my own backend. At 5,000 robots it
+      completed zero jobs. Not few. Zero.</p>
+      <p><span class="label">What I did about it.</span> I went looking and found 12 problems, including one
+      where two robots could grab the same job. I fixed them, taught the server to say "try again in a second"
+      instead of falling over, added a second server, and ran it all again.</p>
+      <p><span class="label">How I know it worked.</span> 80 test runs, each setup repeated three times, plus 54
+      automated tests. I did not want one lucky run.</p>
+      <p><span class="label">Still unknown.</span> The new breaking point. My pretend fleet gave up before the
+      backend did, which I am choosing to take as a compliment.</p>
+    </div>
+    <div class="side" style="width: 78mm;">
+      <table>
+        <tr><th colspan="3">Jobs finished per second, 400 robots</th></tr>
+        <tr><td>Before</td><td class="barcell"><div class="bar old" style="width:16.5%"></div></td><td class="n">177</td></tr>
+        <tr><td>After, 1 server</td><td class="barcell"><div class="bar" style="width:56.8%"></div></td><td class="n">608 &nbsp;(3.4×)</td></tr>
+        <tr><td>After, 2 servers</td><td class="barcell"><div class="bar" style="width:100%"></div></td><td class="n">1,069 &nbsp;(6×)</td></tr>
+      </table>
+      <table style="margin-top:6pt;">
+        <tr><th colspan="3">Jobs finished per second, 5,000 robots</th></tr>
+        <tr><td>Before</td><td class="barcell"></td><td class="n">0</td></tr>
+        <tr><td>After, 2 servers</td><td class="barcell"><div class="bar" style="width:94.3%"></div></td><td class="n">1,008, none failed</td></tr>
+      </table>
+      <div class="note" style="text-align:right;">from nothing at all to a thousand a second</div>
+    </div>
+  </div>
+</section>
+
+<div class="values-title">Three things this robot taught me</div>
+<div class="learned">
+  <div><b>A robot that says it moved has not necessarily moved.</b> Check its story before you write it down.</div>
+  <div><b>Good logs beat a multimeter.</b> If the robot records the right things, it will tell you what is wrong
+    with it.</div>
+  <div><b>A perfect mark is not a stress test.</b> 100/100 with one robot said nothing about 5,000.</div>
+</div>
+
+<div class="foot">
+  <b style="color:var(--navy)">What I have not done yet.</b> ROS, proper control theory, or designing my own boards.
+  I am telling you now so you do not have to find out in week two. What I can promise is the habit on this page: try the
+  odd idea, break it on purpose, measure it, write it down, and bring it back for another round.
+</div>
+
+</body>
+</html>

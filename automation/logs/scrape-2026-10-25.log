@@ -1,0 +1,22 @@
+started 2026-10-25 14:06  exit 0
+usage: claude-sonnet-5-5 | in 18 + cache write 61,589 + cache read 449,192 | out 4,368 | 20 turns | 0.7 min | API-equivalent cost $0.33
+
+## New Job Matches - 2026-10-25
+
+I found 3 new positions, all low match: 0 high, 0 medium, 3 low. I ran `linkedin-search` and `freehire-search` and left the other four portals alone (the Danish and Canadian ones, off-market for Melbourne). In total that was 6 searches. I wrote the table to `job_scraper/latest_scrape.md`.
+
+| # | Fit | Title | Company | Location |
+|---|-----|-------|---------|----------|
+| 1 | Low | Full Stack Software Engineer (React / .NET) | Compass Education | Hawthorn, VIC (hybrid) |
+| 2 | Low | Junior Analytics Engineer | Ploomo | Melbourne |
+| 3 | Low | Graduate Software Engineer | Tactiv | Location unclear |
+
+- **Compass Education:** the stack matches well (C#/.NET, React, Claude Code). It requires 2+ years of professional experience and unrestricted work rights, which conflict with the profile.
+- **Ploomo:** data and analytics engineering (Snowflake, Fivetran), which is off target.
+- **Tactiv:** a graduate role, and Manit is a third-year student.
+- **Already seen:** Amazon, Tesla, Bosch, RecordPoint, Maincode, Schoolbox, DXC and TikTok were already in `seen_jobs.json`. Shield AI, Anduril and Stryker were senior or non-software roles.
+- **`seen_jobs.json` not updated:** the shell command to write it needed approval, which an unattended run can't get. These 3 may show up again next run.
+- **Portal toggles:** I didn't toggle any portal.
+
+NOTIFY: 3 new jobs: 0 high, 0 medium
+NOTIFY: + 3 low (see latest_scrape.md)

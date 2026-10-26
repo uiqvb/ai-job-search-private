@@ -1,0 +1,5 @@
+Warm "sunny" grade options for the Infosys footage (night, white light, deep blue wall).
+Image order: Syncrowin reference | raw | A light | B medium (recommended) | C strong + vignette
+A: huesaturation=saturation=-0.35:colors=b+c, colortemperature=5200 mix 0.6, eq gamma 1.06 contrast 0.96 sat 0.95
+B: huesaturation=saturation=-0.45:colors=b+c, colortemperature=4700 mix 0.75, eq gamma 1.08 contrast 0.95 sat 0.95, colorbalance rh .04 gh .02 bh -.04
+C: huesaturation=saturation=-0.55:colors=b+c, colortemperature=4300 mix 0.85, eq gamma 1.1 contrast 0.94, colorbalance rh .06 gh .03 bh -.06 rs .02, vignette PI/5
