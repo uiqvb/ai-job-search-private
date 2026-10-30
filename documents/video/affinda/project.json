@@ -1,0 +1,99 @@
+{
+ "company": "Affinda",
+ "raw": "Raw Takes",
+ "editor": "editor",
+ "transcribe_prompt": "Okay Affinda, give me two minutes. You built an AI that reads resumes. WAM of 81. Backend, Data Structures and Algorithms. Deakin Open Day. Robot control API, robot dispatch API. Unit chair. Claude Code. Prompt Wrappers, Chrome extension. Capsule. Manit Khera.",
+ "grade": "",
+ "end_hold": 1.2,
+ "lines": [
+  {
+   "id": "0 Two minutes",
+   "text": "Okay, Affinda. Give me two minutes, and I'll explain why you should hire me.",
+   "exact": true,
+   "action": "big energy"
+  },
+  {
+   "id": "1 Resume",
+   "text": "You built an AI that reads resumes. So here's mine. Fast.",
+   "exact": true,
+   "action": "holds printed resume up next to his face, deadpan"
+  },
+  {
+   "id": "2 Reel",
+   "text": "a WAM of 81, a hundred out of a hundred in Backend and in Data Structures and Algorithms, and my robot got picked for Deakin Open Day",
+   "action": "taps the resume on each item"
+  },
+  {
+   "id": "3 Built",
+   "text": "I built that robot and the API that drives it, and I made a robot dispatch API six times faster"
+  },
+  {
+   "id": "4 Toss",
+   "text": "But a resume can't show you the good stuff.",
+   "exact": true,
+   "action": "crumples resume on 'good stuff', tosses it over his shoulder, freezes straight face 2 s (keep the toss and the hold)"
+  },
+  {
+   "id": "5 Great ideas",
+   "text": "two uni projects, a robot control API and a robot I built myself, nobody said they should meet, so I made them meet",
+   "action": "fists out wide, eyes left then right, smashes fists together on 'made them meet'"
+  },
+  {
+   "id": "6 Curious",
+   "text": "it started with a what if, my unit chair warned me I might finish neither, and for a month every fix broke something new",
+   "action": "shrug on 'what if', straight face hold 1 s on 'finish neither', wince on 'broke'"
+  },
+  {
+   "id": "7 Worked",
+   "text": "then it worked, a hundred out of a hundred, and on show at Open Day",
+   "action": "grin"
+  },
+  {
+   "id": "8 Energy",
+   "text": "energy? I found your job ad today, this video was filmed and edited the same day with Claude Code",
+   "action": "points at the camera on 'this video'"
+  },
+  {
+   "id": "9 Prompt Wrappers",
+   "text": "right now I'm working on two things, one's a Chrome extension called Prompt Wrappers, you save the instructions you keep retyping to AI like keep it simple, and switch them on in one click",
+   "action": "mimes flicking a switch on 'one click'"
+  },
+  {
+   "id": "9b Capsule",
+   "text": "the other's Capsule, an app where you leave anonymous messages at real places on campus, and you can only read one when you walk up to it",
+   "action": "two fingers walking across the air on 'walk up to it'"
+  },
+  {
+   "id": "10 At Affinda",
+   "text": "at Affinda I'd love to take a slow job someone does by hand and build the thing that does it for them",
+   "action": "points beside him (at the paper stack added in the edit) on 'build the thing'"
+  },
+  {
+   "id": "11 Close",
+   "text": "So yeah, I'm Manit Khera. Give me six weeks, and I'll build you something that works. Thanks for watching.",
+   "exact": true,
+   "action": "small wave"
+  }
+ ],
+ "music": {
+  "file": "documents/video/music/run_amok_affinda.mp3",
+  "volume": 0.18,
+  "music_at": 0,
+  "anchor": {
+   "word": "minutes",
+   "n": 1,
+   "edge": "e"
+  },
+  "dips": [],
+  "end_boost": 2.3,
+  "credit": "\"Pixel Peeker Polka - faster\" by Kevin MacLeod (incompetech.com), CC BY 4.0, https://creativecommons.org/licenses/by/4.0/"
+ },
+ "end_card": {
+  "name": "MANIT KHERA",
+  "subtitle": "Software Engineering student · Deakin University",
+  "lines": [
+   "manitkhera26@gmail.com",
+   "linkedin.com/in/manit-khera-603957252"
+  ]
+ }
+}

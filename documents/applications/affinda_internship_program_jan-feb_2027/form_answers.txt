@@ -1,0 +1,73 @@
+AFFINDA INTERNSHIP PROGRAM (JAN-FEB 2027): APPLICATION FORM ANSWERS
+Form: affindagroup.applytojob.com (closes Fri 20 Nov 2026)
+Drafted 27 Oct 2026. Copy the text between the lines. NOTE TO SELF blocks are not for the form.
+
+==================================================================
+BASIC FIELDS
+==================================================================
+First name:    Manit
+Last name:     Khera
+Email:         manitkhera26@gmail.com
+Phone:         0412 761 206
+Address:       12 Jenner Street
+City:          Blackburn South
+State:         VIC
+Postal:        3130
+
+Resume:        attach main_affinda_internship_program.pdf (this folder)
+Cover letter:  paste the BODY section of cover_affinda_internship_program.txt (this folder)
+               (the four paragraphs from "I am writing to apply..." to "...time and consideration."),
+               then "Kind regards, Manit Khera" on its own lines.
+
+Work status in Australia:  pick the student visa option (subclass 500).
+  NOTE TO SELF: the program runs 18 Jan - 26 Feb 2027, inside your course break, so full-time
+  hours are fine. Don't add an explanation unless they ask.
+
+Stage in degree:  the form showed "Final year" selected. CHANGE THIS. Pick "Penultimate year" /
+  "3rd year" (or the closest option). You're in third year of four.
+
+Where are you based:  Melbourne (Blackburn South, VIC).
+
+Transcript (optional):  NOTE TO SELF: new results are due ~30 Oct. The deadline is 20 Nov, so
+  waiting a few days and uploading the updated transcript makes sense if your WAM goes up.
+
+ATAR (or equivalent):  NOTE TO SELF: not on file. Enter your IB score (or ATAR equivalent) yourself.
+
+==================================================================
+WHAT ATTRACTS YOU TO THIS SPECIFIC OPPORTUNITY AT AFFINDA?  (LOCKED IN 27 Oct)
+==================================================================
+------------------------------------------------------------------
+I watched the video of your past interns, and what stood out was that you get a real project the business actually needs, not a checklist of courses, and you own all of it, from research and design through to the people who use it. That's what I'm missing. My uni projects went well, but nothing I've built has been used by real people yet. So I'm building my own. Prompt Wrappers is a Chrome extension that wraps saved instructions around what you type into a web AI chat, and it's almost finished. A friend and I are also planning Capsule, a social media app idea we're building just for fun. Affinda also sounds like a place where you're expected to experiment with AI and learn by doing, and six weeks of that on a real problem, with a cohort to bounce ideas off, is the internship I'd pick.
+------------------------------------------------------------------
+
+==================================================================
+TELL US ABOUT SOMETHING YOU'VE BUILT, DESIGNED OR CREATED OUTSIDE OF COURSEWORK
+(OR AN IDEA YOU'RE EXCITED TO EXPLORE)
+==================================================================
+LOCKED IN (27 Oct)
+------------------------------------------------------------------
+Right now I'm finishing Prompt Wrappers, a Chrome extension for web AI chats. I use AI all day, and I kept typing the same instructions into every chat, things like "keep it simple". Prompt Wrappers lets you save those instructions once. When you switch one on, it wraps them around whatever you type into the chat, so the AI gets them every time without you retyping anything. You can turn each one on or off with one click. It's almost finished.
+
+Next, a friend and I are building Capsule, just for fun. It's an interactive social media app idea I had to make uni life more interesting. You leave anonymous messages, or capsules, at real places on campus, and you can only read one when you walk up to it. We're planning different kinds: love capsules, review capsules and other genres. We're aiming to launch it in February.
+------------------------------------------------------------------
+
+ALTERNATIVE: volunteer website work (finished, real users)
+------------------------------------------------------------------
+Since July 2025 I've volunteered as IT support for the Boroondara Stroke Support Group, helping maintain their WordPress site. Each month I published their events calendar, then I trained new volunteers to do it themselves so it no longer depends on me. Once, a change broke a live page; I rolled it back, then used a Site Health audit to write a plan for redeveloping the site. It taught me that building for people who aren't engineers means the handover matters as much as the build.
+------------------------------------------------------------------
+NOTE TO SELF: Prompt Wrappers is almost done, Capsule not built yet. Don't call either launched,
+no user numbers. Be ready to demo Prompt Wrappers in the interview.
+
+==================================================================
+HOW DO YOU USE AI IN YOUR EVERYDAY LIFE?  (LOCKED IN 27 Oct)
+==================================================================
+------------------------------------------------------------------
+I use Claude, Claude Code and ChatGPT for almost everything, and I'm always looking for ways to improve how I work with them. For uni and my own projects, Claude Code helps me plan, write, test and debug code. I treat it like a fast teammate whose work I still check: I read what it changed, run the tests, and throw out what doesn't hold up.
+
+I also created an automated job-hunting pipeline using Claude Code, which has made my job search a lot easier. It finds jobs, reads my application emails and builds a dashboard of where everything is at. It sends me a daily notification when an important job comes in or an employer replies. I'm trying to get it to find recruiters at specific companies, but I'm not quite there yet. It also runs a video pipeline I built with it, so I can make an intro video in a few hours of effort, in an editing style I developed along the way (I made my intro video for this application within 8 hours of seeing your job ad).
+
+Outside tech, I use it in the kitchen when I've got odd ingredients and want to experiment. That's how I found out a little soy sauce in vanilla ice cream makes it taste like caramel ice cream. Thanks to ChatGPT, I now cook my red sauce pasta with ketchup and mayonnaise (please don't tell the Italians). I also use it as a journal for every weird software idea I have, no matter how absurd, and it gave me a gym routine that's worked well for me so far.
+
+Next, I want to learn how to connect it to Playwright and the GitHub CLI so it can open pull requests itself.
+------------------------------------------------------------------
+NOTE TO SELF: don't claim you wrote Claude Code skills or hooks yourself; you set up and direct the pipeline.

@@ -1,0 +1,53 @@
+# MANIT KHERA
+Blackburn South, VIC | 0412 761 206 | manitkhera26@gmail.com
+linkedin.com/in/manit-khera-603957252 | github.com/uiqvb
+
+## PROFILE
+Third-year Software Engineering (Honours) student at Deakin with a WAM of 81.33 and two perfect scores, who builds working products end to end and uses Claude and Claude Code every day to design, write and test them. Turned two unrelated uni projects into one system nobody asked for, scoring 100/100 and a place in the Deakin Open Day showcase. Curious by default: starts from a "what if", tests it on real hardware, then measures the result.
+
+## EDUCATION
+**Bachelor of Software Engineering (Honours) — Deakin University, Burwood** | **Mar 2025 - 2028 (expected)**
+- WAM **81.33** (HD); **100** in Data Structures & Algorithms, **100** in Backend Development, **93** in Embedded Systems, **92** in OOP
+
+## TECHNICAL SKILLS
+**AI tools:** Claude, Claude Code (daily, across design, coding, testing and debugging)
+**Languages:** C#, Python, JavaScript, TypeScript, SQL, C++ (Arduino firmware)
+**Web & Product:** React, Next.js, Node.js, Express, Flask, REST APIs, Swagger/OpenAPI, JWT auth, TOTP 2FA
+**Data, Cloud & Testing:** PostgreSQL, Firestore, Azure, Docker, Jenkins CI/CD, xUnit, pytest, Git
+
+## PROJECTS
+**Robot Controller API** | C#, .NET 8, PostgreSQL, Docker, Jenkins | [Demo video](https://youtu.be/unDSeDkGBI0) · [Source code](https://github.com/uiqvb/RobotControllerApi)
+- Owned the project end to end: connected the backend unit's REST API to the robot from the embedded unit, a combination neither brief asked for, and spent about a month making the backend drive the physical robot.
+- Built a hardware-neutral platform (**~120 endpoints**) with offline recovery that replays the robot's report through a simulation; hardware testing returned it to its **exact predicted grid position**.
+- Automated seven-stage CI/CD with deployment rollback, cutting container vulnerability findings **93% (310 → 22)**; awarded **100/100** and selected for **Deakin Open Day**.
+
+**DEV@Deakin** | React, Node.js, Express, Firestore | [Live app](https://hd-sit-313.vercel.app/) · [Source code](https://github.com/uiqvb/HD-SIT313)
+- Designed and deployed a full-stack developer community app: JWT auth, TOTP two-factor login with hashed recovery codes, server-enforced premium content, optimistic voting with rollback and XSS-sanitised Markdown; **24 automated tests**.
+
+**Smart Clothesline Robot** | Arduino C++, Raspberry Pi, Python/Flask, MQTT | [Demo video](https://youtu.be/7QVj2lUGF2s) · [Source code](https://github.com/uiqvb/SIT210/tree/main/Task11.1HD)
+- Solved an unreliable rain sensor creatively with an Open-Meteo forecast fallback, verified with physical wet tests and injected telemetry faults.
+- Traced an intermittent brownout to a failing buck converter from the robot's own boot ID and reset-cause telemetry; awarded **93**.
+
+**Scaling a Robot Dispatch API** | C#, PostgreSQL, Azure, NBomber, xUnit | [Demo video](https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=dcbbdbc3-a0bf-4ee4-87fa-b4db001c2a9d) · [Source code](https://github.com/uiqvb/SIT315-RobotDispatch)
+- Raised throughput **6.05×** at 400 simulated robots across two Azure replicas and sustained **~1,008 jobs/sec at 5,000** where the original handled zero, proven over **80 benchmark runs** and **54 automated tests**.
+
+## EXPERIENCE
+**IT Support Volunteer — Boroondara Stroke Support Group** | Jul 2025 - Present
+- Maintain the group's WordPress site as part of a small volunteer team; trained new volunteers to publish the monthly calendar themselves, so the task no longer depends on one person.
+- Troubleshot and rolled back a change that broke a live page, then wrote a redevelopment plan from a Site Health audit.
+
+**Student Ambassador, Open Day — Deakin University, Burwood** | Aug 2026
+- Demonstrated the Robot Controller API and its robot to prospective students and families.
+
+**Customer Service Assistant — 7-Eleven, Noble Park** | Jul 2025 - Oct 2025
+- Opened and closed unsupervised, reconciling cash and EFTPOS and investigating variances; trained new starters.
+
+## LEADERSHIP
+**LinkedIn Manager — Deakin Data Science Club** | Jan 2026 - Present
+- Own the club's LinkedIn content, design and analytics, reaching **1,000+ impressions per post**.
+
+**Committee Member — Deakin Software Engineering Club** | Jul 2025 - Apr 2026
+- Designed the seeded defects for a **30-attendee** debugging workshop; fronted Market Day, contributing to **100+ sign-ups**.
+
+## REFERENCES
+Available upon request.

@@ -1,6 +1,71 @@
 # Scrape history
 
-Every job the scraper has found (309 total), newest day first. Rebuilt from `seen_jobs.json` after each scrape; edit that file, not this one.
+Every job the scraper has found (321 total), newest day first. Rebuilt from `seen_jobs.json` after each scrape; edit that file, not this one.
+
+## 2026-10-30
+
+2 new: 0 high, 0 medium, 2 low.
+
+<details><summary>2 low-fit jobs</summary>
+
+| Fit | Title | Company | Posted | Deadline | Score | Status | Link |
+|-----|-------|---------|--------|----------|-------|--------|------|
+| Low | AI Research Resident | Maincode | 2026-10-23 | - | - | skipped | [Open](https://www.linkedin.com/jobs/view/4426211654) |
+| Low | Gameplay Programmer: Unreal Engine (Vehicles & Combat) | Upsurge Studios | 2026-10-29 | - | - | skipped | [Open](https://www.linkedin.com/jobs/view/4484167099) |
+
+</details>
+
+## 2026-10-29
+
+4 new: 0 high, 2 medium, 2 low.
+
+| Fit | Title | Company | Posted | Deadline | Score | Status | Link |
+|-----|-------|---------|--------|----------|-------|--------|------|
+| Medium | Intern, Software Engineer [PDMS-D&M-GDSIMENG] | Autodesk | 2026-10-28 | - | - | new | [Open](https://autodesk.wd1.myworkdayjobs.com/uni/job/Melbourne-AUS/Intern--Software-Engineer--PDMS-D-M-GDSIMENG-_26WD101850) |
+| Medium | Software Developer Internship | Ace Talent Recruitment | 2026-10-28 | - | - | new | [Open](https://au.linkedin.com/jobs/view/software-developer-internship-at-ace-talent-recruitment-4484416117) |
+
+<details><summary>2 low-fit jobs</summary>
+
+| Fit | Title | Company | Posted | Deadline | Score | Status | Link |
+|-----|-------|---------|--------|----------|-------|--------|------|
+| Low | Electronic Engineering Internship | Ace Talent Recruitment | 2026-10-28 | - | - | new | [Open](https://au.linkedin.com/jobs/view/electronic-engineering-internship-at-ace-talent-recruitment-4484426835) |
+| Low | Technology Associate Program (Traineeship) | Commonwealth Bank | 2026-10-27 | - | - | new | [Open](https://au.linkedin.com/jobs/view/technology-associate-program-traineeship-at-commonwealth-bank-4484027131) |
+
+</details>
+
+## 2026-10-28
+
+3 new: 0 high, 1 medium, 2 low.
+
+| Fit | Title | Company | Posted | Deadline | Score | Status | Link |
+|-----|-------|---------|--------|----------|-------|--------|------|
+| Medium | Intern: Robotics Software Engineer — 🔒 Filled · Accepting expressions of interest | Imitation Machines | 2026-10-25 | - | - | new | [Open](https://freehire.me/jobs/intern-robotics-software-engineer-filled-accepting-expressions-of-interest-imitation-machines-435bmrfq) |
+
+<details><summary>2 low-fit jobs</summary>
+
+| Fit | Title | Company | Posted | Deadline | Score | Status | Link |
+|-----|-------|---------|--------|----------|-------|--------|------|
+| Low | Intern: Machine Learning (Imitation, RL) and Robotics Research Engineer — Filled · Accepting expressions of interest | Imitation Machines | 2026-10-25 | - | - | new | [Open](https://freehire.me/jobs/intern-machine-learning-imitation-rl-and-robotics-research-engineer-filled-accepting-expressions-of-interest-imitation-machines-7nmk65ru) |
+| Low | AURIN Associate Software Engineer | University of Melbourne | 2026-10-26 | - | - | new | [Open](https://www.linkedin.com/jobs/view/4474228886) |
+
+</details>
+
+## 2026-10-27
+
+3 new: 1 high, 0 medium, 2 low.
+
+| Fit | Title | Company | Posted | Deadline | Score | Status | Link |
+|-----|-------|---------|--------|----------|-------|--------|------|
+| High | Affinda Internship Program Jan – Feb 2027 | Affinda | 2026-10-27 | 2026-11-20 | - | new | [Open](https://www.linkedin.com/jobs/view/4483271590) |
+
+<details><summary>2 low-fit jobs</summary>
+
+| Fit | Title | Company | Posted | Deadline | Score | Status | Link |
+|-----|-------|---------|--------|----------|-------|--------|------|
+| Low | Junior Full Stack Engineer - Hybrid | Sitemate | 2026-10-26 | - | - | new | [Open](https://www.linkedin.com/jobs/view/4483518460) |
+| Low | Electronics Intern | C-PRAV Technology Solutions | 2026-10-27 | - | - | new | [Open](https://www.linkedin.com/jobs/view/4483267678) |
+
+</details>
 
 ## 2026-10-24
 
@@ -281,11 +346,11 @@ Every job the scraper has found (309 total), newest day first. Rebuilt from `see
 | Low | Software Engineer - Embedded | Gallagher Animal Management | 2026-10-16 | - | 65 | ranked | [Open](https://au.linkedin.com/jobs/view/software-engineer-embedded-at-gallagher-animal-management-4469738467) |
 | Low | Internship Opportunity – React Native Mobile App Developer | Medical Wizard | 2026-10-18 | - | 46 | ranked | [Open](https://freehire.me/jobs/internship-opportunity-react-native-mobile-app-developer-medical-wizard-4rzzt7db) |
 | Low | Electrical Engineering Intern | CAREER PANACEA | 2026-10-19 | - | 28 | ranked | [Open](https://au.linkedin.com/jobs/view/electrical-engineering-intern-at-career-panacea-4480946607) |
+| Low | Graduate / Associate Forward Deployed AI Consultant / Melbourne | ADAPTOVATE | 2026-10-19 | - | - | skipped | [Open](https://au.linkedin.com/jobs/view/graduate-associate-forward-deployed-ai-consultant-melbourne-at-adaptovate-4481224309) |
 | Low | Engineering Intern | Johnson Controls | 2026-10-15 | - | - | skipped | [Open](https://au.linkedin.com/jobs/view/engineering-intern-at-johnson-controls-4477328583) |
 | Low | Associate Engineer | Moog Inc. | 2026-10-06 | - | - | skipped | [Open](https://au.linkedin.com/jobs/view/associate-engineer-at-moog-inc-4467706312) |
 | Low | 2026/2027 Software Engineering Intern Program (Heidi Launch Lab) | Heidi | 2026-10-15 | - | - | skipped | [Open](https://au.linkedin.com/jobs/view/2026-2027-software-engineering-intern-program-heidi-launch-lab-at-heidi-4479769032) |
 | Low | Associate Machine Learning Engineer | REA Group | 2026-10-14 | - | - | skipped | [Open](https://au.linkedin.com/jobs/view/associate-machine-learning-engineer-at-rea-group-4476611933) |
-| Low | Graduate / Associate Forward Deployed AI Consultant / Melbourne | ADAPTOVATE | 2026-10-19 | - | - | skipped | [Open](https://au.linkedin.com/jobs/view/graduate-associate-forward-deployed-ai-consultant-melbourne-at-adaptovate-4481224309) |
 | Low | Early Careers Consultant / Data & AI | Publicis Sapient | 2026-10-15 | - | - | skipped | [Open](https://au.linkedin.com/jobs/view/early-careers-consultant-data-ai-at-publicis-sapient-4469305141) |
 | Low | 2027 Graduate - AI & Innovation Full Stack Engineer | DXC Technology | 2026-10-14 | - | - | skipped | [Open](https://au.linkedin.com/jobs/view/2027-graduate-ai-innovation-full-stack-engineer-at-dxc-technology-4478415059) |
 | Low | Early Careers Consultant / Engineering | Publicis Sapient | 2026-10-15 | - | - | skipped | [Open](https://au.linkedin.com/jobs/view/early-careers-consultant-engineering-at-publicis-sapient-4469309077) |

@@ -1,0 +1,133 @@
+{
+ "round": 3,
+ "pieces": [
+  {
+   "line": "1 Roadster",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 51.5,
+   "out": 59.4,
+   "snap": "none",
+   "why": "R2: in 51.50 per reviewer; whole eye-follow kept"
+  },
+  {
+   "line": "2 Smaller",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 129.6,
+   "out": 134.9,
+   "snap": "in",
+   "why": "unchanged: last of 6, look-down hold"
+  },
+  {
+   "line": "3 No flips",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 140.02,
+   "out": 143.05,
+   "snap": "in",
+   "why": "R2: out 143.05 (1 s hold)"
+  },
+  {
+   "line": "4 Who",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 246.94,
+   "out": 256.24,
+   "snap": "both",
+   "why": "unchanged; 'moves laundry by itself' (264.9 says 'autonomously')"
+  },
+  {
+   "line": "4 Who",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 281.7,
+   "out": 285.66,
+   "snap": "both",
+   "why": "unchanged: Arduino + firmware I wrote"
+  },
+  {
+   "line": "5 Restart",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 319.3,
+   "out": 327.2,
+   "snap": "in",
+   "why": "R2: out 327.20"
+  },
+  {
+   "line": "6 Data",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 489.6,
+   "out": 493.6,
+   "snap": "in",
+   "why": "R2: out 493.60, temple tap kept"
+  },
+  {
+   "line": "6 Data",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 549.3,
+   "out": 554.6,
+   "snap": "both",
+   "why": "unchanged: boot ID / reset cause / buck converter"
+  },
+  {
+   "line": "7 Break it",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 605.68,
+   "out": 607.9,
+   "snap": "both",
+   "why": "unchanged"
+  },
+  {
+   "line": "7 Break it",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 631.88,
+   "out": 634.55,
+   "snap": "out",
+   "why": "R2: in 631.88 removes click"
+  },
+  {
+   "line": "7 Break it",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 654.16,
+   "out": 658.84,
+   "snap": "none",
+   "why": "R3: reviewer swap - 663.6 take slurs 'fake faulty data'; 654.16 attempt clean ('such as using fake faulty data and testing it while the rain sensor is wet'), silence before 650.87-654.2"
+  },
+  {
+   "line": "8 Megapacks",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 696.2,
+   "out": 699.15,
+   "snap": "in",
+   "why": "R2: out 699.15"
+  },
+  {
+   "line": "8 Megapacks",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 713.8,
+   "out": 715.95,
+   "snap": "both",
+   "why": "unchanged: 444 at Plumpton"
+  },
+  {
+   "line": "8 Megapacks",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 835.3,
+   "out": 843.45,
+   "snap": "in",
+   "why": "R2: out 843.45"
+  },
+  {
+   "line": "9 Gap",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 877.97,
+   "out": 882.44,
+   "snap": "out",
+   "why": "R2: in 877.97"
+  },
+  {
+   "line": "10 Close",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 903.0,
+   "out": 908.65,
+   "snap": "none",
+   "why": "R2: 'watching' ends 908.60; render adds end_hold 1.8 -> ends 910.45, before he looks down at 910.55"
+  }
+ ]
+}

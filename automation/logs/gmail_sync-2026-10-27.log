@@ -1,0 +1,39 @@
+started 2026-10-27 12:47  exit 0
+usage: claude-sonnet-5-5 | in 18 + cache write 127,493 + cache read 637,517 | out 8,175 | 27 turns | 1.1 min | API-equivalent cost $0.66
+
+## Gmail Sync (unattended) – Done – 2026-10-27
+
+I scanned 11 application threads and 8 Meetup threads since 26 Oct, and found no new status changes. The one pending item is still waiting on you.
+
+### Written automatically
+- **Infosys**: notes only, no status change.
+  - 2026-10-26: Shweta Dhall replied. She passed your email to the team, and they will contact you directly if you're shortlisted.
+  - 2026-10-27: you sent her a thank-you reply.
+
+### Needs your decision
+- **Arcitecta**: still `drafted`. The only email is the Hack2Hire sign-up, which isn't proof the internship application was sent. Was it submitted? It stays in `pending.md`.
+
+### Not application signals
+- Tesla sent a password-reset code and a password-changed email on 26 Oct. That's account security, not a status change.
+- The rest was LinkedIn and Indeed job alerts and invitations.
+
+### Events (`documents/notes/events.md`)
+- **New:** 3rd Melbourne Hardware Hangout (Thu 29 Oct, 5:30–8:30pm, RMIT Carlton). It moved from Suggested to Going, because you registered on Luma on 26 Oct.
+- **New suggestions:**
+  - Startup Pitch & Networking: Fri 6 Nov, 6–9pm, National Hotel, Richmond.
+  - Google AI Deep Dive Ep 5: online, 12 Nov. The email shows 4–5am, so check the local time.
+  - ML & AI Meetup: Tue 17 Nov, 6–8pm, 912 Collins St. I updated the placeholder title to "Neural Processing from the Ground Up".
+- **Next three up:**
+  - Wed 28 Oct: All Energy Australia, 9am–5pm, and Full Stack Friends, 2:30pm.
+  - Thu 29 Oct: the Hardware Hangout, 5:30pm. It's the same day as All Energy day 2, but starts after it ends.
+  - Sun 1 Nov: TechWalking, 10am.
+- **Contacts:** I didn't cross-check `contacts.json` for anyone attending.
+- The events memory snapshot and `gmail_sync/state.json` (`last_sync` is now 2026-10-27) are updated. The dashboard is rebuilt at `reports/application-dashboard.html`.
+
+I couldn't append to `documents/notes/log.md`, because a shell command was blocked in this unattended run. Please add a line for today's run.
+
+NOTIFY: Quiet run, 1 Infosys note, 4 event updates
+NOTIFY: Infosys: Shweta Dhall replied, passed your email to the team
+NOTIFY: Hardware Hangout confirmed, Thu 29 Oct 5:30pm, RMIT Carlton
+NOTIFY: New event: Startup Pitch, Fri 6 Nov 6pm, Richmond
+NOTIFY: Arcitecta: was the application submitted? Still drafted

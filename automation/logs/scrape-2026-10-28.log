@@ -1,0 +1,31 @@
+started 2026-10-28 08:25  exit 0
+usage: claude-sonnet-5-5 | in 28 + cache write 62,474 + cache read 726,699 | out 8,446 | 33 turns | 1.9 min | API-equivalent cost $0.41
+
+## New Job Matches - 2026-10-28
+
+Found 3 new positions (0 high, 1 medium, 2 low). I wrote the table to `job_scraper/latest_scrape.md`.
+
+skipped (disabled): jobindex-search, jobbank-search, jobnet-search, jobdanmark-search
+
+Most other hits (Affinda, Sitemate, Schoolbox, Mable, Maincode, RecordPoint, Allume, Found Life, Amazon, DXC) were already in `seen_jobs.json` from earlier runs.
+
+| # | Fit | Title | Company | Location | Deadline |
+|---|-----|-------|---------|----------|----------|
+| 1 | Medium | Intern: Robotics Software Engineer (marked filled, taking expressions of interest) | Imitation Machines | Remote or hybrid, Sydney preferred | none stated |
+| 2 | Low | AURIN Associate Software Engineer | University of Melbourne | Parkville, VIC | none stated |
+| 3 | Low | Intern: ML (Imitation, RL) and Robotics Research Engineer (marked filled, taking expressions of interest) | Imitation Machines | Remote or hybrid, Sydney preferred | none stated |
+
+- **Imitation Machines robotics intern:**
+  - It is a pre-seed startup. The role is part-time (2 days a week, 6+ months) and remote is fine.
+  - Robot integration and simulation work fits his hardware/software strength.
+  - Red flags: it asks for ROS/ROS2 and simulator experience, which is a stated gap, and the listing is marked filled, so only expressions of interest are open.
+- **AURIN:** The role is full-time and fixed-term, on a Java/Python/MongoDB stack. Full-time conflicts with his student visa outside course breaks.
+
+**Contacts (Imitation Machines)**
+- Recruiters: https://www.linkedin.com/search/results/people/?keywords=Imitation%20Machines%20recruiter&origin=GLOBAL_SEARCH_HEADER
+- Robotics peers: https://www.linkedin.com/search/results/people/?keywords=Imitation%20Machines%20robotics%20software&origin=GLOBAL_SEARCH_HEADER
+
+NOTIFY: 3 new jobs: 0 high, 1 medium
+NOTIFY: Medium | Imitation Machines - Intern: Robotics Software Engineer | Remote/Sydney | part-time, ROS gap
+NOTIFY: + 2 low (see latest_scrape.md)
+NOTIFY-LINK: Imitation Machines | https://freehire.me/jobs/intern-robotics-software-engineer-filled-accepting-expressions-of-interest-imitation-machines-435bmrfq

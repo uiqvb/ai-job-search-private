@@ -1,0 +1,55 @@
+AFFINDA - FILMING SHEET v3  (one long take: read, look up, wait 1 s, say it your way)
+FAST and LOUD. Talk quicker than feels normal. Prop: printed resume (+ a spare).
+Film AND edit today, or the "same day" line in row 9 changes.
+
+1.  "Okay, Affinda. Give me two minutes, and I'll explain why you should hire me."   (say exactly, big energy)
+
+2.  >> HOLD YOUR RESUME UP next to your face, deadpan
+    "You built an AI that reads resumes. So here's mine. Fast."   (say exactly)
+
+3.  >> TAP THE RESUME on each one
+    - WAM of 81
+    - 100/100 in Backend, and in Data Structures and Algorithms
+    - my robot got picked for Deakin Open Day
+
+4.  - built that robot, and the API that drives it
+    - made a robot dispatch API six times faster
+
+5.  "But a resume can't show you the good stuff."   (say exactly)
+    >> on "good stuff": CRUMPLE IT, TOSS IT OVER YOUR SHOULDER
+    >> FREEZE, straight face, 2 s
+
+6.  >> FISTS OUT WIDE, one each side
+    - two uni projects
+    - a robot control API   (look at LEFT fist)
+    - a robot I built myself   (look at RIGHT fist)
+    - nobody said they should meet
+    - so I made them meet   >> SMASH FISTS TOGETHER
+
+7.  - it started with a "what if"   >> SHRUG
+    - unit chair warned me I might finish neither   >> STRAIGHT FACE, hold 1 s
+    - for a month, every fix broke something new   >> WINCE
+
+8.  - then it worked   >> GRIN
+    - 100 out of 100, on show at Open Day
+
+9.  - energy? found your job ad today
+    - this video   >> POINT AT THE CAMERA
+    - filmed and edited the same day, with Claude Code
+
+10. - right now, working on two things
+    - Chrome extension: Prompt Wrappers
+    - save the instructions you keep retyping to AI ("keep it simple")
+    - switch them on in one click   >> FLICK A SWITCH
+
+11. - the other: Capsule
+    - leave anonymous messages at real places on campus
+    - you can only read one when you walk up to it   >> FINGERS WALK
+
+12. - at Affinda: take a slow job someone does by hand
+    - build the thing that does it for them   >> POINT AT THE PAPER STACK beside you
+
+13. >> small wave at the end
+    "So yeah, I'm Manit Khera. Give me six weeks, and I'll build you something that works. Thanks for watching."   (say exactly)
+
+Mess up? Pause, say the whole point again. Don't move your feet.

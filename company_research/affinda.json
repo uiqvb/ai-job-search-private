@@ -1,0 +1,11 @@
+{
+  "company": "Affinda",
+  "fetched_date": "2026-10-27",
+  "sources": {
+    "website": {"url": "https://affinda.com/about-us", "notes": "Verified 2026-10-27 (drafter + reviewer fetches). 'Global AI product & deployment company'; principle: AI should be yours to control (see AI spend, choose models, switch providers). Products: Affinda Control (AI cost control, sits between a company and its AI providers), Affinda Extract (document automation, documents into structured data), Affinda Deployment (AI adoption/enablement plus applied AI engineering, prototype to production), Affinda Resume Parser, Draftable (legal doc comparison, 1,300+ legal teams). Founded 2012 by brothers Ben Toner (PhD quantum physics, Caltech) and Tim Toner (ex-Macquarie, Lazard), Melbourne. 120+ employees, 2,800+ customers, 85+ countries. ISO 27001:2022, SOC 2 Type 2. No internship info on this page."},
+    "reviews": {"url": "", "notes": "Not researched."},
+    "linkedin": {"url": "https://www.linkedin.com/jobs/view/4483271590", "notes": "Internship posting: 100+ people, HQ Melbourne, office Dover House, Cremorne."},
+    "media": {"url": "https://affinda.com/news", "notes": "News list (headlines, not all fetched): AFR Feb 2026 $25M raise, valuation $100m to $220m; AFR Oct 2025 first acquisition Pathfindr (AI training firm) ~$15M; AFR Jun 2024 $120m valuation; Forbes Australia Nov 2024 'fastest growing AI company in Australia' (Deloitte Tech Fast 50, 26th in 2024). Affinda news article 30 Jan 2025 (fetched): Draftable first product, then Affinda document processing; HQ Melbourne; 70 staff then. Search leads only: Affinda Group parent of Affinda, Pathfindr, Draftable, Vesparum Capital."}
+  },
+  "network_contacts_note": "No known contacts at Affinda recorded."
+}

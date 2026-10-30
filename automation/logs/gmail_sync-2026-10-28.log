@@ -1,0 +1,39 @@
+started 2026-10-28 08:25  exit 0
+usage: claude-sonnet-5-5 | in 22 + cache write 100,003 + cache read 892,935 | out 7,292 | 27 turns | 1.7 min | API-equivalent cost $0.56
+
+## Gmail Sync - Done - 2026-10-28 (unattended)
+
+I scanned the threads since 26 Oct and read the 13 new messages in full.
+
+### Written automatically
+- **Infosys:** added a tracker note that two replies went to Saloni Agarwal on 27 Oct. They settled on a call at 3 Nov, 2:00 PM IST, which is 7:30 PM AEDT.
+- **Affinda:**
+  - The application ack from applytojob arrived on 27 Oct. The row was already `applied`, so no status change.
+  - Added a note about the follow-up emailed to careers@affinda.com on 27 Oct with the intro video, resume, cover letter and transcript.
+
+### Queued for approval (`gmail_sync/pending.md`)
+- **Infosys, interview scheduled:** Saloni will send an MS Teams invite. The tracker is already `interview`. The queued change is to tick the interview stage in `outcome.md` with the exact time.
+
+### Not written
+- Job alerts from LinkedIn, Indeed and Capgemini were noise, with no signal.
+- Two sent emails to murugesuyuvarajah@gmail.com (resume, transcript) are personal mail, not tied to a tracked application.
+- Waiting on Manit: the Arcitecta Hack2Hire question (was the internship application submitted?).
+
+### Events
+- No new Meetup RSVPs or suggestions this run.
+- I updated the Infosys interview row in `events.md` to 3 Nov at 7:30 pm AEDT and refreshed the events memory.
+- Next up:
+  - All Energy Australia, 28–29 Oct.
+  - Melbourne Full Stack Friends and Code, 28 Oct at 2:30 pm.
+  - 3rd Melbourne Hardware Hangout, 29 Oct at 5:30 pm.
+- No clashes.
+
+### Stale applications
+- None flagged.
+
+The dashboard was rebuilt at `reports/application-dashboard.html`.
+
+NOTIFY: 1 interview scheduled, 2 notes written, 1 pending
+NOTIFY: Infosys interview Tue 3 Nov 7:30 pm AEDT (2:00 PM IST, MS Teams) - approve outcome.md tick in /gmail-sync
+NOTIFY: Affinda ack received and follow-up logged
+NOTIFY: 2 pending updates waiting for approval

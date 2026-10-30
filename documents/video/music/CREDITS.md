@@ -1,0 +1,2 @@
+- Galway.mp3 / galway_accel_affinda.mp3: "Galway" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ . Affinda edit: song 1:59-3:38, sped up 1.00x->1.65x.
+- Run_Amok.mp3 / run_amok_affinda.mp3: "Run Amok" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ . Affinda edit: song from 0:25 so its ending lands on the wave.

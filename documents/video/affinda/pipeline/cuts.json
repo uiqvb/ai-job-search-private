@@ -1,0 +1,125 @@
+{
+ "round": 2,
+ "pieces": [
+  {
+   "line": "0 Two minutes",
+   "file": "20261027_180129.mp4",
+   "in": 86.62,
+   "out": 89.58,
+   "snap": "both",
+   "why": "last real attempt, clean"
+  },
+  {
+   "line": "1 Resume",
+   "file": "20261027_180129.mp4",
+   "in": 111.45,
+   "out": 115.4,
+   "snap": "out",
+   "why": "only attempt; in hand-set after breath"
+  },
+  {
+   "line": "2 Reel",
+   "file": "20261027_180129.mp4",
+   "in": 216.55,
+   "out": 223.0,
+   "snap": "none",
+   "why": "continuous 216.55-223.00; 213.95-215.25 was a cough + false start (re-transcribed \"Oh, I'm out of\"), removed per Manit"
+  },
+  {
+   "line": "3 Built",
+   "file": "20261027_180129.mp4",
+   "in": 264.25,
+   "out": 271.5,
+   "snap": "none",
+   "why": "one continuous take 264.25-271.50 incl. \"to support 6000 robots\" (Manit chose it, 27 Oct). FACT CHECK: verified figure is 5,000 robots"
+  },
+  {
+   "line": "4 Toss",
+   "file": "20261027_180129.mp4",
+   "in": 305.38,
+   "out": 309.75,
+   "snap": "in",
+   "why": "clean toss, ~2.3 s freeze; out trimmed to 310.40 to cut the dead air at the join; Manit: shorter deadpan, out 309.75"
+  },
+  {
+   "line": "5 Great ideas",
+   "file": "20261027_180129.mp4",
+   "in": 386.22,
+   "out": 393.0,
+   "snap": "out",
+   "why": "last attempt, fists meet; in hand-set 386.22 so the opening I is kept"
+  },
+  {
+   "line": "6 Curious",
+   "file": "20261027_180129.mp4",
+   "in": 449.1,
+   "out": 457.44,
+   "snap": "both",
+   "why": "clean restart"
+  },
+  {
+   "line": "7 Worked",
+   "file": "20261027_180129.mp4",
+   "in": 469.5,
+   "out": 473.7,
+   "snap": "both",
+   "why": "only attempt"
+  },
+  {
+   "line": "8 Energy",
+   "file": "20261027_180129.mp4",
+   "in": 517.1,
+   "out": 523.05,
+   "snap": "both",
+   "why": "last attempt, points at camera"
+  },
+  {
+   "line": "9 Prompt Wrappers",
+   "file": "20261027_180129.mp4",
+   "in": 614.1,
+   "out": 615.95,
+   "snap": "both",
+   "why": "'Right now I'm working on two things'"
+  },
+  {
+   "line": "9 Prompt Wrappers",
+   "file": "20261027_180129.mp4",
+   "in": 627.1,
+   "out": 628.78,
+   "snap": "in",
+   "why": "'called Prompt Wrappers' (last take says excluded old name)"
+  },
+  {
+   "line": "9 Prompt Wrappers",
+   "file": "20261027_180129.mp4",
+   "in": 707.52,
+   "out": 714.5,
+   "snap": "out",
+   "why": "rest of description + switch flick"
+  },
+  {
+   "line": "9b Capsule",
+   "file": "20261027_180129.mp4",
+   "in": 847.1,
+   "out": 853.0,
+   "snap": "both",
+   "why": "last of 3 attempts"
+  },
+  {
+   "line": "10 At Affinda",
+   "file": "20261027_180129.mp4",
+   "in": 932.4,
+   "out": 936.98,
+   "snap": "both",
+   "why": "last attempt, includes 'by hand'"
+  },
+  {
+   "line": "11 Close",
+   "file": "20261027_180129.mp4",
+   "in": 969.42,
+   "out": 975.3,
+   "snap": "in",
+   "why": "last attempt, wave; end_hold 1.2; out hand-set 975.30 (snap pushed it 1.16 s late, into the hand-to-head)"
+  }
+ ]
+}

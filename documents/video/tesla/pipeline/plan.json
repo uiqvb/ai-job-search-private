@@ -1,0 +1,579 @@
+{
+ "anchors": {
+  "okay": {
+   "word": "Okay"
+  },
+  "tesla_e": {
+   "word": "Tesla",
+   "edge": "e"
+  },
+  "flight": {
+   "word": "Roadster",
+   "edge": "e",
+   "offset": 0.14
+  },
+  "too_in": {
+   "word": "I too made",
+   "offset": -0.14
+  },
+  "flop": {
+   "word": "smaller",
+   "edge": "e",
+   "offset": 0.08
+  },
+  "and_in": {
+   "word": "And it does"
+  },
+  "flips": {
+   "word": "flips",
+   "n": 1
+  },
+  "flips_out": {
+   "word": "flips",
+   "n": 1,
+   "offset": 0.75
+  },
+  "im": {
+   "word": "I'm",
+   "n": 1
+  },
+  "deakin_e": {
+   "word": "Deakin",
+   "edge": "e",
+   "offset": 0.15
+  },
+  "split1": {
+   "word": "I built this",
+   "n": 1
+  },
+  "firmware": {
+   "word": "firmware"
+  },
+  "split1_out": {
+   "word": "wrote",
+   "edge": "e",
+   "offset": 0.1
+  },
+  "log_in": {
+   "word": "It sends"
+  },
+  "restart": {
+   "word": "restart"
+  },
+  "random": {
+   "word": "random"
+  },
+  "random_e": {
+   "word": "random",
+   "edge": "e"
+  },
+  "could_in": {
+   "word": "I could have",
+   "offset": -0.05
+  },
+  "the_data": {
+   "word": "the data",
+   "n": 1
+  },
+  "the_data_out": {
+   "word": "The boot ID",
+   "offset": -0.05
+  },
+  "boot": {
+   "word": "boot ID"
+  },
+  "reset": {
+   "word": "reset cause"
+  },
+  "split2": {
+   "word": "that led me"
+  },
+  "failing": {
+   "word": "failing"
+  },
+  "split2_out": {
+   "word": "converter",
+   "edge": "e",
+   "offset": 0.15
+  },
+  "log_back": {
+   "word": "Before I trusted"
+  },
+  "purpose": {
+   "word": "on purpose"
+  },
+  "fake": {
+   "word": "fake faulty data"
+  },
+  "testing": {
+   "word": "testing"
+  },
+  "rain": {
+   "word": "rain sensor"
+  },
+  "is_wet": {
+   "word": "is wet"
+  },
+  "wet": {
+   "word": "wet"
+  },
+  "wet_e": {
+   "word": "wet",
+   "edge": "e"
+  },
+  "megapacks": {
+   "word": "Megapacks"
+  },
+  "much": {
+   "word": "much bigger"
+  },
+  "grid_in": {
+   "word": "444"
+  },
+  "tests": {
+   "word": "tests"
+  },
+  "goes_live": {
+   "word": "goes live"
+  },
+  "live_e": {
+   "word": "live",
+   "edge": "e"
+  },
+  "red": {
+   "word": "catches"
+  },
+  "grid_zoom": {
+   "word": "before a customer"
+  },
+  "grid_out": {
+   "word": "downtime",
+   "edge": "e"
+  },
+  "gap": {
+   "word": "I haven't"
+  },
+  "canbus": {
+   "word": "CAN bus"
+  },
+  "system_e": {
+   "word": "system",
+   "edge": "e"
+  },
+  "soyeah": {
+   "word": "So yeah"
+  },
+  "mini": {
+   "word": "No flips"
+  },
+  "endcard": {
+   "word": "watching",
+   "edge": "e",
+   "offset": 0.15
+  }
+ },
+ "captions": {
+  "on": true,
+  "top": 1600,
+  "lift": [
+   {
+    "from": "@split1",
+    "to": "@split1_out+0.15",
+    "top": 1720
+   },
+   {
+    "from": "@split2",
+    "to": "@split2_out+0.15",
+    "top": 1720
+   }
+  ],
+  "fix": {
+   "falls": "faults"
+  }
+ },
+ "nametag": {
+  "from": "@im",
+  "to": "@deakin_e",
+  "subtitle": "Third-year Software Engineering student, Deakin"
+ },
+ "zooms": [
+  {
+   "from": "@okay",
+   "to": "@tesla_e",
+   "scale": 1.2,
+   "tilt": 0
+  },
+  {
+   "from": "@flips",
+   "to": "@flips_out",
+   "scale": 1.3,
+   "tilt": -3
+  },
+  {
+   "from": "@random",
+   "to": "@could_in",
+   "scale": 1.25,
+   "tilt": 2
+  },
+  {
+   "from": "@the_data",
+   "to": "@the_data_out",
+   "scale": 1.2,
+   "tilt": -2
+  }
+ ],
+ "bw": [
+  {
+   "from": "@flips",
+   "to": "@flips_out"
+  },
+  {
+   "from": "@random",
+   "to": "@could_in"
+  }
+ ],
+ "echo": [
+  {
+   "id": "flips",
+   "word": {
+    "word": "flips",
+    "n": 1
+   },
+   "vol": 0.75
+  },
+  {
+   "id": "random",
+   "word": {
+    "word": "random"
+   },
+   "vol": 0.75
+  }
+ ],
+ "shakes": [
+  {
+   "at": "@flight+1.72",
+   "strength": 10
+  },
+  {
+   "at": "@flop+0.69",
+   "strength": 6
+  },
+  {
+   "at": "@purpose",
+   "strength": 12
+  }
+ ],
+ "bursts": [
+  {
+   "at": "@flight+1.72",
+   "x": 230,
+   "y": 1500
+  },
+  {
+   "at": "@wet",
+   "x": 840,
+   "y": 1240
+  }
+ ],
+ "broll": [
+  {
+   "from": "@split1",
+   "to": "@split1_out",
+   "src": "broll/cuts/clothesline.mp4",
+   "start": 55.0,
+   "layout": "split",
+   "zoom": 1.35,
+   "focus": [
+    580,
+    390
+   ]
+  },
+  {
+   "from": "@split2",
+   "to": "@split2_out",
+   "src": "broll/cuts/clothesline.mp4",
+   "start": 20.9,
+   "layout": "split",
+   "zoom": 1.0
+  }
+ ],
+ "texts": [
+  {
+   "from": "@firmware",
+   "to": "@split1_out",
+   "txt": "MY FIRMWARE",
+   "size": 90,
+   "top": 230,
+   "x": 624,
+   "rot": -4
+  },
+  {
+   "from": "@failing",
+   "to": "@split2_out",
+   "txt": "FOUND IT",
+   "size": 130,
+   "top": 600,
+   "x": 540,
+   "rot": -4
+  },
+  {
+   "from": "@purpose",
+   "to": "@wet_e",
+   "txt": "STRESS TEST",
+   "size": 140,
+   "top": 470,
+   "x": 540,
+   "rot": -8
+  },
+  {
+   "from": "@grid_in",
+   "to": "@tests",
+   "txt": "444",
+   "size": 240,
+   "top": 250,
+   "x": 540,
+   "rot": -3
+  },
+  {
+   "from": "@goes_live",
+   "to": "@red",
+   "txt": "GO LIVE",
+   "size": 170,
+   "top": 300,
+   "x": 540,
+   "rot": 3
+  },
+  {
+   "from": "@canbus",
+   "to": "@system_e",
+   "txt": "NOT YET",
+   "size": 90,
+   "top": 360,
+   "x": 540,
+   "rot": 3
+  }
+ ],
+ "stickers": [
+  {
+   "from": 0,
+   "to": 0.04,
+   "src": "project:img/roadster.png",
+   "x": -3000,
+   "y": -3000,
+   "width": 10,
+   "anim": "pop"
+  },
+  {
+   "from": "@testing",
+   "to": "@much",
+   "src": "editor-template/syncrowin-style/public/img/robot_sticker.png",
+   "x": 840,
+   "y": 1330,
+   "width": 300,
+   "anim": "pop"
+  }
+ ],
+ "endcard": {
+  "from": "@endcard"
+ },
+ "sfx": [
+  {
+   "name": "rocket",
+   "at": "@flight",
+   "vol": 0.22,
+   "max": 0.95
+  },
+  {
+   "name": "whoosh",
+   "at": "@flight+1.35",
+   "vol": 0.35
+  },
+  {
+   "name": "slam",
+   "at": "@flight+1.72",
+   "vol": 0.45
+  },
+  {
+   "name": "clap",
+   "at": "@flight+1.75",
+   "vol": 0.3
+  },
+  {
+   "name": "clap",
+   "at": "@flight+1.85",
+   "vol": 0.3
+  },
+  {
+   "name": "clap",
+   "at": "@flight+1.95",
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": "@flight+1.8",
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": "@flight+1.95",
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": "@flight+2.1",
+   "vol": 0.3
+  },
+  {
+   "name": "whip",
+   "at": "@flop",
+   "vol": 0.3
+  },
+  {
+   "name": "scratch",
+   "at": "@flop+0.41",
+   "vol": 0.5
+  },
+  {
+   "name": "puff",
+   "at": "@flop+0.69",
+   "vol": 0.5
+  },
+  {
+   "name": "pop",
+   "at": "@flop+0.75",
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": "@flop+0.9",
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": "@flop+1.05",
+   "vol": 0.3
+  },
+  {
+   "name": "thock",
+   "at": "@restart",
+   "vol": 0.35
+  },
+  {
+   "name": "tick",
+   "at": "@restart+0.2",
+   "vol": 0.5
+  },
+  {
+   "name": "scribble",
+   "at": "@boot",
+   "vol": 0.4
+  },
+  {
+   "name": "scribble",
+   "at": "@reset",
+   "vol": 0.4
+  },
+  {
+   "name": "whoosh",
+   "at": "@split2",
+   "vol": 0.3
+  },
+  {
+   "name": "scribble",
+   "at": "@failing",
+   "vol": 0.35
+  },
+  {
+   "name": "ding",
+   "at": "@failing+0.2",
+   "vol": 0.45
+  },
+  {
+   "name": "slam",
+   "at": "@purpose",
+   "vol": 0.5
+  },
+  {
+   "name": "typing",
+   "at": "@fake",
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": "@rain",
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": "@is_wet",
+   "vol": 0.3
+  },
+  {
+   "name": "puff",
+   "at": "@wet",
+   "vol": 0.5
+  },
+  {
+   "name": "tinkle",
+   "at": "@wet",
+   "vol": 0.35
+  },
+  {
+   "name": "whoosh",
+   "at": "@grid_in",
+   "vol": 0.35
+  },
+  {
+   "name": "sparkle",
+   "at": "@goes_live",
+   "vol": 0.3
+  },
+  {
+   "name": "bloop",
+   "at": "@red",
+   "vol": 0.4
+  },
+  {
+   "name": "bloop",
+   "at": "@red+0.2",
+   "vol": 0.4
+  },
+  {
+   "name": "whip",
+   "at": "@grid_zoom",
+   "vol": 0.3
+  },
+  {
+   "name": "scribble",
+   "at": "@grid_zoom+0.22",
+   "vol": 0.3
+  },
+  {
+   "name": "scratch",
+   "at": "@mini+0.55",
+   "vol": 0.25
+  },
+  {
+   "name": "ding2",
+   "at": "@endcard",
+   "vol": 0.4
+  }
+ ],
+ "music": {
+  "stops": [
+   {
+    "from": "@flips",
+    "to": "@im"
+   },
+   {
+    "from": "@gap",
+    "to": "@soyeah"
+   },
+   {
+    "from": "@random",
+    "to": "@could_in"
+   }
+  ]
+ },
+ "custom": true
+}

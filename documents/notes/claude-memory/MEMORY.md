@@ -10,10 +10,13 @@
 - [Phone access plan](phone-access-plan.md) — deferred: private repo + cloud sessions + pull/push hooks, so he can work from his phone
 - [Automation setup](automation-setup-in-progress.md) — scheduled gmail-sync/scrape/event reminders + ntfy push: built and scheduled; phone setup + wake check left
 - [No availability caveats](no-availability-caveats.md) — never volunteer visa/part-time limits in CVs or letters; state start date only
-- [Video script style](video-script-style.md) — read documents/video/SCRIPT-RULES.md before any video script; one story, sentences hand off
+- [Video script style](video-script-style.md) — scripts = Infosys-style storyboard table + filming sheet, never prose; read SCRIPT-RULES.md first
 - [Video pipeline plan](video-pipeline-plan.md) — deferred: two-phase video pipeline (auto cut+music+transition review, then planned visuals), approval gates
 - [Video style references](video-style-references.md) — videos Manit likes (Mark Leruste video CV, PremiumBeat + other roundups); list in documents/video/REFERENCES.md
 - [No AI-sounding copy](no-ai-sounding-copy.md) — plain human voice; never riff on company slogans or quote their values back
 - [Video edit style](video-edit-style-human.md) — old-PewDiePie human edit: snap zooms, B&W + echo beats, meme text, real photo cutouts; no brand colours or AI-looking effects
 - [Catch-up command](catchup-command.md) — /catchup = scrape + gmail sync + buried-reply sweep + dashboard in one run
 - [Skill to make later](skill-to-make-later.md) — Manit wants a new skill, topic not remembered yet; ask him, don't guess
+- [Token-lean agents](token-lean-agents.md) — videos: one cutter + one planner, no reviewer agents, Manit checks; fixes in main chat
+- [One folder per application](one-folder-per-application.md) — CV + CL + form answers all in documents/applications/<company>_<role>/
+- [Don't repeat two-projects story](dont-repeat-two-projects-story.md) — max once per application; form answers use other angles

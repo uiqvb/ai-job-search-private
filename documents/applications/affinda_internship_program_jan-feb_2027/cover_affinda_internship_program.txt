@@ -1,0 +1,36 @@
+## Sender
+Manit Khera
+12 Jenner Street
+Blackburn South, VIC 3130
+0412 761 206
+manitkhera26@gmail.com
+
+## Date
+Tuesday 27 October 2026
+
+## Recipient
+Hiring Manager
+Affinda
+Dover House
+Cremorne, VIC 3121
+
+## Greeting
+Dear Hiring Manager,
+
+## RE
+RE: Affinda Internship Program, January to February 2027
+
+## Body
+I am writing to apply for the Affinda Internship Program (January to February 2027), which I found on LinkedIn. Owning a small product end to end in six weeks, from the design to the people who use it, is the kind of brief I usually end up writing for myself, and I would like to do it inside a company that builds and deploys AI for a living.
+
+I am a third-year student in a Bachelor of Software Engineering (Honours) at Deakin University, with a WAM of 81.33 and marks of 100 in Data Structures and Algorithms and in Backend Development, where my project was selected for the Deakin Open Day showcase. I would bring three things to the program. First, I use AI for almost everything, and I am open about it. Claude Code is part of how I design, write, test and debug software, and I keep looking for ways to improve that workflow. I run my job search through it too, from finding postings and tracking applications to editing short intro videos for recruiters. Next, I want it to move my tickets from to-do to done and open the pull requests itself, so my time goes into checking its work rather than the busywork. Second, I own things end to end. In one trimester I had two unrelated major unit projects, a backend API for controlling robots and a robot I built myself. Nothing in either brief said they should meet, so I made the backend drive the robot. It took about a month of fixes that broke something new each time, then it scored 100 out of 100 and went to Open Day. Third, I build for people who are not engineers. As an IT support volunteer for the Boroondara Stroke Support Group, I help maintain the group's website and trained new volunteers to publish the monthly calendar themselves, so the job no longer depends on me.
+
+Affinda's path from Draftable to Affinda Extract, and now to Affinda Deployment, which helps companies adopt AI and engineer it into their work, is the part of your business I most want to learn from. Your internship brief, taking an internal process, automating it with AI and handing it to the people who use it, reads like that deployment work at a small scale. I also like that Affinda Control lets a company see its AI spend and choose the right model for each job. When I scaled a robot dispatch API, I kept a change only after benchmarks showed it helped, and I would judge an automation the same way: by whether it saves the people using it time.
+
+My resume is attached. I would welcome an interview, and I would be glad to show you the robot and the code behind it. Thank you for your time and consideration.
+
+## Sign-off
+Kind regards,
+
+## Name
+Manit Khera

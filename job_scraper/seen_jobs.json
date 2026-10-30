@@ -1,5 +1,137 @@
 {
   "seen": {
+    "autodesk_intern-software-engineer-pdms-d-m-gdsimeng": {
+      "title": "Intern, Software Engineer [PDMS-D&M-GDSIMENG]",
+      "company": "Autodesk",
+      "url": "https://autodesk.wd1.myworkdayjobs.com/uni/job/Melbourne-AUS/Intern--Software-Engineer--PDMS-D-M-GDSIMENG-_26WD101850",
+      "first_seen": "2026-10-29",
+      "posted_date": "2026-10-28",
+      "deadline": null,
+      "fit": "medium",
+      "status": "new",
+      "portal": "freehire-search",
+      "source": "cli"
+    },
+    "ace-talent-recruitment_software-developer-internship": {
+      "title": "Software Developer Internship",
+      "company": "Ace Talent Recruitment",
+      "url": "https://au.linkedin.com/jobs/view/software-developer-internship-at-ace-talent-recruitment-4484416117",
+      "first_seen": "2026-10-29",
+      "posted_date": "2026-10-28",
+      "deadline": null,
+      "fit": "medium",
+      "status": "new",
+      "portal": "linkedin-search",
+      "source": "cli"
+    },
+    "ace-talent-recruitment_electronic-engineering-internship": {
+      "title": "Electronic Engineering Internship",
+      "company": "Ace Talent Recruitment",
+      "url": "https://au.linkedin.com/jobs/view/electronic-engineering-internship-at-ace-talent-recruitment-4484426835",
+      "first_seen": "2026-10-29",
+      "posted_date": "2026-10-28",
+      "deadline": null,
+      "fit": "low",
+      "status": "new",
+      "portal": "linkedin-search",
+      "source": "cli"
+    },
+    "commonwealth-bank_technology-associate-program-traineeship": {
+      "title": "Technology Associate Program (Traineeship)",
+      "company": "Commonwealth Bank",
+      "url": "https://au.linkedin.com/jobs/view/technology-associate-program-traineeship-at-commonwealth-bank-4484027131",
+      "first_seen": "2026-10-29",
+      "posted_date": "2026-10-27",
+      "deadline": null,
+      "fit": "low",
+      "status": "new",
+      "portal": "linkedin-search",
+      "source": "cli"
+    },
+    "adaptovate_graduate-associate-forward-deployed-ai-consultant-melbourne": {
+      "title": "Graduate / Associate Forward Deployed AI Consultant | Melbourne",
+      "company": "ADAPTOVATE",
+      "url": "https://au.linkedin.com/jobs/view/graduate-associate-forward-deployed-ai-consultant-melbourne-at-adaptovate-4481224309",
+      "first_seen": "2026-10-29",
+      "posted_date": "2026-10-19",
+      "deadline": null,
+      "fit": "low",
+      "status": "new",
+      "portal": "linkedin-search",
+      "source": "cli"
+    },
+    "imitation-machines_intern-robotics-software-engineer-filled-accepting-expressio-9a98f4": {
+      "title": "Intern: Robotics Software Engineer — 🔒 Filled · Accepting expressions of interest",
+      "company": "Imitation Machines",
+      "url": "https://freehire.me/jobs/intern-robotics-software-engineer-filled-accepting-expressions-of-interest-imitation-machines-435bmrfq",
+      "first_seen": "2026-10-28",
+      "posted_date": "2026-10-25",
+      "deadline": null,
+      "fit": "medium",
+      "status": "new",
+      "portal": "freehire-search",
+      "source": "cli"
+    },
+    "imitation-machines_intern-machine-learning-imitation-rl-and-robotics-research-e-9c45b3": {
+      "title": "Intern: Machine Learning (Imitation, RL) and Robotics Research Engineer — Filled · Accepting expressions of interest",
+      "company": "Imitation Machines",
+      "url": "https://freehire.me/jobs/intern-machine-learning-imitation-rl-and-robotics-research-engineer-filled-accepting-expressions-of-interest-imitation-machines-7nmk65ru",
+      "first_seen": "2026-10-28",
+      "posted_date": "2026-10-25",
+      "deadline": null,
+      "fit": "low",
+      "status": "new",
+      "portal": "freehire-search",
+      "source": "cli"
+    },
+    "university-of-melbourne_aurin-associate-software-engineer": {
+      "title": "AURIN Associate Software Engineer",
+      "company": "University of Melbourne",
+      "url": "https://www.linkedin.com/jobs/view/4474228886",
+      "first_seen": "2026-10-28",
+      "posted_date": "2026-10-26",
+      "deadline": null,
+      "fit": "low",
+      "status": "new",
+      "portal": "linkedin-search",
+      "source": "cli"
+    },
+    "affinda_affinda-internship-program-jan-feb-2027": {
+      "title": "Affinda Internship Program Jan – Feb 2027",
+      "company": "Affinda",
+      "url": "https://www.linkedin.com/jobs/view/4483271590",
+      "first_seen": "2026-10-27",
+      "posted_date": "2026-10-27",
+      "deadline": "2026-11-20",
+      "fit": "high",
+      "status": "new",
+      "portal": "linkedin-search",
+      "source": "cli"
+    },
+    "sitemate_junior-full-stack-engineer-hybrid": {
+      "title": "Junior Full Stack Engineer - Hybrid",
+      "company": "Sitemate",
+      "url": "https://www.linkedin.com/jobs/view/4483518460",
+      "first_seen": "2026-10-27",
+      "posted_date": "2026-10-26",
+      "deadline": null,
+      "fit": "low",
+      "status": "new",
+      "portal": "linkedin-search",
+      "source": "cli"
+    },
+    "c-prav-technology-solutions_electronics-intern": {
+      "title": "Electronics Intern",
+      "company": "C-PRAV Technology Solutions",
+      "url": "https://www.linkedin.com/jobs/view/4483267678",
+      "first_seen": "2026-10-27",
+      "posted_date": "2026-10-27",
+      "deadline": null,
+      "fit": "low",
+      "status": "new",
+      "portal": "linkedin-search",
+      "source": "cli"
+    },
     "found-life_software-engineer-embedded-and-cloud": {
       "title": "Software Engineer, Embedded and Cloud",
       "company": "Found Life",
@@ -3912,6 +4044,32 @@
       "portal": "linkedin-search",
       "source": "cli",
       "location": "Australia"
+    },
+    "maincode_ai-research-resident-4426211654": {
+      "title": "AI Research Resident",
+      "company": "Maincode",
+      "url": "https://www.linkedin.com/jobs/view/4426211654",
+      "first_seen": "2026-10-30",
+      "posted_date": "2026-10-23",
+      "deadline": null,
+      "fit": "low",
+      "status": "skipped",
+      "portal": "linkedin-search",
+      "source": "cli",
+      "location": "Melbourne, Victoria, Australia"
+    },
+    "upsurge-studios_gameplay-programmer-unreal-engine-vehicles-combat-4484167099": {
+      "title": "Gameplay Programmer: Unreal Engine (Vehicles & Combat)",
+      "company": "Upsurge Studios",
+      "url": "https://www.linkedin.com/jobs/view/4484167099",
+      "first_seen": "2026-10-30",
+      "posted_date": "2026-10-29",
+      "deadline": null,
+      "fit": "low",
+      "status": "skipped",
+      "portal": "linkedin-search",
+      "source": "cli",
+      "location": "Melbourne, Victoria, Australia (remote)"
     }
   }
 }

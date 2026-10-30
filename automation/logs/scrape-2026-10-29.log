@@ -1,0 +1,22 @@
+started 2026-10-29 10:52  exit 0
+usage: claude-sonnet-5-5 | in 34 + cache write 79,090 + cache read 1,026,889 | out 10,893 | 35 turns | 2.7 min | API-equivalent cost $0.53
+
+The scrape found 5 new jobs: 0 high, 2 medium and 3 low. I wrote them to `job_scraper/latest_scrape.md` and added them to `job_scraper/seen_jobs.json`.
+
+- **Portals run:** `linkedin-search` and `freehire-search`.
+- **Skipped (disabled):** `jobbank-search`, `jobdanmark-search`, `jobindex-search` and `jobnet-search`.
+- **Health:** no portal looked degraded or broken, so there are no health lines.
+- **Searches run:** one multi-query script was blocked for needing approval, so I ran a smaller set of individual searches. That covered robotics and embedded, software and AI internships, junior developer, and remote software internship. I did not run the STEM/coding tutor, mechatronics, or junior C#/.NET queries.
+- **Autodesk:** the Autodesk page is blocked by its robots.txt, so that row comes from the freehire listing only. I didn't see its requirements.
+- **Already seen:** most other hits were already in the seen list or tracker.
+
+**Autodesk and Ace Talent**
+- **Autodesk** is an intern software engineer role in Melbourne using C++, Python and APIs.
+- **Ace Talent Recruitment** is a recruiter advertising a paid, on-site software developer internship using JS/TS/React/Node.
+
+NOTIFY: 5 new jobs: 0 high, 2 medium
+NOTIFY: Medium | Autodesk - Intern, Software Engineer | Melbourne | C++/Python/API intern
+NOTIFY: Medium | Ace Talent Recruitment - Software Developer Internship | Melbourne | paid, JS/TS/React
+NOTIFY: + 3 low (see latest_scrape.md)
+NOTIFY-LINK: Autodesk | https://autodesk.wd1.myworkdayjobs.com/uni/job/Melbourne-AUS/Intern--Software-Engineer--PDMS-D-M-GDSIMENG-_26WD101850
+NOTIFY-LINK: Ace Talent Recruitment | https://au.linkedin.com/jobs/view/software-developer-internship-at-ace-talent-recruitment-4484416117

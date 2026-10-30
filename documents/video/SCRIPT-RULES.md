@@ -4,6 +4,14 @@ Manit's corrections, collected so they are not repeated. Applies to Claude, Code
 working in `documents/video/`. Process and editing steps are in `PROTOCOL.md`; this file is about the
 words.
 
+## 0. Format: storyboard, never a prose script (27 Oct 2026)
+- Every script is written as `Storyboard.md`: one table, `Time | Pointers (say your way) | Example
+  line | You do | On screen | Sound`, about one minute, with a running gag, plus `Filming Sheet.txt`
+  with keywords only. Model: `infosys/Storyboard.md` and `infosys/Filming Sheet.txt`.
+- Don't hand Manit a section-by-section prose script (Manit on the Tesla v1/v2 drafts: "I don't
+  want this sort of script").
+- The rules below still apply to the words in the Example line column.
+
 ## 1. One or two achievements, told properly (21 Oct 2026)
 - Pick **one** main story, at most two, chosen for what *this* company values. Never a highlight reel.
 - Give each story its context before its result: what the project was, why it existed, what went

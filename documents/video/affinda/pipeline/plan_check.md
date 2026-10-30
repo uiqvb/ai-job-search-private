@@ -1,0 +1,132 @@
+# Plan check: Affinda
+
+Length 80.00s. 0 error, 4 warning.
+
+- warning: texts[8] '(I MADE THIS VIDEO WITHIN 12 HOURS' at 48.33s may sit on his face (face y 709-1298, text y 770-825)
+- warning: texts[9] 'OF THE AFFINDA AD GOING UP ON LINKEDIN)' at 48.33s may sit on his face (face y 709-1298, text y 835-890)
+- warning: texts[9] 'OF THE AFFINDA AD GOING UP ON LINKEDIN)' is probably wider than the frame at size 50
+- warning: captions overlap his chin/face at 54 word(s), first at 14.44s: add a captions.lift with a lower top, or move them
+
+## Resolved times
+
+- zooms: 1.16-1.62 
+- zooms: 3.34-5.16 
+- zooms: 7.58-8.48 
+- zooms: 13.02-13.80 
+- zooms: 16.28-17.50 
+- zooms: 20.16-21.06 
+- zooms: 31.71-32.39 
+- zooms: 35.33-36.63 
+- zooms: 36.63-37.29 
+- zooms: 39.95-40.81 
+- zooms: 41.09-42.15 
+- zooms: 45.25-46.13 
+- zooms: 47.65-48.03 
+- zooms: 54.93-55.87 
+- zooms: 58.53-59.41 
+- zooms: 62.36-63.41 
+- zooms: 66.79-67.70 
+- zooms: 68.35-69.47 
+- zooms: 72.89-74.61 
+- zooms: 76.15-77.49 
+- follow: 0.00-1.16 
+- follow: 1.64-3.24 
+- follow: 5.52-7.42 
+- follow: 8.56-13.02 
+- follow: 17.50-20.16 
+- follow: 21.24-22.56 
+- follow: 25.61-27.37 
+- follow: 32.75-35.17 
+- follow: 37.39-39.06 
+- follow: 42.15-45.29 
+- follow: 46.13-47.27 
+- follow: 51.37-53.49 
+- follow: 55.87-58.53 
+- follow: 59.41-61.31 
+- follow: 63.41-64.57 
+- follow: 64.57-66.79 
+- follow: 69.47-71.31 
+- follow: 74.75-76.15 
+- bw: 36.63-37.49 
+- bw: 77.05-77.95 
+- broll: 14.44-16.28 lib/broll/cuts/clothesline.mp4
+- broll: 41.09-45.29 lib/broll/cuts/openday.mp4
+- broll: 53.77-62.29 lib/project/img/prompt-wrappers.png
+- texts: 5.52-7.42 THE FAST VERSION
+- texts: 20.16-21.06 6X FASTER
+- texts: 33.59-35.17 WHAT IF...?
+- texts: 42.31-45.29 100/100
+- texts: 51.37-53.49 RIGHT NOW:
+- texts: 54.93-57.21 PROMPT WRAPPERS
+- texts: 63.15-64.57 NEXT: CAPSULE
+- texts: 77.39-78.35 WITH TIME TO SPARE
+- texts: 48.28-51.16 (I MADE THIS VIDEO WITHIN 12 HOURS
+- texts: 48.28-51.16 OF THE AFFINDA AD GOING UP ON LINKEDIN)
+- stickers: 12.50-13.80 lib/editor-template/syncrowin-style/public/img/robot_sticker.png
+- stickers: 31.71-32.75 lib/editor-template/syncrowin-style/public/img/robot_sticker.png
+- sfx slam @ 1.16
+- sfx tick @ 1.52
+- sfx crackle @ 5.52
+- sfx pop @ 5.52
+- sfx pop @ 7.58
+- sfx vineboom @ 8.13
+- sfx ding @ 8.56
+- sfx ding @ 10.12
+- sfx ding2 @ 12.50
+- sfx vineboom @ 13.02
+- sfx whoosh @ 14.44
+- sfx whoosh @ 18.02
+- sfx whoosh @ 20.01
+- sfx slam @ 20.16
+- sfx crackle @ 22.56
+- sfx echo_stuff @ 22.76
+- sfx whip @ 23.58
+- sfx thock @ 24.30
+- sfx boom @ 24.40
+- sfx tinkle @ 24.60
+- sfx slam @ 25.61
+- sfx slam @ 25.77
+- sfx slam @ 25.93
+- sfx typing @ 28.18
+- sfx typing @ 29.52
+- sfx clap @ 31.71
+- sfx tinkle @ 31.76
+- sfx tada @ 31.91
+- sfx scribble @ 32.35
+- sfx scribble @ 33.59
+- sfx echo_either @ 36.87
+- sfx glitch @ 39.41
+- sfx whoosh @ 41.09
+- sfx scribble @ 41.89
+- sfx ding @ 42.31
+- sfx clap @ 44.41
+- sfx pop @ 45.57
+- sfx vineboom @ 45.84
+- sfx scratch @ 47.65
+- sfx typing @ 48.18
+- sfx scribble @ 51.37
+- sfx pop @ 51.37
+- sfx whoosh @ 53.77
+- sfx pop @ 54.93
+- sfx tick @ 61.31
+- sfx pop @ 63.15
+- sfx vineboom @ 63.15
+- sfx bloop @ 64.69
+- sfx bloop @ 65.09
+- sfx bloop @ 65.31
+- sfx bloop @ 65.53
+- sfx tick @ 67.75
+- sfx tick @ 67.89
+- sfx tick @ 68.03
+- sfx thock @ 68.17
+- sfx pop @ 68.25
+- sfx crackle @ 69.81
+- sfx pop @ 71.31
+- sfx whoosh @ 71.75
+- sfx ding @ 72.35
+- sfx pop @ 73.91
+- sfx echo_works @ 77.05
+- sfx slam @ 77.39
+- sfx rocket @ 77.95
+- sfx whoosh @ 78.35
+- sfx ding2 @ 78.65

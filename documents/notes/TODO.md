@@ -41,6 +41,7 @@ Last updated: 2026-10-26.
 
 ## Repo
 - [x] Private repo for the whole workspace (2026-10-26). Push with `bash tools/push_private.sh`. Resumes, video media, `automation/config.json` and `.env` stay out. The public fork (`public-fork`) and `upstream` are fetch-only.
+- [ ] **Finish the first push** (committed 25cf333, push rejected: token lacks `workflow` scope). Run `! "C:\Program Files\GitHub CLI\gh.exe" auth refresh -h github.com -s workflow`, then `! git push -u origin master`.
 - [ ] Brother: invite him on GitHub (Settings > Collaborators). He runs `/reset` then `/setup` for his own profile.
 
 Claude's memory is mirrored in `documents/notes/claude-memory/` (refreshed on every push).

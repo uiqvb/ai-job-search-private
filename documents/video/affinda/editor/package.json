@@ -1,0 +1,12 @@
+{
+  "name": "intro-video-editor",
+  "private": true,
+  "description": "Plan-driven Remotion editor for Manit's intro videos (tools/video/kit, copied per project by setup_editor.py)",
+  "dependencies": {
+    "@remotion/cli": "4.0.242",
+    "@remotion/google-fonts": "4.0.242",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.242"
+  }
+}

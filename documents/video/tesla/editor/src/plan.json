@@ -1,0 +1,465 @@
+{
+ "length": 77.41,
+ "anchors": {
+  "okay": 0.0,
+  "tesla_e": 0.8,
+  "flight": 2.7,
+  "too_in": 5.15,
+  "flop": 8.45,
+  "and_in": 9.86,
+  "flips": 11.11,
+  "flips_out": 11.86,
+  "im": 12.47,
+  "deakin_e": 15.82,
+  "split1": 15.87,
+  "firmware": 24.23,
+  "split1_out": 25.55,
+  "log_in": 25.79,
+  "restart": 30.73,
+  "random": 32.01,
+  "random_e": 32.49,
+  "could_in": 33.48,
+  "the_data": 36.39,
+  "the_data_out": 37.2,
+  "boot": 37.39,
+  "reset": 38.13,
+  "split2": 40.65,
+  "failing": 41.51,
+  "split2_out": 42.6,
+  "log_back": 45.17,
+  "purpose": 46.87,
+  "fake": 48.51,
+  "testing": 49.73,
+  "rain": 51.23,
+  "is_wet": 51.63,
+  "wet": 51.93,
+  "wet_e": 52.11,
+  "megapacks": 52.35,
+  "much": 53.51,
+  "grid_in": 55.63,
+  "tests": 57.83,
+  "goes_live": 58.87,
+  "live_e": 59.43,
+  "red": 60.87,
+  "grid_zoom": 62.41,
+  "grid_out": 65.4,
+  "gap": 65.87,
+  "canbus": 66.91,
+  "system_e": 68.31,
+  "soyeah": 70.59,
+  "mini": 72.05,
+  "endcard": 75.94
+ },
+ "zooms": [
+  {
+   "from": 0.0,
+   "to": 0.8,
+   "scale": 1.2,
+   "tilt": 0
+  },
+  {
+   "from": 11.11,
+   "to": 11.86,
+   "scale": 1.3,
+   "tilt": -3
+  },
+  {
+   "from": 32.01,
+   "to": 33.48,
+   "scale": 1.25,
+   "tilt": 2
+  },
+  {
+   "from": 36.39,
+   "to": 37.2,
+   "scale": 1.2,
+   "tilt": -2
+  }
+ ],
+ "follow": [],
+ "bw": [
+  {
+   "from": 11.11,
+   "to": 11.86
+  },
+  {
+   "from": 32.01,
+   "to": 33.48
+  }
+ ],
+ "broll": [
+  {
+   "from": 15.87,
+   "to": 25.55,
+   "src": "lib/broll/cuts/clothesline.mp4",
+   "start": 55.0,
+   "layout": "split",
+   "zoom": 1.35,
+   "focus": [
+    580,
+    390
+   ]
+  },
+  {
+   "from": 40.65,
+   "to": 42.6,
+   "src": "lib/broll/cuts/clothesline.mp4",
+   "start": 20.9,
+   "layout": "split",
+   "zoom": 1.0
+  }
+ ],
+ "texts": [
+  {
+   "from": 24.23,
+   "to": 25.55,
+   "txt": "MY FIRMWARE",
+   "size": 90,
+   "top": 230,
+   "x": 624,
+   "rot": -4
+  },
+  {
+   "from": 41.51,
+   "to": 42.6,
+   "txt": "FOUND IT",
+   "size": 130,
+   "top": 600,
+   "x": 540,
+   "rot": -4
+  },
+  {
+   "from": 46.87,
+   "to": 52.11,
+   "txt": "STRESS TEST",
+   "size": 140,
+   "top": 470,
+   "x": 540,
+   "rot": -8
+  },
+  {
+   "from": 55.63,
+   "to": 57.83,
+   "txt": "444",
+   "size": 240,
+   "top": 250,
+   "x": 540,
+   "rot": -3
+  },
+  {
+   "from": 58.87,
+   "to": 60.87,
+   "txt": "GO LIVE",
+   "size": 170,
+   "top": 300,
+   "x": 540,
+   "rot": 3
+  },
+  {
+   "from": 66.91,
+   "to": 68.31,
+   "txt": "NOT YET",
+   "size": 90,
+   "top": 360,
+   "x": 540,
+   "rot": 3
+  }
+ ],
+ "stickers": [
+  {
+   "from": 0.0,
+   "to": 0.04,
+   "src": "lib/project/img/roadster.png",
+   "x": -3000,
+   "y": -3000,
+   "width": 10,
+   "anim": "pop"
+  },
+  {
+   "from": 49.73,
+   "to": 53.51,
+   "src": "lib/editor-template/syncrowin-style/public/img/robot_sticker.png",
+   "x": 840,
+   "y": 1330,
+   "width": 300,
+   "anim": "pop"
+  }
+ ],
+ "shakes": [
+  {
+   "at": 4.42,
+   "strength": 10
+  },
+  {
+   "at": 9.14,
+   "strength": 6
+  },
+  {
+   "at": 46.87,
+   "strength": 12
+  }
+ ],
+ "bursts": [
+  {
+   "at": 4.42,
+   "x": 230,
+   "y": 1500
+  },
+  {
+   "at": 51.93,
+   "x": 840,
+   "y": 1240
+  }
+ ],
+ "sfx": [
+  {
+   "name": "rocket",
+   "at": 2.7,
+   "vol": 0.22,
+   "max": 0.95
+  },
+  {
+   "name": "whoosh",
+   "at": 4.05,
+   "vol": 0.35
+  },
+  {
+   "name": "slam",
+   "at": 4.42,
+   "vol": 0.45
+  },
+  {
+   "name": "clap",
+   "at": 4.45,
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": 4.5,
+   "vol": 0.3
+  },
+  {
+   "name": "clap",
+   "at": 4.55,
+   "vol": 0.3
+  },
+  {
+   "name": "clap",
+   "at": 4.65,
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": 4.65,
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": 4.8,
+   "vol": 0.3
+  },
+  {
+   "name": "whip",
+   "at": 8.45,
+   "vol": 0.3
+  },
+  {
+   "name": "scratch",
+   "at": 8.86,
+   "vol": 0.5
+  },
+  {
+   "name": "puff",
+   "at": 9.14,
+   "vol": 0.5
+  },
+  {
+   "name": "pop",
+   "at": 9.2,
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": 9.35,
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": 9.5,
+   "vol": 0.3
+  },
+  {
+   "name": "echo_flips",
+   "at": 11.11,
+   "vol": 0.75
+  },
+  {
+   "name": "thock",
+   "at": 30.73,
+   "vol": 0.35
+  },
+  {
+   "name": "tick",
+   "at": 30.93,
+   "vol": 0.5
+  },
+  {
+   "name": "echo_random",
+   "at": 32.01,
+   "vol": 0.75
+  },
+  {
+   "name": "scribble",
+   "at": 37.39,
+   "vol": 0.4
+  },
+  {
+   "name": "scribble",
+   "at": 38.13,
+   "vol": 0.4
+  },
+  {
+   "name": "whoosh",
+   "at": 40.65,
+   "vol": 0.3
+  },
+  {
+   "name": "scribble",
+   "at": 41.51,
+   "vol": 0.35
+  },
+  {
+   "name": "ding",
+   "at": 41.71,
+   "vol": 0.45
+  },
+  {
+   "name": "slam",
+   "at": 46.87,
+   "vol": 0.5
+  },
+  {
+   "name": "typing",
+   "at": 48.51,
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": 51.23,
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": 51.63,
+   "vol": 0.3
+  },
+  {
+   "name": "puff",
+   "at": 51.93,
+   "vol": 0.5
+  },
+  {
+   "name": "tinkle",
+   "at": 51.93,
+   "vol": 0.35
+  },
+  {
+   "name": "whoosh",
+   "at": 55.63,
+   "vol": 0.35
+  },
+  {
+   "name": "sparkle",
+   "at": 58.87,
+   "vol": 0.3
+  },
+  {
+   "name": "bloop",
+   "at": 60.87,
+   "vol": 0.4
+  },
+  {
+   "name": "bloop",
+   "at": 61.07,
+   "vol": 0.4
+  },
+  {
+   "name": "whip",
+   "at": 62.41,
+   "vol": 0.3
+  },
+  {
+   "name": "scribble",
+   "at": 62.63,
+   "vol": 0.3
+  },
+  {
+   "name": "scratch",
+   "at": 72.6,
+   "vol": 0.25
+  },
+  {
+   "name": "ding2",
+   "at": 75.94,
+   "vol": 0.4
+  }
+ ],
+ "captions": {
+  "on": true,
+  "top": 1600,
+  "lift": [
+   {
+    "from": 15.87,
+    "to": 25.7,
+    "top": 1720
+   },
+   {
+    "from": 40.65,
+    "to": 42.75,
+    "top": 1720
+   }
+  ],
+  "fix": {
+   "falls": "faults"
+  }
+ },
+ "nametag": {
+  "from": 12.47,
+  "to": 15.82,
+  "name": "MANIT KHERA",
+  "subtitle": "Third-year Software Engineering student, Deakin"
+ },
+ "endcard": {
+  "from": 75.94,
+  "title": null,
+  "name": "MANIT KHERA",
+  "subtitle": "Software Engineering student · Deakin University",
+  "lines": [
+   "manitkhera26@gmail.com",
+   "linkedin.com/in/manit-khera-603957252"
+  ]
+ },
+ "music": {
+  "src": "lib/music/A Stroll - The Grey Room _ Density & Time.mp3",
+  "startAt": -3.48,
+  "musicFrom": 0,
+  "volume": 0.11,
+  "endBoost": 2.3,
+  "stops": [
+   {
+    "from": 11.11,
+    "to": 12.47
+   },
+   {
+    "from": 65.87,
+    "to": 70.59
+   },
+   {
+    "from": 32.01,
+    "to": 33.48
+   }
+  ],
+  "dips": []
+ },
+ "custom": true
+}

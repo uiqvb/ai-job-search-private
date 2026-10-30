@@ -1,0 +1,497 @@
+{
+ "files": [
+  {
+   "file": "20261027_180129.mp4",
+   "duration": 984.32,
+   "size": [
+    1920,
+    1080
+   ],
+   "words": 638
+  }
+ ],
+ "lines": [
+  {
+   "id": "0 Two minutes",
+   "text": "Okay, Affinda. Give me two minutes, and I'll explain why you should hire me.",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 44.32,
+     "end": 47.78,
+     "score": 0.97,
+     "said": "Okay Affinda, give me just two minutes and I'll explain why you should hire me.",
+     "longest_pause": 0.04,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Affinda,"
+     ],
+     "level_db": -13.9
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 77.66,
+     "end": 81.76,
+     "score": 0.97,
+     "said": "Okay Affinda, give me just two minutes and I'll explain why you should hire me.",
+     "longest_pause": 0.04,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Affinda,"
+     ],
+     "level_db": -14.7
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 86.5,
+     "end": 95.22,
+     "score": 0.97,
+     "said": "Okay Affinda, give me just two minutes and I'll explain why you should hire me.",
+     "longest_pause": 0.04,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Okay",
+      "Affinda,"
+     ],
+     "level_db": -20.4
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 112.7,
+     "end": 125.12,
+     "score": 0.89,
+     "said": "give me just two minutes and I'll explain why you should hire me.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "give",
+      "just",
+      "two",
+      "minutes",
+      "and",
+      "explain",
+      "why",
+      "you",
+      "should",
+      "hire",
+      "me."
+     ],
+     "level_db": -47.1
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 125.12,
+     "end": 155.1,
+     "score": 0.97,
+     "said": "Okay Affinda, give me just two minutes and I'll explain why you should hire me.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Okay",
+      "Affinda,",
+      "give",
+      "just",
+      "two",
+      "minutes",
+      "and",
+      "explain",
+      "why",
+      "you",
+      "should",
+      "hire",
+      "me."
+     ],
+     "level_db": -33.1
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 169.26,
+     "end": 179.6,
+     "score": 0.89,
+     "said": "give me just two minutes and I'll explain why you should hire me.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "give",
+      "just",
+      "two",
+      "minutes",
+      "and",
+      "explain",
+      "why",
+      "you",
+      "should",
+      "hire",
+      "me."
+     ],
+     "level_db": -14.0,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "1 Resume",
+   "text": "You built an AI that reads resumes. So here's mine. Fast.",
+   "attempts": []
+  },
+  {
+   "id": "2 Reel",
+   "text": "a WAM of 81, a hundred out of a hundred in Backend and in Data Structures and Algorithms, and my robot got picked for Deakin Open Day",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 204.72,
+     "end": 213.38,
+     "score": 0.5,
+     "said": "100 out of 100 in my DSA unit and my project got selected for Beacons Open Day.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "project"
+     ],
+     "level_db": -15.6
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 214.22,
+     "end": 223.3,
+     "score": 0.54,
+     "said": "A wham of 81, 100 out of 100 in my backing unit, 100 out of 100 in my DSA unit and my project got selected for Beacons Open Day.",
+     "longest_pause": 0.2,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "of",
+      "out",
+      "backing",
+      "unit,"
+     ],
+     "level_db": -12.9,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "3 Built",
+   "text": "I built that robot and the API that drives it, and I made a robot dispatch API six times faster",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 247.74,
+     "end": 251.08,
+     "score": 0.52,
+     "said": "I built the robot, the API and I scaled the API",
+     "longest_pause": 0.18,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "and"
+     ],
+     "level_db": -10.2,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "4 Toss",
+   "text": "But a resume can't show you the good stuff.",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 283.68,
+     "end": 285.8,
+     "score": 1.0,
+     "said": "But a resume can't show you the good stuff.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -11.0
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 305.24,
+     "end": 307.88,
+     "score": 1.0,
+     "said": "But a resume can't show you the good stuff.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "But"
+     ],
+     "level_db": -11.9,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "5 Great ideas",
+   "text": "two uni projects, a robot control API and a robot I built myself, nobody said they should meet, so I made them meet",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 338.5,
+     "end": 345.18,
+     "score": 0.58,
+     "said": "two different new projects, a robot controller API and an actual robot. No one said that I should meet, but I still made them meet.",
+     "longest_pause": 0.28,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "new",
+      "I",
+      "made"
+     ],
+     "level_db": -11.0
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 387.04,
+     "end": 393.4,
+     "score": 0.58,
+     "said": "two different new projects, a robot controller API and an actual robot. No one said that I should meet, but I still made them meet.",
+     "longest_pause": 0.22,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "different",
+      "new",
+      "controller",
+      "an",
+      "actual",
+      "No",
+      "that",
+      "I",
+      "meet,",
+      "made"
+     ],
+     "level_db": -11.1,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "6 Curious",
+   "text": "it started with a what if, my unit chair warned me I might finish neither, and for a month every fix broke something new",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 403.26,
+     "end": 411.74,
+     "score": 0.73,
+     "said": "It started with a what if about combining both my projects. My unit chair warned me that I might not finish either and for a month everything broke.",
+     "longest_pause": 0.4,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -11.4
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 426.04,
+     "end": 434.62,
+     "score": 0.73,
+     "said": "It started with a what if about combining both my projects. My unit chair warned me that I might not finish either and for a month everything broke.",
+     "longest_pause": 0.28,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "and",
+      "everything",
+      "broke."
+     ],
+     "level_db": -11.3
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 435.48,
+     "end": 456.48,
+     "score": 0.73,
+     "said": "It started with a what if about combining both my projects. My unit chair warned me that I might not finish either and for a month everything broke.",
+     "longest_pause": 0.48,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "It",
+      "chair",
+      "warned",
+      "that",
+      "and",
+      "everything",
+      "broke."
+     ],
+     "level_db": -14.3,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "7 Worked",
+   "text": "then it worked, a hundred out of a hundred, and on show at Open Day",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 469.32,
+     "end": 473.84,
+     "score": 0.69,
+     "said": "Then it worked. 100 of 100 and it got displayed at Deakin's Open Day.",
+     "longest_pause": 0.28,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -14.1,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "8 Energy",
+   "text": "energy? I found your job ad today, this video was filmed and edited the same day with Claude Code",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 498.22,
+     "end": 502.82,
+     "score": 0.82,
+     "said": "I found your job ad today. This video was filmed and edited by Claude Code",
+     "longest_pause": 0.24,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "your",
+      "Code"
+     ],
+     "level_db": -9.5
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 517.78,
+     "end": 522.44,
+     "score": 0.82,
+     "said": "I found your job ad today. This video was filmed and edited by Claude Code",
+     "longest_pause": 0.24,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "your",
+      "ad",
+      "by",
+      "Code"
+     ],
+     "level_db": -9.2,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "9 Prompt Wrappers",
+   "text": "right now I'm working on two things, one's a Chrome extension called Prompt Wrappers, you save the instructions you keep retyping to AI like keep it simple, and switch them on in one click",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 706.12,
+     "end": 714.46,
+     "score": 0.56,
+     "said": "a Chrome extension called Prompt Toggles where you save repeatable instructions like keep it simple or keep it under 300 words and switch them on or off using one click.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Prompt",
+      "Toggles"
+     ],
+     "level_db": -13.3,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "9b Capsule",
+   "text": "the other's Capsule, an app where you leave anonymous messages at real places on campus, and you can only read one when you walk up to it",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 848.22,
+     "end": 854.1,
+     "score": 0.72,
+     "said": "an app where you can leave down messages around campus and only read one when you walk up to it.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -12.5,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "10 At Affinda",
+   "text": "at Affinda I'd love to take a slow job someone does by hand and build the thing that does it for them",
+   "attempts": []
+  },
+  {
+   "id": "11 Close",
+   "text": "So yeah, I'm Manit Khera. Give me six weeks, and I'll build you something that works. Thanks for watching.",
+   "attempts": [
+    {
+     "file": "20261027_180129.mp4",
+     "start": 960.2,
+     "end": 965.98,
+     "score": 0.92,
+     "said": "So yeah, I'm Manit and give me six weeks and I'll build something that works. Thanks for watching.",
+     "longest_pause": 0.16,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -11.2
+    },
+    {
+     "file": "20261027_180129.mp4",
+     "start": 969.6,
+     "end": 975.26,
+     "score": 0.92,
+     "said": "So yeah, I'm Manit and give me six weeks and I'll build something that works. Thanks for watching.",
+     "longest_pause": 0.62,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "and"
+     ],
+     "level_db": -12.1,
+     "last": true
+    }
+   ]
+  }
+ ]
+}

@@ -15,3 +15,4 @@ metadata:
 - Bun is not installed, so portal CLIs (linkedin-search etc.) don't run; /scrape falls back to web search.
 
 Related: [[intro-video-outreach]], [[only-finished-projects]]
+- Academic transcript (Deakin WebConnect PDF): documents/academic/Deakin_Academic_Transcript_WebConnect.pdf. Attach it when an application asks for a transcript.

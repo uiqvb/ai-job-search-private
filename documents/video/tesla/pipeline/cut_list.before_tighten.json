@@ -1,0 +1,149 @@
+{
+ "length": 81.16,
+ "pieces": [
+  {
+   "line": "1 Roadster",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 51.5,
+   "out": 59.4,
+   "at": 0.0,
+   "moved_in": 0.0,
+   "moved_out": 0.0
+  },
+  {
+   "line": "2 Smaller",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 129.55,
+   "out": 134.9,
+   "at": 7.9,
+   "moved_in": -0.05,
+   "moved_out": 0.0
+  },
+  {
+   "line": "3 No flips",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 140.19,
+   "out": 143.05,
+   "at": 13.25,
+   "moved_in": 0.17,
+   "moved_out": 0.0
+  },
+  {
+   "line": "4 Who",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 247.2,
+   "out": 256.34,
+   "at": 16.11,
+   "moved_in": 0.26,
+   "moved_out": 0.1
+  },
+  {
+   "line": "4 Who",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 281.67,
+   "out": 285.73,
+   "at": 25.25,
+   "moved_in": -0.03,
+   "moved_out": 0.07
+  },
+  {
+   "line": "5 Restart",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 319.38,
+   "out": 327.2,
+   "at": 29.31,
+   "moved_in": 0.08,
+   "moved_out": 0.0
+  },
+  {
+   "line": "6 Data",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 489.94,
+   "out": 493.6,
+   "at": 37.13,
+   "moved_in": 0.34,
+   "moved_out": 0.0
+  },
+  {
+   "line": "6 Data",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 549.25,
+   "out": 554.73,
+   "at": 40.79,
+   "moved_in": -0.05,
+   "moved_out": 0.13
+  },
+  {
+   "line": "7 Break it",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 605.72,
+   "out": 608.05,
+   "at": 46.27,
+   "moved_in": 0.04,
+   "moved_out": 0.15
+  },
+  {
+   "line": "7 Break it",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 631.88,
+   "out": 634.63,
+   "at": 48.6,
+   "moved_in": 0.0,
+   "moved_out": 0.08
+  },
+  {
+   "line": "7 Break it",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 654.16,
+   "out": 658.84,
+   "at": 51.35,
+   "moved_in": 0.0,
+   "moved_out": 0.0
+  },
+  {
+   "line": "8 Megapacks",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 696.48,
+   "out": 699.15,
+   "at": 56.03,
+   "moved_in": 0.28,
+   "moved_out": 0.0
+  },
+  {
+   "line": "8 Megapacks",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 713.83,
+   "out": 716.04,
+   "at": 58.7,
+   "moved_in": 0.03,
+   "moved_out": 0.09
+  },
+  {
+   "line": "8 Megapacks",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 835.21,
+   "out": 843.45,
+   "at": 60.91,
+   "moved_in": -0.09,
+   "moved_out": 0.0
+  },
+  {
+   "line": "9 Gap",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 877.97,
+   "out": 882.53,
+   "at": 69.15,
+   "moved_in": 0.0,
+   "moved_out": 0.09
+  },
+  {
+   "line": "10 Close",
+   "file": "tesla_take_2026-10-27.mp4",
+   "in": 903.0,
+   "out": 910.45,
+   "at": 73.71,
+   "moved_in": 0.0,
+   "moved_out": 1.8
+  }
+ ]
+}

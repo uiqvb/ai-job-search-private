@@ -3,7 +3,7 @@
     python tools/video/make_sfx.py <editor>/public/sfx
 
 Writes 48 kHz mono WAVs. Names: pop ding ding2 whoosh whip rocket boom tinkle slam scribble glitch sparkle
-clap scratch typing ignite crackle puff bloop tick thock tada. Echo tails are made per word by build_plan.py."""
+clap scratch typing ignite crackle puff bloop tick thock tada vineboom. Echo tails are made per word by build_plan.py."""
 import numpy as np, scipy.io.wavfile as wav, scipy.signal as sg, os, sys
 SR = 48000
 OUT = sys.argv[1] if len(sys.argv) > 1 else "sfx"
@@ -133,5 +133,16 @@ daah = brass([523.3, 659.3, 784.0, 1046.5], 1.7, 0.05, 0.006)
 gap = np.zeros(int(0.05 * SR))
 x = np.concatenate([ta, gap, daah]); x = x + 0.25 * np.concatenate([np.zeros(int(0.03 * SR)), x[:-int(0.03 * SR)]])
 save("tada", np.tanh(x * 0.6), 0.85)
+
+# vineboom: meme emphasis hit. Punchy mid-bass that phone/laptop speakers can play (pitch drop 220->70 Hz),
+# heavy saturation for harmonics, a hard click on the front and a long ringing tail. Affinda, 27 Oct 2026.
+d = 1.5; tt = t_(d)
+f = 70 + 150 * np.exp(-tt * 7)
+ph = 2 * np.pi * np.cumsum(f) / SR
+body = (np.sin(ph) + 0.5 * np.sin(2 * ph) + 0.3 * np.sin(3 * ph)) * np.exp(-tt * 1.8)
+click = bp(noise(d), 800, 4000) * np.exp(-tt * 45) * 0.8
+x = np.tanh((body + click) * 4.0)
+x = x + 0.3 * np.concatenate([np.zeros(int(0.06 * SR)), x[:-int(0.06 * SR)]]) * np.exp(-tt * 2)
+save("vineboom", x, 0.95)
 
 print("sfx ok:", len(os.listdir(OUT)), "files")

@@ -1,0 +1,517 @@
+{
+ "files": [
+  {
+   "file": "tesla_take_2026-10-27.mp4",
+   "duration": 918.12,
+   "size": [
+    478,
+    850
+   ],
+   "words": 663
+  }
+ ],
+ "lines": [
+  {
+   "id": "1 Roadster",
+   "text": "Okay, Tesla. You make the Roadster.",
+   "attempts": [
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 9.36,
+     "end": 12.04,
+     "score": 0.62,
+     "said": "Okay Tesla, I have seen how you made the Roadster.",
+     "longest_pause": 0.08,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Okay",
+      "have",
+      "Roadster."
+     ],
+     "level_db": -12.6
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 24.44,
+     "end": 27.2,
+     "score": 0.62,
+     "said": "Okay Tesla, I have seen how you made the Roadster.",
+     "longest_pause": 0.02,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Okay",
+      "have",
+      "Roadster."
+     ],
+     "level_db": -13.9
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 35.98,
+     "end": 39.62,
+     "score": 0.62,
+     "said": "Okay Tesla, I have seen how you made the Roadster.",
+     "longest_pause": 0.08,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Tesla,",
+      "have",
+      "Roadster."
+     ],
+     "level_db": -18.6
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 51.6,
+     "end": 54.28,
+     "score": 0.59,
+     "said": "Okay Tesla, I have seen how you guys made the Roadster.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Tesla,",
+      "have",
+      "Roadster."
+     ],
+     "level_db": -12.9,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "2 Smaller",
+   "text": "I made a car too. It's slightly smaller.",
+   "attempts": [
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 81.66,
+     "end": 88.84,
+     "score": 0.82,
+     "said": "I too made a car but it's slightly smaller.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -16.6
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 95.28,
+     "end": 98.28,
+     "score": 0.82,
+     "said": "I too made a car but it's slightly smaller.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "I"
+     ],
+     "level_db": -14.1
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 105.3,
+     "end": 108.3,
+     "score": 0.82,
+     "said": "I too made a car but it's slightly smaller.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -14.8
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 110.74,
+     "end": 117.94,
+     "score": 0.82,
+     "said": "I too made a car but it's slightly smaller.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "but"
+     ],
+     "level_db": -20.8,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "3 No flips",
+   "text": "And it doesn't do flips.",
+   "attempts": [
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 140.02,
+     "end": 142.14,
+     "score": 0.73,
+     "said": "And it does not do flips.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "And"
+     ],
+     "level_db": -14.9,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "4 Who",
+   "text": "I'm Manit, third-year Software Engineering student at Deakin, built it to carry the laundry under cover when it rains, it runs firmware I wrote on an Arduino",
+   "attempts": []
+  },
+  {
+   "id": "5 Restart",
+   "text": "sends its data to a Raspberry Pi running Linux every five seconds, but every so often it would just restart, at random",
+   "attempts": [
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 319.64,
+     "end": 326.62,
+     "score": 0.84,
+     "said": "sends its data to a Raspberry Pi running on Linux, but every so often it used to just restart at random.",
+     "longest_pause": 0.06,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "used"
+     ],
+     "level_db": -14.3,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "6 Data",
+   "text": "could have swapped parts until it stopped, instead went back through the data, boot ID and reset cause pointed to the power dropping out, led me to a failing buck converter",
+   "attempts": [
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 374.02,
+     "end": 384.54,
+     "score": 0.57,
+     "said": "could have swapped parts until it stopped, but instead I looked through the data and I found that it was being reset repeatedly because of a failing buck converter.",
+     "longest_pause": 0.06,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [],
+     "level_db": -13.6
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 480.54,
+     "end": 483.88,
+     "score": 0.57,
+     "said": "could have swapped parts until it stopped, but instead I looked through the data and I found that it was being reset repeatedly because of a failing buck converter.",
+     "longest_pause": 0.1,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "looked",
+      "through",
+      "the",
+      "data",
+      "and",
+      "I",
+      "that",
+      "it",
+      "was",
+      "being",
+      "reset",
+      "repeatedly",
+      "because",
+      "of",
+      "a",
+      "failing",
+      "buck",
+      "converter."
+     ],
+     "level_db": -12.5
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 485.1,
+     "end": 494.6,
+     "score": 0.48,
+     "said": "I could have swapped parts until it stopped, but instead I looked through the data.",
+     "longest_pause": 0.04,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "I",
+      "could"
+     ],
+     "level_db": -21.5
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 542.54,
+     "end": 554.72,
+     "score": 0.67,
+     "said": "The boot ID and reset cause pointed towards the power dropping out and that led me to failing buck converter.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "cause",
+      "buck"
+     ],
+     "level_db": -16.1
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 578.86,
+     "end": 584.46,
+     "score": 0.67,
+     "said": "The boot ID and reset cause pointed towards the power dropping out and that led me to failing buck converter.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "The",
+      "boot",
+      "ID",
+      "and",
+      "reset",
+      "cause",
+      "pointed",
+      "towards",
+      "the",
+      "power",
+      "dropping",
+      "out",
+      "and",
+      "that",
+      "led",
+      "me",
+      "failing",
+      "buck",
+      "converter."
+     ],
+     "level_db": -67.0
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 584.46,
+     "end": 614.22,
+     "score": 0.67,
+     "said": "The boot ID and reset cause pointed towards the power dropping out and that led me to failing buck converter.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "The",
+      "boot",
+      "ID",
+      "and",
+      "reset",
+      "cause",
+      "pointed",
+      "towards",
+      "the",
+      "power",
+      "dropping",
+      "out",
+      "and",
+      "that",
+      "led",
+      "me",
+      "failing",
+      "buck",
+      "converter."
+     ],
+     "level_db": -62.0
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 614.22,
+     "end": 644.02,
+     "score": 0.67,
+     "said": "The boot ID and reset cause pointed towards the power dropping out and that led me to failing buck converter.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "The",
+      "boot",
+      "ID",
+      "and",
+      "reset",
+      "cause",
+      "pointed",
+      "towards",
+      "the",
+      "power",
+      "dropping",
+      "out",
+      "and",
+      "that",
+      "led",
+      "me",
+      "failing",
+      "buck",
+      "converter."
+     ],
+     "level_db": -53.3
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 668.24,
+     "end": 673.82,
+     "score": 0.67,
+     "said": "The boot ID and reset cause pointed towards the power dropping out and that led me to failing buck converter.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "The",
+      "boot",
+      "ID",
+      "and",
+      "reset",
+      "cause",
+      "pointed",
+      "towards",
+      "power",
+      "dropping",
+      "out",
+      "and",
+      "that",
+      "led",
+      "me",
+      "failing",
+      "buck",
+      "converter."
+     ],
+     "level_db": -67.2,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "7 Break it",
+   "text": "after that I stopped waiting for things to break, before I trusted it I tried to break it on purpose, fake faulty data and tests in the wet",
+   "attempts": []
+  },
+  {
+   "id": "8 Megapacks",
+   "text": "your Megapacks are a much bigger version of that, 444 at Plumpton, this role tests a site before it goes live and builds tools that catch a fault before the customer sees any downtime",
+   "attempts": [
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 776.98,
+     "end": 786.24,
+     "score": 0.68,
+     "said": "Your megapacks are a much bigger version of that. This will test before a site goes live and builds tools that catch...",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "Your",
+      "megapacks",
+      "are",
+      "a",
+      "much",
+      "bigger",
+      "version",
+      "that.",
+      "will",
+      "and"
+     ],
+     "level_db": -14.1
+    },
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 814.92,
+     "end": 843.4,
+     "score": 0.59,
+     "said": "This role tests a site before it goes live and catches any faults and builds tools that before a customer can see any downtime.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "tests",
+      "catches",
+      "faults",
+      "before"
+     ],
+     "level_db": -15.7,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "9 Gap",
+   "text": "I haven't worked with CAN bus or battery systems yet, that's what I'd want to learn from your team",
+   "attempts": [
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 861.98,
+     "end": 882.64,
+     "score": 0.72,
+     "said": "I haven't worked with a canvas or a battery system but that's what I want to learn from your team.",
+     "longest_pause": 0.0,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "or",
+      "but",
+      "from"
+     ],
+     "level_db": -16.0,
+     "last": true
+    }
+   ]
+  },
+  {
+   "id": "10 Close",
+   "text": "So yeah, I'm Manit Khera. No flips yet, but I'll always check the data. Thanks for watching.",
+   "attempts": [
+    {
+     "file": "tesla_take_2026-10-27.mp4",
+     "start": 903.0,
+     "end": 907.12,
+     "score": 0.9,
+     "said": "So yeah, I'm Manit Khera. No flips yet but I'll always check the data.",
+     "longest_pause": 0.14,
+     "fillers": [],
+     "repeats": 0,
+     "stumble": false,
+     "unclear_words": [
+      "but"
+     ],
+     "level_db": -13.7,
+     "last": true
+    }
+   ]
+  }
+ ]
+}

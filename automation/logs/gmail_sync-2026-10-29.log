@@ -1,0 +1,22 @@
+started 2026-10-29 10:52  exit 0
+usage: claude-sonnet-5-5 | in 26 + cache write 128,429 + cache read 1,322,993 | out 10,185 | 33 turns | 1.4 min | API-equivalent cost $0.75
+
+The `/gmail-sync` run finished with one application update queued and nothing written to the tracker. The log line in `documents/notes/log.md` is missing: the `printf` I used for it was rejected, and I didn't retry it.
+
+**Application emails**
+- **Infosys InStep Intern:** Saloni Agarwal sent the MS Teams invite on 28 Oct (subject "First Interaction"). The tracker already says `interview`, so no status changes. I queued it in `gmail_sync/pending.md` for you to approve: ticking the `outcome.md` interview stage and checking the time matches 3 Nov, 7:30 PM AEDT. I didn't read the `.ics` attachment, so the invite time is unchecked.
+- **Written automatically:** nothing. There were no new sent applications, acks or auto-replies.
+- **Stale applications:** none reported in this run (the staleness check was not run).
+
+**Events (`documents/notes/events.md`)**
+- **New suggestion:** Physical AI Meetup Year-ender, Tue 10 Nov, 5:30–8 pm, Donald Whitehead Building. It clashes with GDG Melbourne and Infracoders the same evening.
+- **Tidy-up:** Full Stack Friends and Code moved to Past. I removed three Suggested events dated 28 Oct that had already passed.
+- **Reminder only:** the Neo4j/AWS workshop on 13 Nov is already listed.
+- **Next up:** Hardware Hangout (today, 5:30 pm, RMIT), TechWalking (1 Nov), Infosys interview (3 Nov).
+
+I updated the events-calendar memory snapshot and rebuilt `reports/application-dashboard.html`. `state.json` now has `last_sync` set to 2026-10-29.
+
+NOTIFY: 1 pending update, 1 new event
+NOTIFY: Infosys sent the Teams invite for the 3 Nov interview - approve in /gmail-sync
+NOTIFY: New event: Physical AI Meetup Year-ender, 10 Nov 5:30pm
+NOTIFY: 3 pending updates waiting for approval

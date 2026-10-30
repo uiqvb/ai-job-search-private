@@ -1,0 +1,83 @@
+{
+ "company": "Tesla",
+ "raw": "Raw Takes",
+ "editor": "editor",
+ "transcribe_prompt": "Okay Tesla, you make the Roadster. Megapacks, Plumpton. Raspberry Pi, Arduino, firmware, Linux. Boot ID, reset cause, buck converter. CAN bus. Deakin. Manit Khera.",
+ "grade": "huesaturation=hue=0:saturation=-0.45:colors=b+c,colortemperature=temperature=4700:mix=0.75,eq=gamma=1.08:contrast=0.95:saturation=0.95,colorbalance=rh=0.04:gh=0.02:bh=-0.04",
+ "end_hold": 1.8,
+ "lines": [
+  {
+   "id": "1 Roadster",
+   "text": "Okay, Tesla. You make the Roadster.",
+   "exact": true,
+   "action": "deadpan, then eyes follow the Roadster: his left, up, his right, about 3 s (keep the whole look)"
+  },
+  {
+   "id": "2 Smaller",
+   "text": "I made a car too. It's slightly smaller.",
+   "exact": true,
+   "action": "small grin, then hold still looking slightly down, 2 s (keep the hold)"
+  },
+  {
+   "id": "3 No flips",
+   "text": "And it doesn't do flips.",
+   "exact": true,
+   "action": "straight face, hold 1 s"
+  },
+  {
+   "id": "4 Who",
+   "text": "I'm Manit, third-year Software Engineering student at Deakin, built it to carry the laundry under cover when it rains, it runs firmware I wrote on an Arduino"
+  },
+  {
+   "id": "5 Restart",
+   "text": "sends its data to a Raspberry Pi running Linux every five seconds, but every so often it would just restart, at random",
+   "action": "straight face on 'at random', hold 1 s"
+  },
+  {
+   "id": "6 Data",
+   "text": "could have swapped parts until it stopped, instead went back through the data, boot ID and reset cause pointed to the power dropping out, led me to a failing buck converter",
+   "action": "tap temple on 'the data'"
+  },
+  {
+   "id": "7 Break it",
+   "text": "after that I stopped waiting for things to break, before I trusted it I tried to break it on purpose, fake faulty data and tests in the wet",
+   "action": "cheeky grin on 'on purpose'"
+  },
+  {
+   "id": "8 Megapacks",
+   "text": "your Megapacks are a much bigger version of that, 444 at Plumpton, this role tests a site before it goes live and builds tools that catch a fault before the customer sees any downtime",
+   "action": "hands open wide on 'much bigger'"
+  },
+  {
+   "id": "9 Gap",
+   "text": "I haven't worked with CAN bus or battery systems yet, that's what I'd want to learn from your team",
+   "action": "small shrug"
+  },
+  {
+   "id": "10 Close",
+   "text": "So yeah, I'm Manit Khera. No flips yet, but I'll always check the data. Thanks for watching.",
+   "exact": true,
+   "action": "small wave"
+  }
+ ],
+ "music": {
+  "file": "documents/video/music/A Stroll - The Grey Room _ Density & Time.mp3",
+  "volume": 0.11,
+  "music_at": 16.25,
+  "anchor": {
+   "word": "Manit",
+   "n": 1
+  },
+  "dips": [],
+  "end_boost": 2.3,
+  "credit": "YouTube Audio Library, no attribution needed"
+ },
+ "end_card": {
+  "name": "MANIT KHERA",
+  "subtitle": "Software Engineering student · Deakin University",
+  "lines": [
+   "manitkhera26@gmail.com",
+   "linkedin.com/in/manit-khera-603957252"
+  ]
+ }
+}

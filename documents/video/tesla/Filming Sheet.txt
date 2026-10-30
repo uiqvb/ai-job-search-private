@@ -1,0 +1,41 @@
+TESLA - FILMING SHEET v2  (one long take: read, look up, wait 1 s, say it your way)
+
+1.  "Okay, Tesla. You make the Roadster."   (say exactly, deadpan)
+    >> EYES FOLLOW THE ROADSTER, about 3 s:
+       look to YOUR LEFT -> then UP -> then over to YOUR RIGHT
+       (it flies in on your left, flips over your head, lands on your right)
+
+2.  "I made a car too. It's slightly smaller."   (say exactly, small grin)
+    >> HOLD STILL, look slightly down, 2 s
+
+3.  "And it doesn't do flips."   (say exactly)   >> STRAIGHT FACE, hold 1 s
+
+4.  - Manit, third-year Software Engineering, Deakin
+    - built it to carry the laundry under cover when it rains
+    - runs firmware I wrote, on an Arduino
+
+5.  - sends its data to a Raspberry Pi running Linux, every 5 seconds
+    - but every so often, it would just restart
+    - "At random."   >> STRAIGHT FACE, hold 1 s
+
+6.  - could've swapped parts until it stopped
+    - instead: went back through the data   >> TAP YOUR TEMPLE
+    - boot ID + reset cause -> power dropping out
+    - failing buck converter
+
+7.  - after that, stopped waiting for things to break
+    - before I trusted it: tried to break it on purpose   >> CHEEKY GRIN
+    - fake faulty data + tests in the wet
+
+8.  - your Megapacks = a much bigger version   >> HANDS OPEN WIDE
+    - 444 at Plumpton
+    - this role: test a site before it goes live
+    - tools that catch a fault before the customer sees downtime
+
+9.  - no CAN bus or battery systems yet
+    - that's what I'd want to learn from your team   >> small shrug
+
+10. >> small wave at the end
+    "So yeah, I'm Manit Khera. No flips yet, but I'll always check the data. Thanks for watching."   (say exactly)
+
+Mess up? Pause, say the whole point again. Don't move your feet.

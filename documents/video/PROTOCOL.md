@@ -41,6 +41,8 @@ The process follows a YouTube creator's Claude Code editing workflow:
 ## 1. Script
 
 **Read `SCRIPT-RULES.md` first.** It holds Manit's corrections on how scripts should sound.
+**Deliver the script as a storyboard table (`Storyboard.md`) + `Filming Sheet.txt`**, never a prose
+script (Manit, 27 Oct 2026). Steps: `/video script <company>`; model: `infosys/Storyboard.md`.
 
 
 1. **Study the company's own videos first.** Download two or three team videos, transcribe them

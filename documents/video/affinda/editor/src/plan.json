@@ -1,0 +1,946 @@
+{
+ "length": 80.0,
+ "anchors": {
+  "two": 1.16,
+  "minutes_e": 1.52,
+  "hire_e": 3.24,
+  "you_built": 3.34,
+  "resume1_e": 5.16,
+  "heres": 5.52,
+  "first_e": 7.42,
+  "wam": 7.58,
+  "n81_e": 8.38,
+  "hundred1": 8.56,
+  "dsa": 10.12,
+  "selected": 12.5,
+  "deakins1": 13.02,
+  "openday1_e": 13.8,
+  "br1_in": 14.44,
+  "controls_e": 16.28,
+  "support": 17.5,
+  "six": 20.16,
+  "faster_e": 21.06,
+  "but": 21.24,
+  "good": 22.56,
+  "whip": 23.58,
+  "land": 24.3,
+  "boom": 24.4,
+  "bw_in": 25.45,
+  "cut5": 25.49,
+  "i_had": 25.61,
+  "robot_ctrl": 27.37,
+  "api": 28.03,
+  "robot_fist": 29.37,
+  "made": 31.71,
+  "meet_e": 32.35,
+  "cut6": 32.39,
+  "started": 32.75,
+  "whatif": 33.59,
+  "projects2_e": 35.17,
+  "my_unit": 35.33,
+  "finish": 36.63,
+  "either_e": 37.29,
+  "month": 37.29,
+  "broke": 39.41,
+  "broke_e": 39.95,
+  "else_e": 40.81,
+  "then": 41.09,
+  "worked": 41.89,
+  "worked_e": 42.15,
+  "h100b": 42.31,
+  "deakins2": 44.41,
+  "openday2_e": 45.29,
+  "energy_in": 45.25,
+  "energy": 45.57,
+  "found": 46.13,
+  "energy_out": 46.73,
+  "today1_e": 47.27,
+  "this_video": 47.65,
+  "term_in": 48.03,
+  "term_out": 51.31,
+  "tick3": 51.37,
+  "check_out": 52.87,
+  "right_now": 51.37,
+  "things_e": 53.49,
+  "one_is": 53.77,
+  "prompt": 54.93,
+  "save": 55.87,
+  "simple": 57.21,
+  "words300": 58.53,
+  "words300_e": 59.41,
+  "click": 61.31,
+  "pw_out": 62.29,
+  "other_in": 62.36,
+  "capsule": 63.15,
+  "capsule_e": 63.41,
+  "leave": 64.57,
+  "messages": 65.09,
+  "campus": 65.53,
+  "only": 66.79,
+  "walk": 67.75,
+  "cut10": 68.35,
+  "map_out": 68.38,
+  "take": 69.47,
+  "slow": 69.81,
+  "build_thing": 71.31,
+  "thing": 71.75,
+  "so_in": 72.89,
+  "im": 73.91,
+  "im_e": 74.61,
+  "give": 74.75,
+  "build_sth": 76.15,
+  "works": 77.05,
+  "works_e": 77.39,
+  "thanks": 77.95,
+  "card": 78.35,
+  "watching_e": 78.71,
+  "end_e": 79.96,
+  "stuff_s": 22.76,
+  "n6000": 18.02
+ },
+ "zooms": [
+  {
+   "from": 1.16,
+   "to": 1.62,
+   "scale": 1.3,
+   "tilt": -1.8
+  },
+  {
+   "from": 3.34,
+   "to": 5.16,
+   "scale": 1.18,
+   "tilt": 1.2
+  },
+  {
+   "from": 7.58,
+   "to": 8.48,
+   "scale": 1.18,
+   "tilt": -1.2
+  },
+  {
+   "from": 13.02,
+   "to": 13.8,
+   "scale": 1.18,
+   "tilt": 1.2
+  },
+  {
+   "from": 16.28,
+   "to": 17.5,
+   "scale": 1.15,
+   "tilt": -1.2
+  },
+  {
+   "from": 20.16,
+   "to": 21.06,
+   "scale": 1.3,
+   "tilt": -2.4
+  },
+  {
+   "from": 31.71,
+   "to": 32.39,
+   "scale": 1.24,
+   "tilt": -1.8
+  },
+  {
+   "from": 35.33,
+   "to": 36.63,
+   "scale": 1.15,
+   "tilt": 1.2
+  },
+  {
+   "from": 36.63,
+   "to": 37.29,
+   "scale": 1.36,
+   "tilt": 0.0
+  },
+  {
+   "from": 39.95,
+   "to": 40.81,
+   "scale": 1.18,
+   "tilt": -1.8
+  },
+  {
+   "from": 41.09,
+   "to": 42.15,
+   "scale": 1.15,
+   "tilt": 1.2
+  },
+  {
+   "from": 45.25,
+   "to": 46.13,
+   "scale": 1.3,
+   "tilt": 1.8
+  },
+  {
+   "from": 47.65,
+   "to": 48.03,
+   "scale": 1.21,
+   "tilt": -1.2
+  },
+  {
+   "from": 54.93,
+   "to": 55.87,
+   "scale": 1.15,
+   "tilt": 1.2
+  },
+  {
+   "from": 58.53,
+   "to": 59.41,
+   "scale": 1.18,
+   "tilt": -1.2
+  },
+  {
+   "from": 62.36,
+   "to": 63.41,
+   "scale": 1.21,
+   "tilt": 1.2
+  },
+  {
+   "from": 66.79,
+   "to": 67.7,
+   "scale": 1.15,
+   "tilt": -1.2
+  },
+  {
+   "from": 68.35,
+   "to": 69.47,
+   "scale": 1.18,
+   "tilt": 1.2
+  },
+  {
+   "from": 72.89,
+   "to": 74.61,
+   "scale": 1.18,
+   "tilt": -1.2
+  },
+  {
+   "from": 76.15,
+   "to": 77.49,
+   "scale": 1.27,
+   "tilt": 1.8
+  }
+ ],
+ "follow": [
+  {
+   "from": 0.0,
+   "to": 1.16,
+   "scale": 1.072,
+   "amount": 0.36
+  },
+  {
+   "from": 1.64,
+   "to": 3.24,
+   "scale": 1.09,
+   "amount": 0.54
+  },
+  {
+   "from": 5.52,
+   "to": 7.42,
+   "scale": 1.048,
+   "amount": 0.24
+  },
+  {
+   "from": 8.56,
+   "to": 13.02,
+   "scale": 1.048,
+   "amount": 0.3
+  },
+  {
+   "from": 17.5,
+   "to": 20.16,
+   "scale": 1.072,
+   "amount": 0.54
+  },
+  {
+   "from": 21.24,
+   "to": 22.56,
+   "scale": 1.036,
+   "amount": 0.24
+  },
+  {
+   "from": 25.61,
+   "to": 27.37,
+   "scale": 1.06,
+   "amount": 0.48
+  },
+  {
+   "from": 32.75,
+   "to": 35.17,
+   "scale": 1.072,
+   "amount": 0.54
+  },
+  {
+   "from": 37.39,
+   "to": 39.06,
+   "scale": 1.06,
+   "amount": 0.48
+  },
+  {
+   "from": 42.15,
+   "to": 45.29,
+   "scale": 1.06,
+   "amount": 0.36
+  },
+  {
+   "from": 46.13,
+   "to": 47.27,
+   "scale": 1.06,
+   "amount": 0.54
+  },
+  {
+   "from": 51.37,
+   "to": 53.49,
+   "scale": 1.06,
+   "amount": 0.3
+  },
+  {
+   "from": 55.87,
+   "to": 58.53,
+   "scale": 1.06,
+   "amount": 0.48
+  },
+  {
+   "from": 59.41,
+   "to": 61.31,
+   "scale": 1.036,
+   "amount": 0.24
+  },
+  {
+   "from": 63.41,
+   "to": 64.57,
+   "scale": 1.06,
+   "amount": 0.48
+  },
+  {
+   "from": 64.57,
+   "to": 66.79,
+   "scale": 1.03,
+   "amount": 0.18
+  },
+  {
+   "from": 69.47,
+   "to": 71.31,
+   "scale": 1.036,
+   "amount": 0.18
+  },
+  {
+   "from": 74.75,
+   "to": 76.15,
+   "scale": 1.06,
+   "amount": 0.48
+  }
+ ],
+ "bw": [
+  {
+   "from": 36.63,
+   "to": 37.49
+  },
+  {
+   "from": 77.05,
+   "to": 77.95
+  }
+ ],
+ "broll": [
+  {
+   "from": 14.44,
+   "to": 16.28,
+   "src": "lib/broll/cuts/clothesline.mp4",
+   "start": 54.2,
+   "layout": "split",
+   "zoom": 1.15,
+   "focus": [
+    450,
+    500
+   ]
+  },
+  {
+   "from": 41.09,
+   "to": 45.29,
+   "src": "lib/broll/cuts/openday.mp4",
+   "start": 159.0,
+   "layout": "split",
+   "zoom": 1.7,
+   "focus": [
+    496,
+    290
+   ]
+  },
+  {
+   "from": 53.77,
+   "to": 62.29,
+   "src": "lib/project/img/prompt-wrappers.png",
+   "layout": "split",
+   "zoom": 1.0,
+   "focus": [
+    600,
+    440
+   ],
+   "push": 0.12
+  }
+ ],
+ "texts": [
+  {
+   "from": 5.52,
+   "to": 7.42,
+   "txt": "THE FAST VERSION",
+   "size": 110,
+   "top": 330,
+   "x": 540,
+   "rot": -4
+  },
+  {
+   "from": 20.16,
+   "to": 21.06,
+   "txt": "6X FASTER",
+   "size": 160,
+   "top": 200,
+   "x": 540,
+   "rot": -5
+  },
+  {
+   "from": 33.59,
+   "to": 35.17,
+   "txt": "WHAT IF...?",
+   "size": 130,
+   "top": 320,
+   "x": 540,
+   "rot": -7
+  },
+  {
+   "from": 42.31,
+   "to": 45.29,
+   "txt": "100/100",
+   "size": 140,
+   "top": 690,
+   "x": 540,
+   "rot": -4
+  },
+  {
+   "from": 51.37,
+   "to": 53.49,
+   "txt": "RIGHT NOW:",
+   "size": 120,
+   "top": 330,
+   "x": 540,
+   "rot": -3
+  },
+  {
+   "from": 54.93,
+   "to": 57.21,
+   "txt": "PROMPT WRAPPERS",
+   "size": 100,
+   "top": 838,
+   "x": 540,
+   "rot": -2
+  },
+  {
+   "from": 63.15,
+   "to": 64.57,
+   "txt": "NEXT: CAPSULE",
+   "size": 120,
+   "top": 330,
+   "x": 540,
+   "rot": 3
+  },
+  {
+   "from": 77.39,
+   "to": 78.35,
+   "txt": "WITH TIME TO SPARE",
+   "size": 90,
+   "top": 175,
+   "x": 540,
+   "rot": -3
+  },
+  {
+   "from": 48.28,
+   "to": 51.16,
+   "txt": "(I MADE THIS VIDEO WITHIN 12 HOURS",
+   "size": 50,
+   "top": 770,
+   "x": 540,
+   "rot": 0
+  },
+  {
+   "from": 48.28,
+   "to": 51.16,
+   "txt": "OF THE AFFINDA AD GOING UP ON LINKEDIN)",
+   "size": 50,
+   "top": 835,
+   "x": 540,
+   "rot": 0
+  }
+ ],
+ "stickers": [
+  {
+   "from": 12.5,
+   "to": 13.8,
+   "src": "lib/editor-template/syncrowin-style/public/img/robot_sticker.png",
+   "x": 790,
+   "y": 470,
+   "width": 440,
+   "anim": "pop",
+   "label": "OPEN DAY"
+  },
+  {
+   "from": 31.71,
+   "to": 32.75,
+   "src": "lib/editor-template/syncrowin-style/public/img/robot_sticker.png",
+   "x": 560,
+   "y": 1440,
+   "width": 380,
+   "anim": "pop"
+  }
+ ],
+ "shakes": [
+  {
+   "at": 7.58,
+   "strength": 3.6
+  },
+  {
+   "at": 8.56,
+   "strength": 3.6
+  },
+  {
+   "at": 10.12,
+   "strength": 4.2
+  },
+  {
+   "at": 12.5,
+   "strength": 4.8
+  },
+  {
+   "at": 20.16,
+   "strength": 7.2
+  },
+  {
+   "at": 31.71,
+   "strength": 7.2
+  },
+  {
+   "at": 45.57,
+   "strength": 6.0
+  },
+  {
+   "at": 72.25,
+   "strength": 3.6
+  }
+ ],
+ "bursts": [
+  {
+   "at": 20.16,
+   "x": 540,
+   "y": 290
+  },
+  {
+   "at": 31.71,
+   "x": 540,
+   "y": 1430
+  },
+  {
+   "at": 61.31,
+   "x": 921,
+   "y": 279
+  }
+ ],
+ "sfx": [
+  {
+   "name": "slam",
+   "at": 1.16,
+   "vol": 0.45
+  },
+  {
+   "name": "tick",
+   "at": 1.52,
+   "vol": 0.35
+  },
+  {
+   "name": "crackle",
+   "at": 5.52,
+   "vol": 0.35
+  },
+  {
+   "name": "pop",
+   "at": 5.52,
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": 7.58,
+   "vol": 0.4
+  },
+  {
+   "name": "vineboom",
+   "at": 8.13,
+   "vol": 0.6
+  },
+  {
+   "name": "ding",
+   "at": 8.56,
+   "vol": 0.32
+  },
+  {
+   "name": "ding",
+   "at": 10.12,
+   "vol": 0.36
+  },
+  {
+   "name": "ding2",
+   "at": 12.5,
+   "vol": 0.4
+  },
+  {
+   "name": "vineboom",
+   "at": 13.02,
+   "vol": 0.6
+  },
+  {
+   "name": "whoosh",
+   "at": 14.44,
+   "vol": 0.3
+  },
+  {
+   "name": "whoosh",
+   "at": 18.02,
+   "vol": 0.35
+  },
+  {
+   "name": "whoosh",
+   "at": 20.01,
+   "vol": 0.4
+  },
+  {
+   "name": "slam",
+   "at": 20.16,
+   "vol": 0.45
+  },
+  {
+   "name": "crackle",
+   "at": 22.56,
+   "vol": 0.5
+  },
+  {
+   "name": "echo_stuff",
+   "at": 22.76,
+   "vol": 0.75
+  },
+  {
+   "name": "whip",
+   "at": 23.58,
+   "vol": 0.4
+  },
+  {
+   "name": "thock",
+   "at": 24.3,
+   "vol": 0.45
+  },
+  {
+   "name": "boom",
+   "at": 24.4,
+   "vol": 0.55
+  },
+  {
+   "name": "tinkle",
+   "at": 24.6,
+   "vol": 0.35
+  },
+  {
+   "name": "slam",
+   "at": 25.61,
+   "vol": 0.28
+  },
+  {
+   "name": "slam",
+   "at": 25.77,
+   "vol": 0.28
+  },
+  {
+   "name": "slam",
+   "at": 25.93,
+   "vol": 0.28
+  },
+  {
+   "name": "typing",
+   "at": 28.18,
+   "vol": 0.3,
+   "max": 0.85
+  },
+  {
+   "name": "typing",
+   "at": 29.52,
+   "vol": 0.3,
+   "max": 0.75
+  },
+  {
+   "name": "clap",
+   "at": 31.71,
+   "vol": 0.5
+  },
+  {
+   "name": "tinkle",
+   "at": 31.76,
+   "vol": 0.35
+  },
+  {
+   "name": "tada",
+   "at": 31.91,
+   "vol": 0.4
+  },
+  {
+   "name": "scribble",
+   "at": 32.35,
+   "vol": 0.4
+  },
+  {
+   "name": "scribble",
+   "at": 33.59,
+   "vol": 0.35
+  },
+  {
+   "name": "echo_either",
+   "at": 36.87,
+   "vol": 0.8
+  },
+  {
+   "name": "glitch",
+   "at": 39.41,
+   "vol": 0.5
+  },
+  {
+   "name": "whoosh",
+   "at": 41.09,
+   "vol": 0.3
+  },
+  {
+   "name": "scribble",
+   "at": 41.89,
+   "vol": 0.4
+  },
+  {
+   "name": "ding",
+   "at": 42.31,
+   "vol": 0.4
+  },
+  {
+   "name": "clap",
+   "at": 44.41,
+   "vol": 0.35
+  },
+  {
+   "name": "pop",
+   "at": 45.57,
+   "vol": 0.25
+  },
+  {
+   "name": "vineboom",
+   "at": 45.84,
+   "vol": 0.6
+  },
+  {
+   "name": "scratch",
+   "at": 47.65,
+   "vol": 0.45
+  },
+  {
+   "name": "typing",
+   "at": 48.18,
+   "vol": 0.3,
+   "max": 0.75
+  },
+  {
+   "name": "scribble",
+   "at": 51.37,
+   "vol": 0.4
+  },
+  {
+   "name": "pop",
+   "at": 51.37,
+   "vol": 0.3
+  },
+  {
+   "name": "whoosh",
+   "at": 53.77,
+   "vol": 0.3
+  },
+  {
+   "name": "pop",
+   "at": 54.93,
+   "vol": 0.3
+  },
+  {
+   "name": "tick",
+   "at": 61.31,
+   "vol": 0.55
+  },
+  {
+   "name": "pop",
+   "at": 63.15,
+   "vol": 0.35
+  },
+  {
+   "name": "vineboom",
+   "at": 63.15,
+   "vol": 0.6
+  },
+  {
+   "name": "bloop",
+   "at": 64.69,
+   "vol": 0.3
+  },
+  {
+   "name": "bloop",
+   "at": 65.09,
+   "vol": 0.3
+  },
+  {
+   "name": "bloop",
+   "at": 65.31,
+   "vol": 0.25
+  },
+  {
+   "name": "bloop",
+   "at": 65.53,
+   "vol": 0.3
+  },
+  {
+   "name": "tick",
+   "at": 67.75,
+   "vol": 0.22
+  },
+  {
+   "name": "tick",
+   "at": 67.89,
+   "vol": 0.22
+  },
+  {
+   "name": "tick",
+   "at": 68.03,
+   "vol": 0.22
+  },
+  {
+   "name": "thock",
+   "at": 68.17,
+   "vol": 0.45
+  },
+  {
+   "name": "pop",
+   "at": 68.25,
+   "vol": 0.35
+  },
+  {
+   "name": "crackle",
+   "at": 69.81,
+   "vol": 0.35
+  },
+  {
+   "name": "pop",
+   "at": 71.31,
+   "vol": 0.35
+  },
+  {
+   "name": "whoosh",
+   "at": 71.75,
+   "vol": 0.5
+  },
+  {
+   "name": "ding",
+   "at": 72.35,
+   "vol": 0.45
+  },
+  {
+   "name": "pop",
+   "at": 73.91,
+   "vol": 0.3
+  },
+  {
+   "name": "echo_works",
+   "at": 77.05,
+   "vol": 0.7
+  },
+  {
+   "name": "slam",
+   "at": 77.39,
+   "vol": 0.35
+  },
+  {
+   "name": "rocket",
+   "at": 77.95,
+   "vol": 0.35
+  },
+  {
+   "name": "whoosh",
+   "at": 78.35,
+   "vol": 0.3
+  },
+  {
+   "name": "ding2",
+   "at": 78.65,
+   "vol": 0.4
+  }
+ ],
+ "captions": {
+  "on": true,
+  "top": 1600,
+  "lift": [
+   {
+    "from": 14.44,
+    "to": 16.28,
+    "top": 985
+   },
+   {
+    "from": 27.27,
+    "to": 32.75,
+    "top": 1790
+   },
+   {
+    "from": 41.09,
+    "to": 45.29,
+    "top": 985
+   },
+   {
+    "from": 53.77,
+    "to": 62.29,
+    "top": 985
+   }
+  ],
+  "fix": {
+   "check": "chair",
+   "Wrap,": "Wrappers,",
+   "I'd": "At Affinda, I'd",
+   "Manith.": "Manit.",
+   "first.": "fast.",
+   "first": "fast"
+  }
+ },
+ "nametag": {
+  "from": 73.91,
+  "to": 77.05,
+  "name": "MANIT KHERA",
+  "subtitle": "Software Engineering student, Deakin"
+ },
+ "music": {
+  "src": "lib/music/run_amok_affinda.mp3",
+  "startAt": 1.52,
+  "musicFrom": 0,
+  "volume": 0.18,
+  "endBoost": 2.3,
+  "stops": [],
+  "dips": [
+   {
+    "from": 36.63,
+    "to": 37.29,
+    "factor": 0.2
+   },
+   {
+    "from": 78.71,
+    "to": 79.96,
+    "factor": 2.3
+   },
+   {
+    "from": 24.7,
+    "to": 25.49,
+    "factor": 0.3
+   }
+  ]
+ },
+ "custom": true
+}
